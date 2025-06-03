@@ -2,10 +2,8 @@
 @{
     Layout = null;
 
-    // Đọc RoleID từ Claims thay vì Session để luôn chính xác với Cookie Auth
     string roleId = User?.Claims.FirstOrDefault(c => c.Type == "RoleID")?.Value;
 
-    // Các thông tin user từ Claims (nếu muốn lấy từ Claims, không thì giữ ViewBag như cũ)
     string userName = User?.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value
                       ?? (string)ViewBag.UserName ?? "User";
     string avatarInitials = !string.IsNullOrWhiteSpace(userName)
@@ -30,7 +28,7 @@
             <span class="sidebar-logo">QBCA</span>
             <span class="sidebar-logo-abbr">Q</span>
         </div>
-        @* Sidebar sẽ tự động hiển thị theo RoleID *@
+
         @if (roleId == "1")
         {
             @Html.Partial("_SidebarRD")
