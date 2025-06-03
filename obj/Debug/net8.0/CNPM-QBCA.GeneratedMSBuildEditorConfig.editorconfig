@@ -128,16 +128,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lX1N1YmplY3RMZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Project/CNPM-QBCA/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/CNPM/Project/CNPM-QBCA/Views/Home/Logins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CNPM/Project/CNPM-QBCA/Views/Home/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/Views/Notifications/Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uc1xOb3RpZmljYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CNPM/Project/CNPM-QBCA/Views/Plan/Create.cshtml]

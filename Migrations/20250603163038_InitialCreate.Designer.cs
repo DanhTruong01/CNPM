@@ -12,7 +12,7 @@ using QBCA.Data;
 namespace CNPM_QBCA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250603073340_InitialCreate")]
+    [Migration("20250603163038_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -245,6 +245,9 @@ namespace CNPM_QBCA.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
+
                     b.Property<string>("Message")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -264,6 +267,8 @@ namespace CNPM_QBCA.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("NotificationID");
+
+                    b.HasIndex("CreatedBy");
 
                     b.HasIndex("UserID");
 
@@ -304,7 +309,7 @@ namespace CNPM_QBCA.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DistributionID"));
 
-                    b.Property<int?>("AssignedManagerID")
+                    b.Property<int>("AssignedManagerRoleID")
                         .HasColumnType("int");
 
                     b.Property<int>("DifficultyLevelID")
@@ -324,7 +329,7 @@ namespace CNPM_QBCA.Migrations
 
                     b.HasKey("DistributionID");
 
-                    b.HasIndex("AssignedManagerID");
+                    b.HasIndex("AssignedManagerRoleID");
 
                     b.HasIndex("DifficultyLevelID");
 
@@ -646,11 +651,19 @@ namespace CNPM_QBCA.Migrations
 
             modelBuilder.Entity("QBCA.Models.Notification", b =>
                 {
+                    b.HasOne("QBCA.Models.User", "CreatedByUser")
+                        .WithMany()
+                        .HasForeignKey("CreatedBy")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("QBCA.Models.User", "User")
                         .WithMany("Notifications")
                         .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("CreatedByUser");
 
                     b.Navigation("User");
                 });
@@ -668,10 +681,11 @@ namespace CNPM_QBCA.Migrations
 
             modelBuilder.Entity("QBCA.Models.PlanDistribution", b =>
                 {
-                    b.HasOne("QBCA.Models.User", "AssignedManager")
+                    b.HasOne("QBCA.Models.Role", "AssignedManagerRole")
                         .WithMany()
-                        .HasForeignKey("AssignedManagerID")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("AssignedManagerRoleID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("QBCA.Models.DifficultyLevel", "DifficultyLevel")
                         .WithMany()
@@ -685,7 +699,7 @@ namespace CNPM_QBCA.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("AssignedManager");
+                    b.Navigation("AssignedManagerRole");
 
                     b.Navigation("DifficultyLevel");
 

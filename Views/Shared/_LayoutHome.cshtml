@@ -29,6 +29,7 @@
             <span class="sidebar-logo-abbr">Q</span>
         </div>
 
+        @* Sidebar hiển thị theo RoleID *@
         @if (roleId == "1")
         {
             @Html.Partial("_SidebarRD")
@@ -36,6 +37,18 @@
         else if (roleId == "2")
         {
             @Html.Partial("_SidebarLecturer")
+        }
+        else if (roleId == "3")
+        {
+            @Html.Partial("_SidebarHeadDept")
+        }
+        else if (roleId == "4")
+        {
+            @Html.Partial("_SidebarSubjectLeader")
+        }
+        else if (roleId == "5")
+        {
+            @Html.Partial("_SidebarExamHead")
         }
         else
         {
@@ -71,7 +84,7 @@
                             <li class="no-notifications">No new notifications.</li>
                         </ul>
                         <div class="notification-dropdown-footer">
-                            <a href="@Url.Action("Index", "Notification")">View All Notifications</a>
+                            <a href="@Url.Action("Notifications", "Notifications")">View All Notifications</a>
                         </div>
                     </div>
                 </div>

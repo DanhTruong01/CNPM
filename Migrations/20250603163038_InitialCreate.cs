@@ -87,11 +87,18 @@ namespace CNPM_QBCA.Migrations
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RelatedEntityType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RelatedEntityID = table.Column<int>(type: "int", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Notifications", x => x.NotificationID);
+                    table.ForeignKey(
+                        name: "FK_Notifications_Users_CreatedBy",
+                        column: x => x.CreatedBy,
+                        principalTable: "Users",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Notifications_Users_UserID",
                         column: x => x.UserID,
@@ -322,7 +329,7 @@ namespace CNPM_QBCA.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PlanID = table.Column<int>(type: "int", nullable: false),
                     DifficultyLevelID = table.Column<int>(type: "int", nullable: false),
-                    AssignedManagerID = table.Column<int>(type: "int", nullable: true),
+                    AssignedManagerRoleID = table.Column<int>(type: "int", nullable: false),
                     NumberOfQuestions = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "Assigned")
                 },
@@ -342,10 +349,10 @@ namespace CNPM_QBCA.Migrations
                         principalColumn: "PlanID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PlanDistributions_Users_AssignedManagerID",
-                        column: x => x.AssignedManagerID,
-                        principalTable: "Users",
-                        principalColumn: "UserID",
+                        name: "FK_PlanDistributions_Roles_AssignedManagerRoleID",
+                        column: x => x.AssignedManagerRoleID,
+                        principalTable: "Roles",
+                        principalColumn: "RoleID",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -495,14 +502,19 @@ namespace CNPM_QBCA.Migrations
                 column: "UserID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Notifications_CreatedBy",
+                table: "Notifications",
+                column: "CreatedBy");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Notifications_UserID",
                 table: "Notifications",
                 column: "UserID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PlanDistributions_AssignedManagerID",
+                name: "IX_PlanDistributions_AssignedManagerRoleID",
                 table: "PlanDistributions",
-                column: "AssignedManagerID");
+                column: "AssignedManagerRoleID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PlanDistributions_DifficultyLevelID",
