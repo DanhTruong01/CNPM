@@ -50,5 +50,34 @@ namespace QBCA.Controllers
             await _context.SaveChangesAsync();
             return Json(new { success = true, status = notification.Status });
         }
+
+        // GET: /Notifications/DropdownUnread
+        [HttpGet]
+        public async Task<IActionResult> DropdownUnread()
+        {
+            var userIdStr = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdStr, out int userId)) return Json(new object[0]);
+            var list = await _context.Notifications
+                .Where(n => n.UserID == userId && n.Status == "UNREAD")
+                .OrderByDescending(n => n.CreatedAt)
+                .Take(5)
+                .Select(n => new {
+                    message = n.Message,
+                    createdAt = n.CreatedAt.AddHours(7).ToString("dd/MM/yyyy HH:mm")
+                }).ToListAsync();
+            return Json(list);
+        }
+
+        // GET: /Notifications/DropdownUnreadCount
+        [HttpGet]
+        public async Task<IActionResult> DropdownUnreadCount()
+        {
+            var userIdStr = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdStr, out int userId)) return Json(new { count = 0 });
+            int count = await _context.Notifications
+                .Where(n => n.UserID == userId && n.Status == "UNREAD")
+                .CountAsync();
+            return Json(new { count });
+        }
     }
 }
