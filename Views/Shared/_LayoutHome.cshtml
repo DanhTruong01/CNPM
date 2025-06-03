@@ -1,10 +1,16 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http
+@{
     Layout = null;
-    
-    string userName = (string)ViewBag.UserName ?? "User";
+
+    // Đọc RoleID từ Claims thay vì Session để luôn chính xác với Cookie Auth
+    string roleId = User?.Claims.FirstOrDefault(c => c.Type == "RoleID")?.Value;
+
+    // Các thông tin user từ Claims (nếu muốn lấy từ Claims, không thì giữ ViewBag như cũ)
+    string userName = User?.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value
+                      ?? (string)ViewBag.UserName ?? "User";
     string avatarInitials = !string.IsNullOrWhiteSpace(userName)
-        ? userName.Trim().Substring(0, 1).ToUpper(): "U";
-    
+        ? userName.Trim().Substring(0, 1).ToUpper() : "U";
+
     ViewBag.AvatarInitials = avatarInitials;
 }
 <!DOCTYPE html>
@@ -24,12 +30,26 @@
             <span class="sidebar-logo">QBCA</span>
             <span class="sidebar-logo-abbr">Q</span>
         </div>
-        @RenderSection("SidebarMenu", required: false)
-        <!--<div class="sidebar-toggle-container">
+        @* Sidebar sẽ tự động hiển thị theo RoleID *@
+        @if (roleId == "1")
+        {
+            @Html.Partial("_SidebarRD")
+        }
+        else if (roleId == "2")
+        {
+            @Html.Partial("_SidebarLecturer")
+        }
+        else
+        {
+            <span>No sidebar for your role.</span>
+        }
+        <!--
+        <div class="sidebar-toggle-container">
             <button class="sidebar-toggle" onclick="toggleSidebar()" id="sidebarToggleBtn">
                 <i class="fas fa-chevron-left"></i> <span class="menu-text">Collapse</span>
             </button>
-        </div>-->
+        </div>
+        -->
     </aside>
     <div class="main-content">
         <!-- Header bar -->
