@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QBCA.Data;
 using QBCA.Models;
@@ -39,7 +39,7 @@ namespace QBCA.Controllers
         {
             var vm = new TaskAssignmentCreateViewModel
             {
-                AllUsers = _context.Users.ToList()
+                AllUsers = _context.Users.Where(u => u.RoleID == 2).ToList()
             };
             return View(vm);
         }
@@ -48,9 +48,14 @@ namespace QBCA.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(TaskAssignmentCreateViewModel vm)
         {
+            if (vm.DueDate < DateTime.Today)
+            {
+                ModelState.AddModelError("DueDate", "Due Date must be today or later.");
+            }
+
             if (!ModelState.IsValid)
             {
-                vm.AllUsers = _context.Users.ToList();
+                vm.AllUsers = _context.Users.Where(u => u.RoleID == 2).ToList();
                 return View(vm);
             }
 
@@ -72,14 +77,17 @@ namespace QBCA.Controllers
             _context.TaskAssignments.Add(task);
             await _context.SaveChangesAsync();
 
-            var notifyUsers = _context.Users.Where(u => u.RoleID == 1 || u.RoleID == 3).ToList();
+            var notifyUsers = _context.Users.Where(u => u.RoleID == 2).ToList();
             foreach (var user in notifyUsers)
             {
                 AddNotification(user.UserID, "New task assigned to you", "TaskAssignment", task.AssignmentID, createdBy);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Tasks");
+
+            TempData["SuccessMessage"] = "Task has been successfully assigned.";            
+
+            return RedirectToAction("AssignToLecturers");
         }
 
         // GET: /Task/Edit/5
@@ -156,7 +164,7 @@ namespace QBCA.Controllers
 
         // CHO SUBJECT LEADER XEM CÁC NHIỆM VỤ ĐƯỢC GIAO CHO MÌNH
         public async Task<IActionResult> TeamTasks()
-        {            
+        { 
             var userIdClaim = User.FindFirst("UserID")?.Value;
             if (!int.TryParse(userIdClaim, out int userId))
                 return Unauthorized();
@@ -182,8 +190,6 @@ namespace QBCA.Controllers
                 .Where(t => t.AssignedBy == userId)
                 .ToListAsync();
             return View("AssignToLecturers", tasks); // Views/Task/AssignToLecturers.cshtml
-        }        
+        }
     }
 }
-        
-
