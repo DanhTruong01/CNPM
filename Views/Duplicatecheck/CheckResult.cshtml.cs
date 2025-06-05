@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace CNPM_QBCA.Views.Duplicate
+namespace CNPM_QBCA.Views.Duplicatecheck
 {
-    public class CheckDuplicateModel : PageModel
+    public class CheckResultModel : PageModel
     {
         public void OnGet()
         {
