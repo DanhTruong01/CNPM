@@ -37,7 +37,7 @@
                                 <td>@item.CheckID</td>
                                 <td class="text-start">@item.Question?.Content</td>
                                 <td class="text-start">@item.SimilarQuestion?.Content</td>
-                                <td>@item.SimilarityScore.ToString("0.000")</td>
+                                <td>@((item.SimilarityScore * 100).ToString("0.0") + "%")</td>
                                 <td>
                                     @{
                                         var checkedAtVN = item.CheckedAt.AddHours(7);

@@ -78,8 +78,7 @@
               "RelativeToolTip": "Views\\Question\\QuestionBank.cshtml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T12:49:35.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T12:49:35.914Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "Views\\Question\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T12:49:33.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T12:49:33.803Z"
             },
             {
               "$type": "Document",
@@ -104,8 +102,7 @@
               "RelativeToolTip": "Views\\Shared\\_SidebarRD.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T12:33:43.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T12:33:43.172Z"
             },
             {
               "$type": "Document",
@@ -115,7 +112,7 @@
               "RelativeDocumentMoniker": "Views\\Duplicatecheck\\HomeCheck.cshtml",
               "ToolTip": "E:\\CNPM\\Project\\CNPM-QBCA\\Views\\Duplicatecheck\\HomeCheck.cshtml",
               "RelativeToolTip": "Views\\Duplicatecheck\\HomeCheck.cshtml",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAQwJYAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-05T12:10:32.968Z",
               "EditorCaption": ""
@@ -130,8 +127,7 @@
               "RelativeToolTip": "Views\\Duplicatecheck\\Check.cshtml",
               "ViewState": "AgIAAEMAAAAAAAAAAAAQwFwAAACOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T11:38:18.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T11:38:18.103Z"
             },
             {
               "$type": "Document",
@@ -143,8 +139,7 @@
               "RelativeToolTip": "Controller\\DuplicateCheckController.cs",
               "ViewState": "AgIAAMUAAAAAAAAAAAAkwNMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T11:35:11.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T11:35:11.46Z"
             },
             {
               "$type": "Document",
@@ -156,8 +151,7 @@
               "RelativeToolTip": "Views\\CLO\\CLOs.cshtml",
               "ViewState": "AgIAAKAAAAAAAAAAAAAQwLwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T12:06:35.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T12:06:35.026Z"
             },
             {
               "$type": "Document",
@@ -169,8 +163,7 @@
               "RelativeToolTip": "Views\\Duplicatecheck\\CheckResult.cshtml",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAF0AAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T12:19:57.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T12:19:57.485Z"
             },
             {
               "$type": "Document",
@@ -182,8 +175,7 @@
               "RelativeToolTip": "Views\\Shared\\_SidebarLecturer.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T12:30:31.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T12:30:31.88Z"
             },
             {
               "$type": "Document",
@@ -195,8 +187,7 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAANEAAAAAAAAAAAAYwNIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T11:59:57.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T11:59:57.285Z"
             },
             {
               "$type": "Document",
@@ -208,8 +199,7 @@
               "RelativeToolTip": "Views\\Shared\\_SidebarHeadDept.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T12:30:30.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T12:30:30.816Z"
             },
             {
               "$type": "Document",
@@ -221,8 +211,7 @@
               "RelativeToolTip": "Services\\GeminiDuplicateService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAYwDgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T11:52:54.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T11:52:54.883Z"
             },
             {
               "$type": "Document",
