@@ -1,4 +1,4 @@
-﻿@model List<QBCA.Models.TaskAssignment>
+@model List<QBCA.Models.TaskAssignment>
 @{
     ViewBag.Title = "Assign To Lecturers";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
@@ -10,20 +10,23 @@
             <h2 class="fw-bold mb-2" style="font-size:2.1rem;">Assign To Lecturers</h2>
             <div class="text-secondary" style="font-size:1.18rem;">View tasks assigned to lecturers.</div>
         </div>
+
         <div class="mb-4 w-100" style="display: flex; justify-content: flex-start;">
             <a href="@Url.Action("Create", "Task")"
                class="btn btn-signin-custom"
                style="font-size:1.15rem; min-width:240px;">
-				Assign New Task
+                Assign New Task
             </a>
         </div>
-        @if (TempData["Success"] != null)
+
+        @if (TempData["SuccessMessage"] != null)
         {
             <div class="alert alert-success alert-dismissible fade show py-2 px-3" role="alert" style="border-radius:10px;">
-                <i class="fas fa-check-circle me-2"></i> @TempData["Success"]
+                <i class="fas fa-check-circle me-2"></i> @TempData["SuccessMessage"]
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="top:9px;"></button>
             </div>
         }
+
         <div class="table-container">
             <table class="table subject-table mb-0">
                 <thead>
