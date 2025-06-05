@@ -156,15 +156,7 @@ namespace QBCA.Controllers
 
         // CHO SUBJECT LEADER XEM CÁC NHIỆM VỤ ĐƯỢC GIAO CHO MÌNH
         public async Task<IActionResult> TeamTasks()
-        {
-            //var userIdClaim = User.FindFirst("UserID")?.Value;
-            //int userId = 0;
-            //if (int.TryParse(userIdClaim, out int parsedUserId))
-            //    userId = parsedUserId;
-            //var tasks = await _context.TaskAssignments
-            //    .Where(t => t.AssignedTo == userId)
-            //    .ToListAsync();
-            //return View("TeamTasks", tasks); // Views/Task/TeamTasks.cshtml
+        {            
             var userIdClaim = User.FindFirst("UserID")?.Value;
             if (!int.TryParse(userIdClaim, out int userId))
                 return Unauthorized();
@@ -175,7 +167,7 @@ namespace QBCA.Controllers
                 .OrderByDescending(t => t.DueDate)
                 .ToListAsync();
 
-            return View("TeamTasks", tasks);
+            return View("TeamTasks", tasks); // Views/Task/TeamTasks.cshtml
         }
 
         // CHO SUBJECT LEADER XEM CÁC NHIỆM VỤ MÌNH ĐÃ GIAO
