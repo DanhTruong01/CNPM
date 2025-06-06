@@ -169,6 +169,14 @@ namespace QBCA.Controllers
             if (subject == null)
                 return NotFound();
 
+            // Kiểm tra xem Subject này có CLO liên quan không
+            var cloExists = await _context.CLOs.AnyAsync(c => c.SubjectID == id);
+            if (cloExists)
+            {
+                TempData["Error"] = "Cannot delete this subject because there are related CLOs (Course Learning Outcomes). Please delete or reassign the CLOs before deleting the subject.";
+                return RedirectToAction("Subjects");
+            }
+
             string subjectName = subject.SubjectName;
 
             _context.Subjects.Remove(subject);
