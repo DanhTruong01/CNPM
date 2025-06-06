@@ -1,7 +1,7 @@
-﻿@model QBCA.Models.PlanCreateViewModel
+﻿@model QBCA.Models.ExamPlanCreateViewModel
 @using System.Text.Json
 @{
-    ViewBag.Title = "Create New Plan & Distribution";
+    ViewBag.Title = "Create New Exam Plan & Distribution";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
     if (Model.Distributions == null || Model.Distributions.Count == 0)
     {
@@ -100,9 +100,9 @@
 <section class="min-vh-100 d-flex align-items-start justify-content-center bg-light" style="padding-top: 120px;">
     <div class="neumorphic-box">
         <h3 class="text-center fw-bold mb-4 text-dark">
-            <span style="color:#6d82f3;"><i class="fas fa-plus"></i></span> Create New Plan & Distribution
+            <span style="color:#6d82f3;"><i class="fas fa-plus"></i></span> Create New Exam Plan & Distribution
         </h3>
-        @using (Html.BeginForm("Create", "Plan", FormMethod.Post, new { id = "plan-form" }))
+        @using (Html.BeginForm("Create", "ExamPlan", FormMethod.Post, new { id = "plan-form" }))
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
@@ -161,8 +161,8 @@
                 </tbody>
             </table>
         </div>
-        <button type="submit" class="neumorphic-button">Create Plan</button>
-        <a href="@Url.Action("Plan", "Plan")" class="btn btn-link w-100 text-center" style="font-weight:500;">Cancel</a>
+        <button type="submit" class="neumorphic-button">Create Exam Plan</button>
+        <a href="@Url.Action("ExamPlans", "ExamPlan")" class="btn btn-link w-100 text-center" style="font-weight:500;">Cancel</a>
                 }
     </div>
 </section>

@@ -1,7 +1,7 @@
-﻿@model QBCA.Models.PlanCreateViewModel
+﻿@model QBCA.Models.ExamPlanCreateViewModel
 @using System.Text.Json
 @{
-    ViewBag.Title = "Edit Plan & Distribution";
+    ViewBag.Title = "Edit Exam Plan & Distribution";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
     if (Model.Distributions == null || Model.Distributions.Count == 0)
     {
@@ -100,9 +100,9 @@
 <section class="min-vh-100 d-flex align-items-start justify-content-center bg-light" style="padding-top: 120px;">
     <div class="neumorphic-box">
         <h3 class="text-center fw-bold mb-4 text-dark">
-            <span style="color:#ff9800;"><i class="fas fa-edit"></i></span> Edit Plan & Distribution
+            <span style="color:#ff9800;"><i class="fas fa-edit"></i></span> Edit Exam Plan & Distribution
         </h3>
-        @using (Html.BeginForm("Edit", "Plan", FormMethod.Post, new { id = "plan-form" }))
+        @using (Html.BeginForm("Edit", "ExamPlan", FormMethod.Post, new { id = "plan-form" }))
         {
             @Html.AntiForgeryToken()
             @Html.HiddenFor(model => model.PlanID)
@@ -163,17 +163,17 @@
             </table>
         </div>
         <button type="submit" class="neumorphic-button">Save Changes</button>
-        <a href="@Url.Action("Plan", "Plan")" class="btn btn-link w-100 text-center" style="font-weight:500;">Cancel</a>
+        <a href="@Url.Action("ExamPlans", "ExamPlan")" class="btn btn-link w-100 text-center" style="font-weight:500;">Cancel</a>
                 }
     </div>
 </section>
 <script>
     var difficulties = @Html.Raw(JsonSerializer.Serialize(
-                                                                Model.AllDifficultyLevels.Select(x => new { x.DifficultyLevelID, x.LevelName })
-                                ));
+                                                                                                                                Model.AllDifficultyLevels.Select(x => new { x.DifficultyLevelID, x.LevelName })
+                                                                ));
     var roles = @Html.Raw(JsonSerializer.Serialize(
-                                                                Model.AllManagerRoles.Select(x => new { x.RoleID, x.RoleName })
-                                ));
+                                                                                                                                Model.AllManagerRoles.Select(x => new { x.RoleID, x.RoleName })
+                                                                ));
 
     function addDistributionRow() {
         var idx = $("#dist-tbody tr").length;

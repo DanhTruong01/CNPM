@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QBCA.Models
 {
-    public class PlanCreateViewModel
+    public class ExamPlanCreateViewModel
     {
         public int? PlanID { get; set; }
 
@@ -17,7 +17,7 @@ namespace QBCA.Models
 
         public List<Subject> AllSubjects { get; set; } = new List<Subject>();
         public List<DifficultyLevel> AllDifficultyLevels { get; set; } = new List<DifficultyLevel>();
-        public List<Role> AllManagerRoles { get; set; } = new List<Role>(); 
+        public List<Role> AllManagerRoles { get; set; } = new List<Role>();
 
         public List<PlanDistributionViewModel> Distributions { get; set; } = new List<PlanDistributionViewModel>();
     }
