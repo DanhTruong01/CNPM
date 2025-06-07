@@ -130,36 +130,6 @@ namespace CNPM_QBCA.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TaskAssignments",
-                columns: table => new
-                {
-                    AssignmentID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AssignedBy = table.Column<int>(type: "int", nullable: false),
-                    AssignedTo = table.Column<int>(type: "int", nullable: false),
-                    TaskType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DueDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TaskAssignments", x => x.AssignmentID);
-                    table.ForeignKey(
-                        name: "FK_TaskAssignments_Users_AssignedBy",
-                        column: x => x.AssignedBy,
-                        principalTable: "Users",
-                        principalColumn: "UserID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_TaskAssignments_Users_AssignedTo",
-                        column: x => x.AssignedTo,
-                        principalTable: "Users",
-                        principalColumn: "UserID",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "CLOs",
                 columns: table => new
                 {
@@ -204,16 +174,17 @@ namespace CNPM_QBCA.Migrations
                 name: "ExamPlans",
                 columns: table => new
                 {
-                    PlanID = table.Column<int>(type: "int", nullable: false)
+                    ExamPlanID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SubjectID = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<int>(type: "int", nullable: true)
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ExamPlans", x => x.PlanID);
+                    table.PrimaryKey("PK_ExamPlans", x => x.ExamPlanID);
                     table.ForeignKey(
                         name: "FK_ExamPlans_Subjects_SubjectID",
                         column: x => x.SubjectID,
@@ -234,10 +205,10 @@ namespace CNPM_QBCA.Migrations
                 {
                     DistributionID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PlanID = table.Column<int>(type: "int", nullable: false),
+                    ExamPlanID = table.Column<int>(type: "int", nullable: false),
                     DifficultyLevelID = table.Column<int>(type: "int", nullable: false),
-                    AssignedManagerRoleID = table.Column<int>(type: "int", nullable: false),
                     NumberOfQuestions = table.Column<int>(type: "int", nullable: false),
+                    AssignedManagerRoleID = table.Column<int>(type: "int", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "Assigned")
                 },
                 constraints: table =>
@@ -250,10 +221,10 @@ namespace CNPM_QBCA.Migrations
                         principalColumn: "DifficultyLevelID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ExamPlanDistributions_ExamPlans_PlanID",
-                        column: x => x.PlanID,
+                        name: "FK_ExamPlanDistributions_ExamPlans_ExamPlanID",
+                        column: x => x.ExamPlanID,
                         principalTable: "ExamPlans",
-                        principalColumn: "PlanID",
+                        principalColumn: "ExamPlanID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ExamPlanDistributions_Roles_AssignedManagerRoleID",
@@ -286,7 +257,7 @@ namespace CNPM_QBCA.Migrations
                         name: "FK_SubmissionTables_ExamPlans_PlanID",
                         column: x => x.PlanID,
                         principalTable: "ExamPlans",
-                        principalColumn: "PlanID",
+                        principalColumn: "ExamPlanID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_SubmissionTables_Users_ApprovedBy",
@@ -297,6 +268,46 @@ namespace CNPM_QBCA.Migrations
                     table.ForeignKey(
                         name: "FK_SubmissionTables_Users_CreatedBy",
                         column: x => x.CreatedBy,
+                        principalTable: "Users",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TaskAssignments",
+                columns: table => new
+                {
+                    AssignmentID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ExamPlanID = table.Column<int>(type: "int", nullable: false),
+                    AssignedBy = table.Column<int>(type: "int", nullable: false),
+                    AssignedTo = table.Column<int>(type: "int", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TaskType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AssignedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DueDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TaskAssignments", x => x.AssignmentID);
+                    table.ForeignKey(
+                        name: "FK_TaskAssignments_ExamPlans_ExamPlanID",
+                        column: x => x.ExamPlanID,
+                        principalTable: "ExamPlans",
+                        principalColumn: "ExamPlanID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TaskAssignments_Users_AssignedBy",
+                        column: x => x.AssignedBy,
+                        principalTable: "Users",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TaskAssignments_Users_AssignedTo",
+                        column: x => x.AssignedTo,
                         principalTable: "Users",
                         principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
@@ -387,19 +398,20 @@ namespace CNPM_QBCA.Migrations
                 {
                     ExamQuestionID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PlanID = table.Column<int>(type: "int", nullable: false),
+                    ExamPlanID = table.Column<int>(type: "int", nullable: false),
                     QuestionID = table.Column<int>(type: "int", nullable: false),
                     Approved = table.Column<bool>(type: "bit", nullable: false),
-                    Comment = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                    Comment = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    SubmittedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ExamQuestions", x => x.ExamQuestionID);
                     table.ForeignKey(
-                        name: "FK_ExamQuestions_ExamPlans_PlanID",
-                        column: x => x.PlanID,
+                        name: "FK_ExamQuestions_ExamPlans_ExamPlanID",
+                        column: x => x.ExamPlanID,
                         principalTable: "ExamPlans",
-                        principalColumn: "PlanID",
+                        principalColumn: "ExamPlanID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ExamQuestions_Questions_QuestionID",
@@ -418,7 +430,8 @@ namespace CNPM_QBCA.Migrations
                     ExamQuestionID = table.Column<int>(type: "int", nullable: false),
                     ReviewerID = table.Column<int>(type: "int", nullable: false),
                     ReviewResult = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    ReviewNotes = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                    ReviewNotes = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    ReviewedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -468,9 +481,9 @@ namespace CNPM_QBCA.Migrations
                 column: "DifficultyLevelID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExamPlanDistributions_PlanID",
+                name: "IX_ExamPlanDistributions_ExamPlanID",
                 table: "ExamPlanDistributions",
-                column: "PlanID");
+                column: "ExamPlanID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ExamPlans_CreatedBy",
@@ -483,9 +496,9 @@ namespace CNPM_QBCA.Migrations
                 column: "SubjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExamQuestions_PlanID",
+                name: "IX_ExamQuestions_ExamPlanID",
                 table: "ExamQuestions",
-                column: "PlanID");
+                column: "ExamPlanID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ExamQuestions_QuestionID",
@@ -576,6 +589,11 @@ namespace CNPM_QBCA.Migrations
                 name: "IX_TaskAssignments_AssignedTo",
                 table: "TaskAssignments",
                 column: "AssignedTo");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TaskAssignments_ExamPlanID",
+                table: "TaskAssignments",
+                column: "ExamPlanID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_RoleID",
