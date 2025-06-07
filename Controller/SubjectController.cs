@@ -169,7 +169,6 @@ namespace QBCA.Controllers
             if (subject == null)
                 return NotFound();
 
-            // Kiểm tra xem Subject này có CLO liên quan không
             var cloExists = await _context.CLOs.AnyAsync(c => c.SubjectID == id);
             if (cloExists)
             {

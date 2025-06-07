@@ -20,7 +20,7 @@ namespace QBCA.Controllers
         public async Task<IActionResult> SubmissionTable()
         {
             var submissions = await _context.SubmissionTables
-                .Include(s => s.ExamPlan)   // Đổi từ Plan sang ExamPlan
+                .Include(s => s.ExamPlan)  
                 .Include(s => s.Creator)
                 .Include(s => s.Approver)
                 .Include(s => s.Questions)
@@ -29,6 +29,5 @@ namespace QBCA.Controllers
             return View(submissions);
         }
 
-        // (Có thể bổ sung Create/Edit/Details nếu cần)
     }
 }
