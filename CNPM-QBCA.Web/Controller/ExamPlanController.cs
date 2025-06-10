@@ -115,12 +115,12 @@ namespace QBCA.Controllers
                     await _context.SaveChangesAsync();
                 }
 
-                // Gửi notification
+                // Send notifications
                 var subjectName = _context.Subjects.Find(examPlan.SubjectID)?.SubjectName;
 
                 foreach (var dist in model.Distributions)
                 {
-                    // Gửi cho tất cả Manager được chọn
+                    // Send to all selected Managers
                     if (dist.AssignedManagerRoleID.HasValue)
                     {
                         var users = _context.Users.Where(u => u.RoleID == dist.AssignedManagerRoleID.Value && u.IsActive).ToList();
@@ -136,7 +136,7 @@ namespace QBCA.Controllers
                         }
                     }
 
-                    // Gửi cho tất cả RD (RoleID == 1)
+                    // Send to all RDs (RoleID == 1)
                     var rds = _context.Users.Where(u => u.RoleID == 1 && u.IsActive).ToList();
                     foreach (var rd in rds)
                     {
@@ -230,14 +230,14 @@ namespace QBCA.Controllers
                 }
                 await _context.SaveChangesAsync();
 
-                // Xóa notification cũ liên quan đến plan này
+                // Delete old notifications related to this exam plan
                 var oldNotifications = _context.Notifications
                     .Where(n => n.RelatedEntityType == "ExamPlan" && n.RelatedEntityID == examPlan.ExamPlanID)
                     .ToList();
                 _context.Notifications.RemoveRange(oldNotifications);
                 await _context.SaveChangesAsync();
 
-                // Gửi lại notification mới
+                // ReSend notifications
                 var subjectName = _context.Subjects.Find(examPlan.SubjectID)?.SubjectName;
                 var userIdClaim = User?.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
                 int createdBy = 0;
@@ -245,7 +245,7 @@ namespace QBCA.Controllers
 
                 foreach (var dist in model.Distributions)
                 {
-                    // Gửi cho tất cả Manager được chọn
+                    // Send to all selected Managers
                     if (dist.AssignedManagerRoleID.HasValue)
                     {
                         var users = _context.Users.Where(u => u.RoleID == dist.AssignedManagerRoleID.Value && u.IsActive).ToList();
@@ -261,7 +261,7 @@ namespace QBCA.Controllers
                         }
                     }
 
-                    // Gửi cho tất cả RD (RoleID == 1)
+                    // Send to all RDs (RoleID == 1)
                     var rds = _context.Users.Where(u => u.RoleID == 1 && u.IsActive).ToList();
                     foreach (var rd in rds)
                     {
@@ -300,7 +300,7 @@ namespace QBCA.Controllers
                 _context.ExamPlanDistributions.RemoveRange(examPlan.Distributions);
                 _context.ExamPlans.Remove(examPlan);
 
-                // Xóa notification liên quan đến plan này
+                // Delete notifications related to this exam plan
                 var notifications = _context.Notifications
                     .Where(n => n.RelatedEntityType == "ExamPlan" && n.RelatedEntityID == examPlan.ExamPlanID)
                     .ToList();

@@ -16,7 +16,7 @@ namespace QBCA.Controllers
             _context = context;
         }
 
-        // CHO R&D: chỉ xem
+        // R&D: Only view
         public async Task<IActionResult> QuestionBank()
         {
             var questions = await _context.Questions
@@ -29,7 +29,7 @@ namespace QBCA.Controllers
             return View("QuestionBank", questions); // Views/Question/QuestionBank.cshtml
         }
 
-        // CHO SUBJECT LEADER: chỉ xem
+        // SUBJECT LEADER: Only view
         public async Task<IActionResult> ReviewQuestions()
         {
             var questions = await _context.Questions
@@ -42,7 +42,7 @@ namespace QBCA.Controllers
             return View("ReviewQuestions", questions); // Views/Question/ReviewQuestions.cshtml
         }
 
-        // CHO LECTURER: xem + CRUD
+        // LECTURER: View + CRUD
         public async Task<IActionResult> Questions()
         {
             var questions = await _context.Questions
@@ -68,13 +68,13 @@ namespace QBCA.Controllers
         public async Task<IActionResult> Create(Question question)
         {
             question.CreatedAt = System.DateTime.UtcNow;
-            question.CreatedBy = 1; // Thay bằng lấy từ user đăng nhập nếu có
+            question.CreatedBy = 1; // Chage this to the actual user ID
 
             if (!ModelState.IsValid)
             {
                 LoadDropdowns();
 
-                // XÓA giá trị navigation property để tránh lỗi required navigation
+                // Delete navigation properties to avoid circular references
                 question.Subject = null;
                 question.CLO = null;
                 question.DifficultyLevel = null;
@@ -182,9 +182,6 @@ namespace QBCA.Controllers
             return RedirectToAction(nameof(Questions));
         }
 
-        /// <summary>
-        /// Nạp lại dữ liệu cho các dropdown để tránh NullReferenceException trong View
-        /// </summary>
         private void LoadDropdowns()
         {
             ViewBag.Subjects = _context.Subjects.ToList();

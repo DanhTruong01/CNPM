@@ -89,8 +89,7 @@ namespace QBCA.Controllers
                 {
                     var qTopic = ExtractMainTopic(q.Content);
 
-                    // Nếu cả hai câu hỏi đều có chủ đề chính (tức là dạng "công thức tính ...")
-                    // và chủ đề không giống nhau thì KHÔNG báo duplicate dù similarity cao
+                    // Continue if the main topics do not match
                     if (!string.IsNullOrWhiteSpace(targetTopic) && !string.IsNullOrWhiteSpace(qTopic) && targetTopic != qTopic)
                     {
                         continue;
@@ -162,10 +161,6 @@ namespace QBCA.Controllers
             }
         }
 
-        /// <summary>
-        /// Tách keyword/chủ đề chính sau "công thức tính ..." hoặc "tính ..."
-        /// Nếu không phải dạng câu hỏi công thức thì trả về rỗng.
-        /// </summary>
         public string ExtractMainTopic(string content)
         {
             content = content.ToLowerInvariant();
