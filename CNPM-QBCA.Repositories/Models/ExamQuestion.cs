@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -8,6 +8,8 @@ namespace QBCA.Models
     {
         [Key]
         public int ExamQuestionID { get; set; }
+        [Required]
+        public int ExamID { get; set; }  
 
         [Required]
         public int ExamPlanID { get; set; }
@@ -25,5 +27,6 @@ namespace QBCA.Models
         public ExamPlan ExamPlan { get; set; }
         public Question Question { get; set; }
         public ICollection<ExamReview> ExamReviews { get; set; } = new List<ExamReview>();
+        public Exam Exam { get; set; }  
     }
 }
