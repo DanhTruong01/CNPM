@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using QBCA.Models;
 
 namespace QBCA.Data
@@ -25,6 +25,7 @@ namespace QBCA.Data
         public DbSet<TaskAssignment> TaskAssignments { get; set; }
         public DbSet<DuplicateCheckResult> DuplicateCheckResults { get; set; }
         public DbSet<ExamPlanDistribution> ExamPlanDistributions { get; set; }
+        public DbSet<Exam> Exams { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -238,6 +239,27 @@ namespace QBCA.Data
                 .Property(pd => pd.Status)
                 .HasDefaultValue("Assigned")
                 .IsRequired();
+
+            // 1-1: Exam - ExamPlanDistribution
+            modelBuilder.Entity<Exam>()
+                .HasOne(e => e.ExamPlanDistribution)
+                .WithOne(pd => pd.Exam)
+                .HasForeignKey<Exam>(e => e.DistributionID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // n-1: Exam - Submitter
+            modelBuilder.Entity<Exam>()
+                .HasOne(e => e.Submitter)
+                .WithMany()
+                .HasForeignKey(e => e.SubmittedBy)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // 1-n: Exam - ExamQuestions
+            modelBuilder.Entity<Exam>()
+                .HasMany(e => e.ExamQuestions)
+                .WithOne(eq => eq.Exam)
+                .HasForeignKey(eq => eq.ExamID)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
