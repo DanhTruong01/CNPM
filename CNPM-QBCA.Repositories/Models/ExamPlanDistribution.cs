@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace QBCA.Models
 {
@@ -22,5 +22,7 @@ namespace QBCA.Models
         public Role AssignedManagerRole { get; set; }
 
         public string Status { get; set; }
+
+        public Exam Exam { get; set; } 
     }
 }
