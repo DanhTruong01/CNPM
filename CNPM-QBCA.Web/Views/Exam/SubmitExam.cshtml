@@ -1,4 +1,4 @@
-﻿@model QBCA.Models.ExamCreateViewModel
+@model QBCA.Models.ExamCreateViewModel
 @{
     ViewBag.Title = "Submit New Exam";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
@@ -104,7 +104,7 @@
             @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger small" })
 
             <button type="submit" class="neumorphic-button">Submit Exam</button>
-            <a href="@Url.Action("Index", "Exam")" class="btn btn-link w-100 text-center" style="font-weight:500;">Cancel</a>
+            <a href="@Url.Action("SubmittedExams", "Exam")" class="btn btn-link w-100 text-center" style="font-weight:500;">Cancel</a>
         }
     </div>
 </section>
@@ -155,4 +155,3 @@
     });
 </script>
 }
-
