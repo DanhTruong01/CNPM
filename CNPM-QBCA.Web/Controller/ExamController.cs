@@ -34,6 +34,7 @@ namespace QBCA.Controllers
         {
             var exams = await _context.Exams
                 .Include(e => e.ExamPlanDistribution)
+                    .ThenInclude(d => d.ExamPlan)
                 .Include(e => e.Submitter)
                 .ToListAsync();
             return View(exams);
