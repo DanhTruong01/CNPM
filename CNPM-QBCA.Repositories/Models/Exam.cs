@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -21,7 +21,6 @@ namespace QBCA.Models
 
         [Required]
         public int DistributionID { get; set; }
-        [Required]
         public ExamPlanDistribution ExamPlanDistribution { get; set; }
         public DateTime SubmitDate { get; set; } // Ngày nộp đề
         public int SubmittedBy { get; set; }     // Ai là người nộp
