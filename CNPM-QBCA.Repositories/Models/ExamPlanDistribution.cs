@@ -24,5 +24,6 @@ namespace QBCA.Models
         public string Status { get; set; }
 
         public Exam Exam { get; set; } 
+        public ICollection<TaskAssignment> TaskAssignments { get; set; } = new List<TaskAssignment>();
     }
 }
