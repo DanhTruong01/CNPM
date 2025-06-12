@@ -52,6 +52,13 @@ namespace QBCA.Data
                 .HasForeignKey(t => t.ExamPlanID)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // TaskAssignment - ExamPlanDistribution
+            modelBuilder.Entity<TaskAssignment>()
+                .HasOne(t => t.Distribution)
+                .WithMany(pd => pd.TaskAssignments)
+                .HasForeignKey(t => t.DistributionID)
+                .OnDelete(DeleteBehavior.Restrict);
+
             // DuplicateCheckResult - Question & SimilarQuestion
             modelBuilder.Entity<DuplicateCheckResult>()
                 .HasOne(d => d.Question)
