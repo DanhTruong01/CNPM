@@ -39,10 +39,38 @@ namespace QBCA.Controllers
         {
             var vm = new TaskAssignmentCreateViewModel
             {
-                AllUsers = _context.Users.Where(u => u.RoleID == 2).ToList()
+                AllUsers = _context.Users.Where(u => u.RoleID == 2).ToList(),
+                AvailableExamPlans = new List<ExamPlan>(),         
+                AvailableDistributions = new List<ExamPlanDistribution>() 
             };
+
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            if (int.TryParse(userIdClaim, out int userId))
+            {
+                // Lấy RoleID của user hiện tại
+                int? userRoleId = _context.Users
+                    .Where(u => u.UserID == userId)
+                    .Select(u => u.RoleID)
+                    .FirstOrDefault();
+
+                if (userRoleId.HasValue)
+                {
+                    vm.AvailableExamPlans = _context.ExamPlanDistributions
+                        .Include(d => d.ExamPlan)                     
+                        .Where(d => d.AssignedManagerRoleID == userRoleId)
+                        .Select(d => d.ExamPlan)
+                        .Distinct()
+                        .ToList();
+
+                    vm.AvailableDistributions = _context.ExamPlanDistributions
+                        .Where(d => d.AssignedManagerRoleID == userRoleId)
+                        .ToList();
+                }
+            }
+
             return View(vm);
         }
+
         // POST: /Task/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -53,23 +81,62 @@ namespace QBCA.Controllers
                 ModelState.AddModelError("DueDate", "Due Date must be today or later.");
             }
 
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            
+            int userId = 0;
             if (!ModelState.IsValid)
             {
                 vm.AllUsers = _context.Users.Where(u => u.RoleID == 2).ToList();
+
+                if (int.TryParse(userIdClaim, out userId))
+                {
+                    int? userRoleId = _context.Users
+                        .Where(u => u.UserID == userId)
+                        .Select(u => u.RoleID)
+                        .FirstOrDefault();
+
+                    if (userRoleId.HasValue)
+                    {
+                        vm.AvailableExamPlans = _context.ExamPlanDistributions
+                            .Include(d => d.ExamPlan)
+                            .Where(d => d.AssignedManagerRoleID == userRoleId)
+                            .Select(d => d.ExamPlan)
+                            .Distinct()
+                            .ToList();
+
+                        vm.AvailableDistributions = _context.ExamPlanDistributions
+                            .Where(d => d.AssignedManagerRoleID == userRoleId)
+                            .ToList();
+                    }
+                }
                 return View(vm);
             }
 
-            var userIdClaim = User.FindFirst("UserID")?.Value;
             int createdBy = 0;
-            if (int.TryParse(userIdClaim, out int userId))
+            if (int.TryParse(userIdClaim, out userId))
                 createdBy = userId;
 
             // Xử lý ép kiểu int? -> int cho ExamPlanID
             int examPlanId = vm.ExamPlanID ?? 0;
+            if (examPlanId == 0)
+            {
+                ModelState.AddModelError("ExamPlanID", "Exam Plan is required.");
+                vm.AllUsers = _context.Users.Where(u => u.RoleID == 2).ToList();
+                return View(vm);
+            }
+
+            // Xử lý ép kiểu int? -> int cho DistributionID
+            if (vm.DistributionID == null || vm.DistributionID <= 0)
+            {
+                ModelState.AddModelError("DistributionID", "Distribution is required.");
+                vm.AllUsers = _context.Users.Where(u => u.RoleID == 2).ToList();
+                return View(vm);
+            }
 
             var task = new TaskAssignment
             {
                 ExamPlanID = examPlanId,
+                DistributionID = vm.DistributionID.Value,
                 AssignedBy = createdBy,
                 AssignedTo = vm.AssignedTo,
                 Role = vm.Role,
@@ -109,6 +176,7 @@ namespace QBCA.Controllers
             {
                 AssignmentID = task.AssignmentID,
                 ExamPlanID = task.ExamPlanID,
+                DistributionID = task.DistributionID,
                 AssignedTo = task.AssignedTo,
                 Role = task.Role,
                 Description = task.Description,
@@ -187,7 +255,6 @@ namespace QBCA.Controllers
 
             var tasks = await _context.TaskAssignments
                 .Include(t => t.Assigner)
-                .Include(t => t.ExamPlan)
                 .Where(t => t.AssignedTo == userId)
                 .OrderByDescending(t => t.DueDate)
                 .ToListAsync();
@@ -205,6 +272,7 @@ namespace QBCA.Controllers
             var tasks = await _context.TaskAssignments
                 .Include(t => t.Assignee)
                 .Include(t => t.ExamPlan)
+                .Include(t => t.Distribution)
                 .Where(t => t.AssignedBy == userId)
                 .ToListAsync();
             return View("AssignToLecturers", tasks); // Views/Task/AssignToLecturers.cshtml
