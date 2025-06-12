@@ -26,17 +26,26 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="top:9px;"></button>
             </div>
         }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show py-2 px-3" role="alert" style="border-radius:10px;">
+                <i class="fas fa-exclamation-circle me-2"></i> @TempData["Error"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="top:9px;"></button>
+            </div>
+        }
 
         <div class="table-container">
             <table class="table subject-table mb-0">
                 <thead>
                     <tr>
-                        <th style="width:7%;">ID</th>
-                        <th style="width:20%;">Task Type</th>
-                        <th style="width:20%;">Status</th>
-                        <th style="width:15%;">Due Date</th>
-                        <th style="width:23%;">Assigned To</th>
-                        <th style="width:15%;">Created At</th>
+                        <th style="width:5%;">ID</th>
+                        <th style="width:10%;">Task Type</th>
+                        <th style="width:10%;">Status</th>
+                        <th style="width:10%;">Due Date</th>
+                        <th style="width:10%;">Assigned To</th>
+                        <th style="width:10%;">Exam Plan</th>
+                        <th style="width:10%;">Distribution</th>
+                        <th style="width:10%;">Created At</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +59,8 @@
                                 <td>@task.Status</td>
                                 <td>@(task.DueDate?.AddHours(7).ToString("yyyy-MM-dd") ?? "-")</td>
                                 <td>@task.Assignee?.FullName</td>
+                                <td>@task.ExamPlan?.Name</td>
+                                <td>@task.Distribution?.DistributionID</td>
                                 <td>@task.CreatedAt.AddHours(7).ToString("yyyy-MM-dd HH:mm")</td>
                             </tr>
                         }
@@ -57,7 +68,7 @@
                     else
                     {
                         <tr>
-                            <td colspan="6" class="text-center py-4 text-muted">
+                            <td colspan="8" class="text-center py-4 text-muted">
                                 <i class="fas fa-tasks fa-lg mb-2"></i><br />
                                 <span style="font-size:1.11rem;">No tasks assigned to you.</span>
                             </td>
