@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -32,9 +32,13 @@ namespace QBCA.Controllers
         // GET: Exam
         public async Task<IActionResult> SubmittedExams()
         {
-            var exams = await _context.Exams.Include(e => e.ExamPlanDistribution).ToListAsync();
+            var exams = await _context.Exams
+                .Include(e => e.ExamPlanDistribution)
+                .Include(e => e.Submitter)
+                .ToListAsync();
             return View(exams);
         }
+
         // GET: Exam/Details/5
         public async Task<IActionResult> Details(int id)
         {
@@ -50,6 +54,7 @@ namespace QBCA.Controllers
             }
             return View(exam);
         }
+
         // GET: Exam/Create
         public IActionResult SubmitExam()
         {
@@ -82,6 +87,16 @@ namespace QBCA.Controllers
                 if (int.TryParse(userIdClaim, out int userId))
                     submittedBy = userId;
 
+                var distribution = await _context.ExamPlanDistributions
+                    .FirstOrDefaultAsync(d => d.DistributionID == model.DistributionID);
+                
+                if (distribution == null)
+                {
+                    ModelState.AddModelError("DistributionID", "Invalid Distribution selected.");
+                    ViewBag.Distributions = _context.ExamPlanDistributions.ToList();
+                    return View(model);
+                }
+
                 var exam = new Exam
                 {
                     Title = model.Title,
@@ -103,7 +118,8 @@ namespace QBCA.Controllers
                     _context.ExamQuestions.Add(new ExamQuestion
                     {
                         ExamID = exam.ExamID,
-                        QuestionID = qid
+                        QuestionID = qid,
+                        ExamPlanID = distribution.ExamPlanID
                     });
                 }
 
@@ -121,12 +137,25 @@ namespace QBCA.Controllers
                 }
 
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(SubmittedExams));
             }
 
-            ViewBag.Distributions = _context.ExamPlanDistributions.ToList();
+            // Gửi lại dữ liệu xuống view nếu lỗi
+            ViewBag.Distributions = _context.ExamPlanDistributions
+                .Where(d => d.AssignedManagerRoleID == 4)
+                .Select(d => new
+                {
+                    d.DistributionID,
+                    d.NumberOfQuestions
+                }).ToList();
+
+            ViewBag.Questions = _context.Questions
+                .Select(q => new { q.QuestionID, q.Content })
+                .ToList();
+
             return View(model);
         }
+
         // GET: Exam/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
@@ -174,6 +203,7 @@ namespace QBCA.Controllers
             ViewBag.Users = _context.Users.ToList();
             return View(exam);
         }
+
         // GET: Exam/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
