@@ -1,4 +1,4 @@
-﻿@model List<QBCA.Models.Exam>
+@model List<QBCA.Models.Exam>
 @{
     ViewBag.Title = "Submitted Exams";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
@@ -35,8 +35,8 @@
                                 <td>@exam.StartDate.ToString("yyyy-MM-dd")</td>
                                 <td>@exam.EndDate.ToString("yyyy-MM-dd")</td>
                                 <td>@exam.SubmitDate.ToString("yyyy-MM-dd")</td>
-                                <td>@exam.Submitter?.FullName ?? "-"</td>
-                                <td>@exam.Status ?? "-"</td>
+                                <td>@exam.Submitter?.FullName</td>
+                                <td>@exam.Status</td>
                                 <td>
                                     @if (!string.IsNullOrWhiteSpace(exam.Description))
                                     {
