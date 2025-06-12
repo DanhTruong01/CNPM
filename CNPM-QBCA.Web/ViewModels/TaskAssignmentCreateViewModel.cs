@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -10,7 +10,13 @@ namespace QBCA.Models
 
         // Liên kết với ExamPlan
         [Display(Name = "Exam Plan")]
+        [Required(ErrorMessage = "Exam Plan is required.")]
         public int? ExamPlanID { get; set; }
+
+        // Liên kết với Distribution
+        [Display(Name = "Exam Plan Distribution")]
+        [Required(ErrorMessage = "Distribution is required.")]
+        public int? DistributionID { get; set; }
 
         [Required(ErrorMessage = "Assignee is required.")]
         [Display(Name = "Assign To")]
@@ -18,6 +24,7 @@ namespace QBCA.Models
 
         // Vai trò (Reviewer, Creator, Manager,...)
         [Display(Name = "Role")]
+        [Required(ErrorMessage = "Role is required.")]
         public string Role { get; set; }
 
         [Required(ErrorMessage = "Task type is required.")]
@@ -26,6 +33,7 @@ namespace QBCA.Models
 
         // Mô tả nhiệm vụ
         [Display(Name = "Description")]
+        [Required(ErrorMessage = "Description is required.")]
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Status is required.")]
@@ -33,6 +41,7 @@ namespace QBCA.Models
 
         [DataType(DataType.Date)]
         [Display(Name = "Due Date")]
+        [Required(ErrorMessage = "Due Date is required.")]
         public DateTime? DueDate { get; set; }
 
         // Trường này sẽ được gán ở controller dựa vào người đăng nhập
@@ -50,5 +59,14 @@ namespace QBCA.Models
         {
             "Pending", "In Progress", "Completed"
         };
+
+        public List<string> RoleOptions { get; set; } = new List<string>
+        {
+            "Reviewer", "Creator", "Manager"
+        };
+
+        public List<ExamPlan> AvailableExamPlans { get; set; } = new List<ExamPlan>();
+        public List<ExamPlanDistribution> AvailableDistributions { get; set; } = new List<ExamPlanDistribution>();
+
     }
 }
