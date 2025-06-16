@@ -7,6 +7,7 @@ using QBCA.Models;
 
 namespace QBCA.Controllers
 {
+
     public class ExamManagerController : Controller
     {
         private readonly ApplicationDbContext _context;

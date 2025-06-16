@@ -8,6 +8,7 @@ using QBCA.Models;
 
 namespace QBCA.Controllers
 {
+
     public class ExamPlanController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -12,6 +12,7 @@ using System;
 
 namespace QBCA.Controllers
 {
+
     public class DuplicateCheckController : Controller
     {
         private readonly ApplicationDbContext _context;

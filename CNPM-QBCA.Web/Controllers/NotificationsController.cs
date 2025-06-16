@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace QBCA.Controllers
 {
+
     [Authorize]
     public class NotificationsController : Controller
     {

@@ -4,6 +4,19 @@
     "title": "CNPM-QBCA.Web",
     "version": "1.0"
   },
-  "paths": { },
+  "paths": {
+    "/api/TestApi/hello": {
+      "get": {
+        "tags": [
+          "TestApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
   "components": { }
 }

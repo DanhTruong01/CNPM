@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace QBCA.Controllers
 {
+
     public class SubmissionController : Controller
     {
         private readonly ApplicationDbContext _context;

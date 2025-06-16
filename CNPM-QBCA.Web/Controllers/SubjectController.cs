@@ -9,6 +9,7 @@ using System;
 
 namespace QBCA.Controllers
 {
+
     [Authorize]
     public class SubjectController : Controller
     {

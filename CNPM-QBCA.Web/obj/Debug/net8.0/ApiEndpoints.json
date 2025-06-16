@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "QBCA.Web.Controllers.TestApiController",
+    "Method": "Hello",
+    "RelativePath": "api/TestApi/hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

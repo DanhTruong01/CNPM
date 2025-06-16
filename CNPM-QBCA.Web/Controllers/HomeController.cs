@@ -10,6 +10,7 @@ using QBCA.Data;
 
 namespace QBCA.Controllers
 {
+
     [Authorize]
     public class HomeController : Controller
     {

@@ -9,10 +9,11 @@ using System;
 
 namespace QBCA.Controllers
 {
-    public class DifficultyLevelController : Controller
+
+    public class CLOController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public DifficultyLevelController(ApplicationDbContext context)
+        public CLOController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -32,20 +33,20 @@ namespace QBCA.Controllers
             _context.Notifications.Add(noti);
         }
 
-        // GET: /DifficultyLevel/DLs
-        public async Task<IActionResult> DLs()
+        // GET: /CLO/CLOs
+        public async Task<IActionResult> CLOs()
         {
-            var list = await _context.DifficultyLevels
-                .Include(dl => dl.Subject)
-                .Include(dl => dl.Questions)
+            var list = await _context.CLOs
+                .Include(c => c.Subject)
+                .Include(c => c.Questions)
                 .ToListAsync();
             return View(list);
         }
 
-        // GET: /DifficultyLevel/Create
+        // GET: /CLO/Create
         public IActionResult Create()
         {
-            var vm = new DifficultyLevelCreateViewModel
+            var vm = new CLOCreateViewModel
             {
                 AllSubjects = _context.Subjects.ToList(),
                 AllQuestions = _context.Questions.ToList()
@@ -53,34 +54,34 @@ namespace QBCA.Controllers
             return View(vm);
         }
 
-        // POST: /DifficultyLevel/Create
+        // POST: /CLO/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(DifficultyLevelCreateViewModel vm)
+        public async Task<IActionResult> Create(CLOCreateViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                var dl = new DifficultyLevel
+                var clo = new CLO
                 {
-                    LevelName = vm.LevelName,
+                    Code = vm.Code,
+                    Description = vm.Description,
                     SubjectID = vm.SubjectID.Value,
                     Questions = new List<Question>()
                 };
 
                 if (vm.SelectedQuestionIDs != null && vm.SelectedQuestionIDs.Count > 0)
                 {
-                    dl.Questions = await _context.Questions
+                    clo.Questions = await _context.Questions
                         .Where(q => vm.SelectedQuestionIDs.Contains(q.QuestionID))
                         .ToListAsync();
                 }
 
-                _context.DifficultyLevels.Add(dl);
+                _context.CLOs.Add(clo);
                 await _context.SaveChangesAsync();
 
                 var notifyUsers = _context.Users.Where(u => u.RoleID == 1 || u.RoleID == 3).ToList();
-                string subjectName = _context.Subjects.Find(dl.SubjectID)?.SubjectName;
+                string subjectName = _context.Subjects.Find(clo.SubjectID)?.SubjectName;
 
-                // LẤY userID NGƯỜI TẠO
                 var userIdClaim = User?.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
                 int.TryParse(userIdClaim, out int createdBy);
 
@@ -88,16 +89,16 @@ namespace QBCA.Controllers
                 {
                     AddNotification(
                         user.UserID,
-                        $"Difficulty level \"{dl.LevelName}\" for subject \"{subjectName}\" has been created.",
-                        "DifficultyLevel",
-                        dl.DifficultyLevelID,
+                        $"CLO \"{clo.Code}\" for subject \"{subjectName}\" has been created.",
+                        "CLO",
+                        clo.CLOID,
                         createdBy
                     );
                 }
                 await _context.SaveChangesAsync();
 
-                TempData["Success"] = "DifficultyLevel created successfully!";
-                return RedirectToAction("DLs");
+                TempData["Success"] = "CLO created successfully!";
+                return RedirectToAction("CLOs");
             }
 
             vm.AllSubjects = _context.Subjects.ToList();
@@ -105,24 +106,25 @@ namespace QBCA.Controllers
             return View(vm);
         }
 
-        // GET: /DifficultyLevel/Edit/5
+        // GET: /CLO/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            var dl = await _context.DifficultyLevels
-                .Include(d => d.Questions)
-                .FirstOrDefaultAsync(d => d.DifficultyLevelID == id);
+            var clo = await _context.CLOs
+                .Include(c => c.Questions)
+                .FirstOrDefaultAsync(c => c.CLOID == id);
 
-            if (dl == null)
+            if (clo == null)
             {
                 return NotFound();
             }
 
-            var vm = new DifficultyLevelCreateViewModel
+            var vm = new CLOCreateViewModel
             {
-                DifficultyLevelID = dl.DifficultyLevelID,
-                LevelName = dl.LevelName,
-                SubjectID = dl.SubjectID,
-                SelectedQuestionIDs = dl.Questions?.Select(q => q.QuestionID).ToList() ?? new List<int>(),
+                CLOID = clo.CLOID,
+                Code = clo.Code,
+                Description = clo.Description,
+                SubjectID = clo.SubjectID,
+                SelectedQuestionIDs = clo.Questions?.Select(q => q.QuestionID).ToList() ?? new List<int>(),
                 AllSubjects = _context.Subjects.ToList(),
                 AllQuestions = _context.Questions.ToList()
             };
@@ -130,10 +132,10 @@ namespace QBCA.Controllers
             return View(vm);
         }
 
-        // POST: /DifficultyLevel/Edit/5
+        // POST: /CLO/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(DifficultyLevelCreateViewModel vm)
+        public async Task<IActionResult> Edit(CLOCreateViewModel vm)
         {
             if (!ModelState.IsValid)
             {
@@ -142,20 +144,21 @@ namespace QBCA.Controllers
                 return View(vm);
             }
 
-            var dl = await _context.DifficultyLevels
-                .Include(d => d.Questions)
-                .FirstOrDefaultAsync(d => d.DifficultyLevelID == vm.DifficultyLevelID);
+            var clo = await _context.CLOs
+                .Include(c => c.Questions)
+                .FirstOrDefaultAsync(c => c.CLOID == vm.CLOID);
 
-            if (dl == null)
+            if (clo == null)
             {
                 return NotFound();
             }
 
-            dl.LevelName = vm.LevelName;
-            dl.SubjectID = vm.SubjectID.Value;
+            clo.Code = vm.Code;
+            clo.Description = vm.Description;
+            clo.SubjectID = vm.SubjectID.Value;
 
-            // Update questions
-            dl.Questions.Clear();
+            // Update 
+            clo.Questions.Clear();
             if (vm.SelectedQuestionIDs != null && vm.SelectedQuestionIDs.Count > 0)
             {
                 var selectedQuestions = await _context.Questions
@@ -163,16 +166,15 @@ namespace QBCA.Controllers
                     .ToListAsync();
                 foreach (var q in selectedQuestions)
                 {
-                    dl.Questions.Add(q);
+                    clo.Questions.Add(q);
                 }
             }
 
             await _context.SaveChangesAsync();
 
             var notifyUsers = _context.Users.Where(u => u.RoleID == 1 || u.RoleID == 3).ToList();
-            string subjectName = _context.Subjects.Find(dl.SubjectID)?.SubjectName;
+            string subjectName = _context.Subjects.Find(clo.SubjectID)?.SubjectName;
 
-            // LẤY userID NGƯỜI SỬA
             var userIdClaim = User?.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
             int.TryParse(userIdClaim, out int createdBy);
 
@@ -180,43 +182,42 @@ namespace QBCA.Controllers
             {
                 AddNotification(
                     user.UserID,
-                    $"Difficulty level \"{dl.LevelName}\" for subject \"{subjectName}\" has been updated.",
-                    "DifficultyLevel",
-                    dl.DifficultyLevelID,
+                    $"CLO \"{clo.Code}\" for subject \"{subjectName}\" has been updated.",
+                    "CLO",
+                    clo.CLOID,
                     createdBy
                 );
             }
             await _context.SaveChangesAsync();
 
-            TempData["Success"] = "Difficulty Level updated successfully!";
-            return RedirectToAction("DLs");
+            TempData["Success"] = "CLO updated successfully!";
+            return RedirectToAction("CLOs");
         }
 
-        // POST: /DifficultyLevel/Delete/5
+        // POST: /CLO/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
-            var dl = await _context.DifficultyLevels
-                .Include(d => d.Questions)
-                .FirstOrDefaultAsync(d => d.DifficultyLevelID == id);
+            var clo = await _context.CLOs
+                .Include(c => c.Questions)
+                .FirstOrDefaultAsync(c => c.CLOID == id);
 
-            if (dl == null)
+            if (clo == null)
                 return NotFound();
 
-            string levelName = dl.LevelName;
-            string subjectName = _context.Subjects.Find(dl.SubjectID)?.SubjectName;
+            string cloCode = clo.Code;
+            string subjectName = _context.Subjects.Find(clo.SubjectID)?.SubjectName;
 
-            dl.Questions?.Clear();
+            clo.Questions?.Clear();
 
             try
             {
-                _context.DifficultyLevels.Remove(dl);
+                _context.CLOs.Remove(clo);
                 await _context.SaveChangesAsync();
 
                 var notifyUsers = _context.Users.Where(u => u.RoleID == 1 || u.RoleID == 3).ToList();
 
-                // LẤY userID NGƯỜI XÓA
                 var userIdClaim = User?.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
                 int.TryParse(userIdClaim, out int createdBy);
 
@@ -224,26 +225,26 @@ namespace QBCA.Controllers
                 {
                     AddNotification(
                         user.UserID,
-                        $"Difficulty level \"{levelName}\" for subject \"{subjectName}\" has been deleted.",
-                        "DifficultyLevel",
+                        $"CLO \"{cloCode}\" for subject \"{subjectName}\" has been deleted.",
+                        "CLO",
                         id,
                         createdBy
                     );
                 }
                 await _context.SaveChangesAsync();
 
-                TempData["Success"] = "Difficulty Level deleted successfully!";
+                TempData["Success"] = "CLO deleted successfully!";
             }
             catch (DbUpdateException dbEx)
             {
-                TempData["Error"] = "Cannot delete this Difficulty Level because there are related data or foreign key constraints. Please check and remove all related questions or dependent records before deleting!";
+                TempData["Error"] = "Cannot delete this CLO because there are related data or foreign key constraints. Please check and remove all related questions or dependent records before deleting!";
             }
             catch (Exception ex)
             {
-                TempData["Error"] = "An error occurred while deleting the Difficulty Level: " + ex.Message;
+                TempData["Error"] = "An error occurred while deleting the CLO: " + ex.Message;
             }
 
-            return RedirectToAction("DLs");
+            return RedirectToAction("CLOs");
         }
     }
 }

@@ -9,6 +9,7 @@ using System;
 
 namespace QBCA.Controllers
 {
+
     public class TaskController : Controller
     {
         private readonly ApplicationDbContext _context;
