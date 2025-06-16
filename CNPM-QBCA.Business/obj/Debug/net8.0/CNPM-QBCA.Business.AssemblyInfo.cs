@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CNPM-QBCA.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c88049eea8080614da3720f8f4beedd6c9a108eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f1ae4d70017a47f2d33bce5c9e5b7c97bd19169")]
 [assembly: System.Reflection.AssemblyProductAttribute("CNPM-QBCA.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CNPM-QBCA.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
