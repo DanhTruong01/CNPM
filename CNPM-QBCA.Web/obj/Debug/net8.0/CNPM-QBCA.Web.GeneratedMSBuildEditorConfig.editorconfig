@@ -224,6 +224,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Task/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Task/MyTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xNeVRhc2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Task/TeamTasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xUZWFtVGFza3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

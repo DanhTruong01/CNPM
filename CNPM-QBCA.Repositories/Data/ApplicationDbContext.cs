@@ -1,3 +1,4 @@
+using CNPM_QBCA.Models;
 using Microsoft.EntityFrameworkCore;
 using QBCA.Models;
 
@@ -26,6 +27,7 @@ namespace QBCA.Data
         public DbSet<DuplicateCheckResult> DuplicateCheckResults { get; set; }
         public DbSet<ExamPlanDistribution> ExamPlanDistributions { get; set; }
         public DbSet<Exam> Exams { get; set; }
+        public DbSet<TaskModel> TaskModel { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
