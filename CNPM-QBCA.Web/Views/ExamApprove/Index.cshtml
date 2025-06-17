@@ -1,0 +1,71 @@
+﻿@using QBCA.Models
+@model List<ExamApproveTask>
+
+@{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    ViewData["Title"] = "Approve Exam List";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4 rounded-4" style="background: #f0f0f3;">
+        <h2 class="fw-bold mb-2">Approve Exams</h2>
+        <p class="text-muted mb-4">View and manage all submitted exams for approval.</p>
+
+        <div class="mb-3 text-end">
+            <a href="@Url.Action("Review", "ExamApprove")" class="btn btn-primary px-4 py-2 rounded-3 shadow-sm">
+                ➕ Review Latest Exam
+            </a>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="alert alert-light text-center fs-5 py-4 shadow-sm" style="background: white;">
+                <i class="fas fa-info-circle"></i> Không có đề thi nào đang chờ phê duyệt.
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover rounded-3 overflow-hidden">
+                    <thead class="text-white text-center" style="background-color: #4A6CF7;">
+                        <tr>
+                            <th>ID</th>
+                            <th>Exam Title</th>
+                            <th>Subject</th>
+                            <th>Reviewer</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="align-middle text-center bg-white">
+                                <td>@item.Id</td>
+                                <td class="text-start">@item.ExamTitle</td>
+                                <td>@item.SubjectName</td>
+                                <td>@item.Reviewer</td>
+                                <td>@item.DueDate.ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    <span class="badge rounded-pill
+                                                @(item.Status == "Approved" ? "bg-success"
+                                                                                  : item.Status == "Needs Correction" ? "bg-warning text-dark"
+                                                                                  : "bg-secondary")">
+                                @item.Status
+                            </span>
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Review", "ExamApprove", new { id = item.Id })"
+                               class="btn btn-sm btn-outline-info rounded-pill">
+                                <i class="fas fa-search"></i> Review
+                            </a>
+                        </td>
+                    </tr>
+                                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@model QBCA.Models.ReviewExam
+@{
+    ViewBag.Title = "Review Details";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<div class="center-container">
+    <div class="neumorphic-card text-start">
+        <h2 class="header-text text-center">Exam Review Details</h2>
+
+        <div class="info-group"><strong>Title:</strong> @Model.ExamTitle</div>
+        <div class="info-group"><strong>Subject:</strong> @Model.SubjectName</div>
+        <div class="info-group"><strong>Lecturer:</strong> @Model.LecturerName</div>
+        <div class="info-group"><strong>Submitted:</strong> @Model.SubmittedDate.ToShortDateString()</div>
+        <div class="info-group">
+            <strong>Status:</strong>
+            @if (Model.Status == "Pending")
+            {
+                <span class="badge bg-warning text-dark">Pending</span>
+            }
+            else if (Model.Status == "Approved")
+            {
+                <span class="badge bg-success">Approved</span>
+            }
+        </div>
+
+        <div class="mt-4 text-center">
+            <a href="@Url.Action("ReviewExam", "ExamReview")" class="neumorphic-button">Back</a>
+        </div>
+    </div>
+</div>
