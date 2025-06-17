@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\CNPM\\Project\\CNPM-QBCA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|e:\\cnpm\\project\\cnpm-qbca\\cnpm-qbca.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|e:\\cnpm\\project\\cnpm-qbca\\cnpm-qbca.web\\viewmodels\\clocreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\clocreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,6 +59,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Program.cs",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Program.cs",
+              "ToolTip": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Program.cs",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:56:28.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CLOCreateViewModel.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\ViewModels\\CLOCreateViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\CLOCreateViewModel.cs",
@@ -62,12 +79,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\ViewModels\\CLOCreateViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:22:15.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:22:15.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SubjectController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\SubjectController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\SubjectController.cs",
@@ -75,12 +91,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\SubjectController.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:19:33.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:19:33.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
@@ -88,12 +103,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:19:08.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:19:08.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\HomeController.cs",
@@ -101,12 +115,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:18:40.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:18:40.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ExamPlanController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
@@ -114,12 +127,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
               "ViewState": "AgIAACIBAAAAAAAAAAAAwDsBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:17:04.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:17:04.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ExamManagerController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\ExamManagerController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamManagerController.cs",
@@ -127,12 +139,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\ExamManagerController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAowA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:16:50.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:16:50.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ExamController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\ExamController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamController.cs",
@@ -140,12 +151,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\ExamController.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:16:35.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:16:35.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CLO.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\Models\\CLO.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\CLO.cs",
@@ -153,12 +163,11 @@
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\CLO.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAowBcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:14:56.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:14:56.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CLOController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\CLOController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\CLOController.cs",
@@ -166,8 +175,7 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\CLOController.cs",
               "ViewState": "AgIAAN8AAAAAAAAAAAAYwPkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:14:39.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:14:39.403Z"
             }
           ]
         }
