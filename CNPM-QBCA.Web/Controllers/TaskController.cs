@@ -335,7 +335,7 @@ namespace QBCA.Controllers
 
             var tasks = await _context.TaskAssignments
                 .Include(t => t.Assigner)
-                .Include(t => t.ExamPlanID)
+                .Include(t => t.ExamPlan)
                 .Include(t => t.Distribution)
                 .Where(t => t.AssignedTo == userId)
                 .OrderByDescending(t => t.DueDate)
