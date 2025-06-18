@@ -84,6 +84,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHVwbGljYXRlY2hlY2tcSG9tZUNoZWNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamApprove/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbUFwcHJvdmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamApprove/Review.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbUFwcHJvdmVcUmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamManager/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbU1hbmFnZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -102,6 +110,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamPlan/ExamPlans.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVBsYW5cRXhhbVBsYW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamReview/ReviewDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVJldmlld1xSZXZpZXdEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamReview/ReviewExam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVJldmlld1xSZXZpZXdFeGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamTasks/AssignedTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVRhc2tzXEFzc2lnbmVkVGFza3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamTasks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVRhc2tzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamTasks/Review.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVRhc2tzXFJldmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/ExamTasks/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVRhc2tzXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Exam/SubmitExam.cshtml]
@@ -150,6 +182,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Home/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/LecturerAssignment/AssignToLecturers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJBc3NpZ25tZW50XEFzc2lnblRvTGVjdHVyZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/LecturerAssignment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJBc3NpZ25tZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Notifications/Notifications.cshtml]
