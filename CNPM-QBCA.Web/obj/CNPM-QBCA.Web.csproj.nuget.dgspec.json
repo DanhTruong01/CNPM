@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj": {}
+    "E:\\CNPM\\CNPM\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj": {}
   },
   "projects": {
-    "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
+    "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+        "projectUniqueName": "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
         "projectName": "CNPM-QBCA.Business",
-        "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
-        "packagesPath": "C:\\Users\\letru\\.nuget\\packages\\",
-        "outputPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\obj\\",
+        "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
+        "outputPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\letru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
-                "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
+              "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+                "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
               }
             }
           }
@@ -75,24 +75,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+    "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
+        "projectUniqueName": "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
         "projectName": "CNPM-QBCA.Repositories",
-        "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
-        "packagesPath": "C:\\Users\\letru\\.nuget\\packages\\",
-        "outputPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\obj\\",
+        "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
+        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
+        "outputPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\letru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -156,24 +156,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {
+    "E:\\CNPM\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
+        "projectUniqueName": "E:\\CNPM\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
         "projectName": "CNPM-QBCA.Services",
-        "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
-        "packagesPath": "C:\\Users\\letru\\.nuget\\packages\\",
-        "outputPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\obj\\",
+        "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
+        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
+        "outputPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\letru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,8 +188,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
-                "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
+              "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
+                "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
               }
             }
           }
@@ -225,24 +225,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj": {
+    "E:\\CNPM\\CNPM\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj",
+        "projectUniqueName": "E:\\CNPM\\CNPM\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj",
         "projectName": "CNPM-QBCA.Web",
-        "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj",
-        "packagesPath": "C:\\Users\\letru\\.nuget\\packages\\",
-        "outputPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\obj\\",
+        "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj",
+        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
+        "outputPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\letru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -257,14 +257,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
-                "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
+              "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
+                "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
               },
-              "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
-                "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
+              "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+                "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
               },
-              "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {
-                "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj"
+              "E:\\CNPM\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {
+                "projectPath": "E:\\CNPM\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj"
               }
             }
           }
@@ -327,7 +327,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
