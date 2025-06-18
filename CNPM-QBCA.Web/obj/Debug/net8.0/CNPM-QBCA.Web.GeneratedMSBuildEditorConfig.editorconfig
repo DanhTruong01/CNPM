@@ -188,6 +188,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJBc3NpZ25tZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/CNPM/CNPM/CNPM-QBCA.Web/Views/MockExam/DoExam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja0V4YW1cRG9FeGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/CNPM/CNPM-QBCA.Web/Views/MockExam/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja0V4YW1cRmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/CNPM/CNPM-QBCA.Web/Views/MockExam/MyMockExams.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja0V4YW1cTXlNb2NrRXhhbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/CNPM/CNPM/CNPM-QBCA.Web/Views/Notifications/Notifications.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uc1xOb3RpZmljYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

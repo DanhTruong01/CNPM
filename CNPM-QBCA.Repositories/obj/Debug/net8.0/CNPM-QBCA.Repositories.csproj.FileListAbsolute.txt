@@ -22,3 +22,9 @@ E:\CNPM\CNPM\CNPM-QBCA.Repositories\obj\Debug\net8.0\CNPM-QBCA.Repositories.sour
 E:\CNPM\CNPM\CNPM-QBCA.Repositories\obj\Debug\net8.0\CNPM-QBCA.Repositories.dll
 E:\CNPM\CNPM\CNPM-QBCA.Repositories\obj\Debug\net8.0\refint\CNPM-QBCA.Repositories.dll
 E:\CNPM\CNPM\CNPM-QBCA.Repositories\obj\Debug\net8.0\CNPM-QBCA.Repositories.pdb
+E:\CNPM\CNPM\CNPM-QBCA.Repositories\bin\Debug\net8.0\CNPM-QBCA.Repositories.deps.json
+E:\CNPM\CNPM\CNPM-QBCA.Repositories\bin\Debug\net8.0\CNPM-QBCA.Repositories.runtimeconfig.json
+E:\CNPM\CNPM\CNPM-QBCA.Repositories\bin\Debug\net8.0\CNPM-QBCA.Repositories.dll
+E:\CNPM\CNPM\CNPM-QBCA.Repositories\bin\Debug\net8.0\CNPM-QBCA.Repositories.pdb
+E:\CNPM\CNPM\CNPM-QBCA.Repositories\obj\Debug\net8.0\CNPM-QBCA.Repositories.genruntimeconfig.cache
+E:\CNPM\CNPM\CNPM-QBCA.Repositories\obj\Debug\net8.0\ref\CNPM-QBCA.Repositories.dll

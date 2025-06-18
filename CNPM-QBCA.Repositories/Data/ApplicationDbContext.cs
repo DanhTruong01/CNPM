@@ -32,6 +32,9 @@ namespace QBCA.Data
         public DbSet<Exam> Exams { get; set; }
         public DbSet<TaskModel> TaskModel { get; set; }
         public DbSet<MockExam> MockExam { get; set; }
+        public DbSet<MockExamAnswer> MockExamAnswer { get; set; }
+        public DbSet<MockFeedback> MockFeedback { get; set; }
+        public DbSet<MockQuestion> MockQuestion { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
