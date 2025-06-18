@@ -136,6 +136,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVRhc2tzXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Exam/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Exam/SubmitExam.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxTdWJtaXRFeGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -146,10 +150,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Home/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc3NEZW5pZWQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Home/Home.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Home/Home_ExamHead.cshtml]
@@ -170,10 +170,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Home/Home_SubjectLeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lX1N1YmplY3RMZWFkZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Home/Logins.cshtml]
@@ -266,6 +262,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Task/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Task/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CNPM/Project/CNPM-QBCA/CNPM-QBCA.Web/Views/Task/MyTasks.cshtml]

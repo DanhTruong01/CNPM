@@ -8,7 +8,6 @@ using QBCA.Models;
 
 namespace QBCA.Controllers
 {
-
     public class ExamController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -161,55 +160,141 @@ namespace QBCA.Controllers
         // GET: Exam/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            var exam = await _context.Exams.FindAsync(id);
+            var exam = await _context.Exams
+                .Include(e => e.ExamQuestions)
+                .FirstOrDefaultAsync(e => e.ExamID == id);
+
             if (exam == null)
             {
                 return NotFound();
             }
-            ViewBag.Distributions = _context.ExamPlanDistributions.ToList();
-            ViewBag.Users = _context.Users.ToList();
-            return View(exam);
+
+            var model = new ExamCreateViewModel
+            {
+                ExamID = exam.ExamID,
+                Title = exam.Title,
+                StartDate = exam.StartDate,
+                EndDate = exam.EndDate,
+                DistributionID = exam.DistributionID,
+                Description = exam.Description,
+                QuestionIDs = exam.ExamQuestions.Select(eq => eq.QuestionID).ToList()
+            };
+
+            var distributions = _context.ExamPlanDistributions
+                                .Where(d => d.AssignedManagerRoleID == 4)
+                                .Select(d => new
+                                {
+                                    d.DistributionID,
+                                    d.NumberOfQuestions
+                                }).ToList();
+
+            ViewBag.Distributions = distributions;
+
+            ViewBag.Questions = _context.Questions
+                .Select(q => new { q.QuestionID, q.Content })
+                .ToList();
+
+            return View(model);
         }
-        // POST: Exam/Edit/5
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ExamID,Title,StartDate,EndDate,DistributionID,SubmitDate,SubmittedBy,Status,Description")] Exam exam)
+        public async Task<IActionResult> Edit(int id, ExamCreateViewModel model)
         {
-            if (id != exam.ExamID)
+            if (id != model.ExamID)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
+                var exam = await _context.Exams
+                    .Include(e => e.ExamQuestions)
+                    .FirstOrDefaultAsync(e => e.ExamID == id);
+
+                if (exam == null)
                 {
-                    _context.Update(exam);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
+
+                var userIdClaim = User.FindFirst("UserID")?.Value;
+                int submittedBy = 0;
+                if (int.TryParse(userIdClaim, out int userId))
+                    submittedBy = userId;
+
+                var distribution = await _context.ExamPlanDistributions
+                    .FirstOrDefaultAsync(d => d.DistributionID == model.DistributionID);
+
+                if (distribution == null)
                 {
-                    if (!ExamExists(exam.ExamID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError("DistributionID", "Invalid Distribution selected.");
+                    ViewBag.Distributions = _context.ExamPlanDistributions.ToList();
+                    ViewBag.Questions = _context.Questions.ToList();
+                    return View(model);
                 }
-                return RedirectToAction(nameof(Index));
+
+                // Cập nhật thông tin đề thi
+                exam.Title = model.Title;
+                exam.StartDate = model.StartDate;
+                exam.EndDate = model.EndDate;
+                exam.DistributionID = model.DistributionID;
+                exam.SubmitDate = DateTime.Now;
+                exam.SubmittedBy = submittedBy;
+                exam.Status = "Updated"; // hoặc giữ là "Submitted" nếu không có trạng thái khác
+                exam.Description = model.Description;
+
+                // Xoá các câu hỏi cũ
+                var oldQuestions = _context.ExamQuestions.Where(eq => eq.ExamID == exam.ExamID);
+                _context.ExamQuestions.RemoveRange(oldQuestions);
+
+                // Thêm câu hỏi mới
+                foreach (var qid in model.QuestionIDs)
+                {
+                    _context.ExamQuestions.Add(new ExamQuestion
+                    {
+                        ExamID = exam.ExamID,
+                        QuestionID = qid,
+                        ExamPlanID = distribution.ExamPlanID
+                    });
+                }
+
+                // Gửi thông báo
+                var rndUsers = _context.Users.Where(u => u.RoleID == 1).ToList();
+                foreach (var rnd in rndUsers)
+                {
+                    AddNotification(
+                        userId: rnd.UserID,
+                        message: $"Exam '{exam.Title}' has been updated.",
+                        relatedType: "Exam",
+                        relatedId: exam.ExamID,
+                        createdBy: submittedBy
+                    );
+                }
+
+                await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Exam updated successfully.";
+                return RedirectToAction(nameof(SubmittedExams));
             }
 
+            // Gửi lại dữ liệu nếu lỗi
             ViewBag.Distributions = _context.ExamPlanDistributions.ToList();
-            ViewBag.Users = _context.Users.ToList();
-            return View(exam);
+            ViewBag.Questions = _context.Questions.ToList();
+            return View(model);
         }
 
         // GET: Exam/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
+        {
+            var exam = await _context.Exams.FindAsync(id);
+            if (exam == null)
+            {
+                return NotFound();
+            }
+            return View(exam);
+        }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirm(int id)
         {
             var exam = await _context.Exams.FindAsync(id);
             if (exam == null)
@@ -218,12 +303,11 @@ namespace QBCA.Controllers
             }
             _context.Exams.Remove(exam);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(SubmittedExams));
         }
         private bool ExamExists(int id)
         {
             return _context.Exams.Any(e => e.ExamID == id);
         }
-
     }
 }
