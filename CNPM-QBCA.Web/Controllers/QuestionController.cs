@@ -189,5 +189,45 @@ namespace QBCA.Controllers
             ViewBag.CLOs = _context.CLOs.ToList();
             ViewBag.DifficultyLevels = _context.DifficultyLevels.ToList();
         }
+
+        // GET: /Question/ApproveQuestionList
+        public async Task<IActionResult> ApproveQuestionList()
+        {
+            var questions = await _context.Questions
+                .Where(q => q.Status == "Inactive")
+                .Include(q => q.Subject)
+                .Include(q => q.CLO)
+                .Include(q => q.DifficultyLevel)
+                .Include(q => q.Creator)
+                .OrderByDescending(q => q.CreatedAt)
+                .ToListAsync();
+        
+            return View("ApproveQuestionList", questions);
+        }
+        
+        // POST: /Question/ApproveQuestion
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ApproveQuestionList(List<int> selectedQuestionIds)
+        {
+            if (selectedQuestionIds == null || selectedQuestionIds.Count == 0)
+            {
+                TempData["Error"] = "No question was selected.";
+                return RedirectToAction(nameof(ApproveQuestionList));
+            }
+        
+            var questions = await _context.Questions
+                .Where(q => selectedQuestionIds.Contains(q.QuestionID))
+                .ToListAsync();
+        
+            foreach (var question in questions)
+            {
+                question.Status = "Active";
+            }
+        
+            await _context.SaveChangesAsync();
+            TempData["Success"] = "Approved questions successfully!";
+            return RedirectToAction(nameof(ApproveQuestionList));
+        }
     }
 }
