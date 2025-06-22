@@ -6,8 +6,7 @@ namespace CNPM_QBCA.Services
     {
         private static List<TaskModel> tasks = new List<TaskModel>
         {
-            new TaskModel { Id = 1, Title = "Soát đề HK1", Description = "Kiểm tra nội dung & trùng lặp", AssignedBy = "Head of Dept", AssignedTo = "Lecturer A", Deadline = DateTime.Now.AddDays(3), Status = "Pending" },
-            new TaskModel { Id = 2, Title = "Đánh giá đề thi thử", Description = "Phân tích mức độ khó", AssignedBy = "Subject Leader", AssignedTo = "Lecturer A", Deadline = DateTime.Now.AddDays(5), Status = "In Progress" }
+        
         };
 
         public List<TaskModel> GetTasksForUser(string user)
