@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\CNPM\\Project\\CNPM-QBCA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|e:\\cnpm\\project\\cnpm-qbca\\cnpm-qbca.repositories\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|e:\\cnpm\\project\\cnpm-qbca\\cnpm-qbca.services\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|solutionrelative:cnpm-qbca.services\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
+              "ToolTip": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T15:16:27.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\AuthController.cs",
@@ -58,12 +75,11 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T14:00:46.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T14:00:46.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MyTasks.cshtml",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Views\\Task\\MyTasks.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Task\\MyTasks.cshtml",
@@ -75,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TeamTasks.cshtml",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
@@ -87,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TaskController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\TaskController.cs",
@@ -99,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "OpenAIDuplicateService.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
@@ -111,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TaskService.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\Services\\TaskService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\TaskService.cs",
@@ -124,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GeminiDuplicateService.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
@@ -136,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "QuestionController.cs",
               "DocumentMoniker": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\QuestionController.cs",

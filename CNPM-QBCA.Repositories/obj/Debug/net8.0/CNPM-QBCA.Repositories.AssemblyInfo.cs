@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CNPM-QBCA.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+248cc86b1de4165c9aa110679c4b14e16467f400")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e944426322ba513ca70278534a74aaecac7f1ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("CNPM-QBCA.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CNPM-QBCA.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CNPM_QBCA.Migrations
+namespace CNPM_QBCA.Repositories.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -11,6 +11,106 @@ namespace CNPM_QBCA.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "ExamApproveTasks",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ExamTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Reviewer = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastUpdated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Feedback = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ExamApproveTasks", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ExamAssignments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    LecturerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ExamTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Deadline = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Comments = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsReviewed = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ExamAssignments", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MockExam",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Deadline = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MockExam", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MockExamAnswer",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MockExamId = table.Column<int>(type: "int", nullable: false),
+                    LecturerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AnswerJson = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubmittedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MockExamAnswer", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MockFeedback",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MockExamId = table.Column<int>(type: "int", nullable: false),
+                    LecturerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Comments = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FeedbackDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MockFeedback", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ReviewExams",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ExamTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LecturerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubmittedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ReviewExams", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
@@ -22,6 +122,49 @@ namespace CNPM_QBCA.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Roles", x => x.RoleID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TaskModel",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AssignedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AssignedTo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Deadline = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TaskModel", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MockQuestion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MockExamId = table.Column<int>(type: "int", nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionA = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionB = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionC = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionD = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CorrectAnswer = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MockQuestion", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MockQuestion_MockExam_MockExamId",
+                        column: x => x.MockExamId,
+                        principalTable: "MockExam",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -274,12 +417,45 @@ namespace CNPM_QBCA.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Exams",
+                columns: table => new
+                {
+                    ExamID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DistributionID = table.Column<int>(type: "int", nullable: false),
+                    SubmitDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    SubmittedBy = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Exams", x => x.ExamID);
+                    table.ForeignKey(
+                        name: "FK_Exams_ExamPlanDistributions_DistributionID",
+                        column: x => x.DistributionID,
+                        principalTable: "ExamPlanDistributions",
+                        principalColumn: "DistributionID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Exams_Users_SubmittedBy",
+                        column: x => x.SubmittedBy,
+                        principalTable: "Users",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "TaskAssignments",
                 columns: table => new
                 {
                     AssignmentID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ExamPlanID = table.Column<int>(type: "int", nullable: false),
+                    DistributionID = table.Column<int>(type: "int", nullable: false),
                     AssignedBy = table.Column<int>(type: "int", nullable: false),
                     AssignedTo = table.Column<int>(type: "int", nullable: false),
                     Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -293,6 +469,12 @@ namespace CNPM_QBCA.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TaskAssignments", x => x.AssignmentID);
+                    table.ForeignKey(
+                        name: "FK_TaskAssignments_ExamPlanDistributions_DistributionID",
+                        column: x => x.DistributionID,
+                        principalTable: "ExamPlanDistributions",
+                        principalColumn: "DistributionID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_TaskAssignments_ExamPlans_ExamPlanID",
                         column: x => x.ExamPlanID,
@@ -398,6 +580,7 @@ namespace CNPM_QBCA.Migrations
                 {
                     ExamQuestionID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    ExamID = table.Column<int>(type: "int", nullable: false),
                     ExamPlanID = table.Column<int>(type: "int", nullable: false),
                     QuestionID = table.Column<int>(type: "int", nullable: false),
                     Approved = table.Column<bool>(type: "bit", nullable: false),
@@ -413,6 +596,12 @@ namespace CNPM_QBCA.Migrations
                         principalTable: "ExamPlans",
                         principalColumn: "ExamPlanID",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ExamQuestions_Exams_ExamID",
+                        column: x => x.ExamID,
+                        principalTable: "Exams",
+                        principalColumn: "ExamID",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ExamQuestions_Questions_QuestionID",
                         column: x => x.QuestionID,
@@ -496,6 +685,11 @@ namespace CNPM_QBCA.Migrations
                 column: "SubjectID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ExamQuestions_ExamID",
+                table: "ExamQuestions",
+                column: "ExamID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ExamQuestions_ExamPlanID",
                 table: "ExamQuestions",
                 column: "ExamPlanID");
@@ -516,6 +710,17 @@ namespace CNPM_QBCA.Migrations
                 column: "ReviewerID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Exams_DistributionID",
+                table: "Exams",
+                column: "DistributionID",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Exams_SubmittedBy",
+                table: "Exams",
+                column: "SubmittedBy");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Logins_RoleID",
                 table: "Logins",
                 column: "RoleID");
@@ -524,6 +729,11 @@ namespace CNPM_QBCA.Migrations
                 name: "IX_Logins_UserID",
                 table: "Logins",
                 column: "UserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MockQuestion_MockExamId",
+                table: "MockQuestion",
+                column: "MockExamId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Notifications_CreatedBy",
@@ -591,6 +801,11 @@ namespace CNPM_QBCA.Migrations
                 column: "AssignedTo");
 
             migrationBuilder.CreateIndex(
+                name: "IX_TaskAssignments_DistributionID",
+                table: "TaskAssignments",
+                column: "DistributionID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TaskAssignments_ExamPlanID",
                 table: "TaskAssignments",
                 column: "ExamPlanID");
@@ -608,7 +823,10 @@ namespace CNPM_QBCA.Migrations
                 name: "DuplicateCheckResults");
 
             migrationBuilder.DropTable(
-                name: "ExamPlanDistributions");
+                name: "ExamApproveTasks");
+
+            migrationBuilder.DropTable(
+                name: "ExamAssignments");
 
             migrationBuilder.DropTable(
                 name: "ExamReviews");
@@ -617,25 +835,49 @@ namespace CNPM_QBCA.Migrations
                 name: "Logins");
 
             migrationBuilder.DropTable(
+                name: "MockExamAnswer");
+
+            migrationBuilder.DropTable(
+                name: "MockFeedback");
+
+            migrationBuilder.DropTable(
+                name: "MockQuestion");
+
+            migrationBuilder.DropTable(
                 name: "Notifications");
+
+            migrationBuilder.DropTable(
+                name: "ReviewExams");
 
             migrationBuilder.DropTable(
                 name: "TaskAssignments");
 
             migrationBuilder.DropTable(
+                name: "TaskModel");
+
+            migrationBuilder.DropTable(
                 name: "ExamQuestions");
+
+            migrationBuilder.DropTable(
+                name: "MockExam");
+
+            migrationBuilder.DropTable(
+                name: "Exams");
 
             migrationBuilder.DropTable(
                 name: "Questions");
 
             migrationBuilder.DropTable(
+                name: "ExamPlanDistributions");
+
+            migrationBuilder.DropTable(
                 name: "CLOs");
 
             migrationBuilder.DropTable(
-                name: "DifficultyLevels");
+                name: "SubmissionTables");
 
             migrationBuilder.DropTable(
-                name: "SubmissionTables");
+                name: "DifficultyLevels");
 
             migrationBuilder.DropTable(
                 name: "ExamPlans");

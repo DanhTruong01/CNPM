@@ -14,3 +14,5 @@ E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\refint\CNPM-QBCA.Business.dll
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.pdb
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\ref\CNPM-QBCA.Business.dll
+E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\bin\Debug\net8.0\appsettings.Development.json
+E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\bin\Debug\net8.0\appsettings.json

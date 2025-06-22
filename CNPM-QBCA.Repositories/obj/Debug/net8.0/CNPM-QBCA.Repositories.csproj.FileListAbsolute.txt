@@ -13,3 +13,5 @@ E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Repositories\obj\Debug\net8.0\refint\CNPM-QB
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Repositories\obj\Debug\net8.0\CNPM-QBCA.Repositories.pdb
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Repositories\obj\Debug\net8.0\CNPM-QBCA.Repositories.genruntimeconfig.cache
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Repositories\obj\Debug\net8.0\ref\CNPM-QBCA.Repositories.dll
+E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Repositories\bin\Debug\net8.0\appsettings.Development.json
+E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Repositories\bin\Debug\net8.0\appsettings.json

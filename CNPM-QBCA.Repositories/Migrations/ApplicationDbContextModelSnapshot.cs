@@ -8,7 +8,7 @@ using QBCA.Data;
 
 #nullable disable
 
-namespace CNPM_QBCA.Migrations
+namespace CNPM_QBCA.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -21,6 +21,162 @@ namespace CNPM_QBCA.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockExam", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MockExam");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockExamAnswer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AnswerJson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LecturerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MockExamId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SubmittedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MockExamAnswer");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockFeedback", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comments")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FeedbackDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LecturerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MockExamId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MockFeedback");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockQuestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CorrectAnswer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MockExamId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OptionA")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OptionB")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OptionC")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OptionD")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MockExamId");
+
+                    b.ToTable("MockQuestion");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.TaskModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AssignedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AssignedTo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TaskModel");
+                });
 
             modelBuilder.Entity("QBCA.Models.CLO", b =>
                 {
@@ -101,6 +257,123 @@ namespace CNPM_QBCA.Migrations
                     b.HasIndex("SimilarQuestionID");
 
                     b.ToTable("DuplicateCheckResults");
+                });
+
+            modelBuilder.Entity("QBCA.Models.Exam", b =>
+                {
+                    b.Property<int>("ExamID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExamID"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("DistributionID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SubmitDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SubmittedBy")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("ExamID");
+
+                    b.HasIndex("DistributionID")
+                        .IsUnique();
+
+                    b.HasIndex("SubmittedBy");
+
+                    b.ToTable("Exams");
+                });
+
+            modelBuilder.Entity("QBCA.Models.ExamApproveTask", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExamTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Feedback")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Reviewer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SubjectName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExamApproveTasks");
+                });
+
+            modelBuilder.Entity("QBCA.Models.ExamAssignment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comments")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExamTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsReviewed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LecturerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExamAssignments");
                 });
 
             modelBuilder.Entity("QBCA.Models.ExamPlan", b =>
@@ -191,6 +464,9 @@ namespace CNPM_QBCA.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<int>("ExamID")
+                        .HasColumnType("int");
+
                     b.Property<int>("ExamPlanID")
                         .HasColumnType("int");
 
@@ -201,6 +477,8 @@ namespace CNPM_QBCA.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("ExamQuestionID");
+
+                    b.HasIndex("ExamID");
 
                     b.HasIndex("ExamPlanID");
 
@@ -370,6 +648,38 @@ namespace CNPM_QBCA.Migrations
                     b.ToTable("Questions");
                 });
 
+            modelBuilder.Entity("QBCA.Models.ReviewExam", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ExamTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LecturerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SubjectName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SubmittedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReviewExams");
+                });
+
             modelBuilder.Entity("QBCA.Models.Role", b =>
                 {
                     b.Property<int>("RoleID")
@@ -494,6 +804,9 @@ namespace CNPM_QBCA.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("DistributionID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("DueDate")
                         .HasColumnType("datetime2");
 
@@ -517,6 +830,8 @@ namespace CNPM_QBCA.Migrations
                     b.HasIndex("AssignedBy");
 
                     b.HasIndex("AssignedTo");
+
+                    b.HasIndex("DistributionID");
 
                     b.HasIndex("ExamPlanID");
 
@@ -554,6 +869,15 @@ namespace CNPM_QBCA.Migrations
                     b.HasIndex("RoleID");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockQuestion", b =>
+                {
+                    b.HasOne("CNPM_QBCA.Models.MockExam", null)
+                        .WithMany("Questions")
+                        .HasForeignKey("MockExamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("QBCA.Models.CLO", b =>
@@ -595,6 +919,25 @@ namespace CNPM_QBCA.Migrations
                     b.Navigation("Question");
 
                     b.Navigation("SimilarQuestion");
+                });
+
+            modelBuilder.Entity("QBCA.Models.Exam", b =>
+                {
+                    b.HasOne("QBCA.Models.ExamPlanDistribution", "ExamPlanDistribution")
+                        .WithOne("Exam")
+                        .HasForeignKey("QBCA.Models.Exam", "DistributionID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.User", "Submitter")
+                        .WithMany()
+                        .HasForeignKey("SubmittedBy")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ExamPlanDistribution");
+
+                    b.Navigation("Submitter");
                 });
 
             modelBuilder.Entity("QBCA.Models.ExamPlan", b =>
@@ -643,6 +986,12 @@ namespace CNPM_QBCA.Migrations
 
             modelBuilder.Entity("QBCA.Models.ExamQuestion", b =>
                 {
+                    b.HasOne("QBCA.Models.Exam", "Exam")
+                        .WithMany("ExamQuestions")
+                        .HasForeignKey("ExamID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("QBCA.Models.ExamPlan", "ExamPlan")
                         .WithMany("ExamQuestions")
                         .HasForeignKey("ExamPlanID")
@@ -654,6 +1003,8 @@ namespace CNPM_QBCA.Migrations
                         .HasForeignKey("QuestionID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Exam");
 
                     b.Navigation("ExamPlan");
 
@@ -810,6 +1161,12 @@ namespace CNPM_QBCA.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("QBCA.Models.ExamPlanDistribution", "Distribution")
+                        .WithMany("TaskAssignments")
+                        .HasForeignKey("DistributionID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("QBCA.Models.ExamPlan", "ExamPlan")
                         .WithMany("TaskAssignments")
                         .HasForeignKey("ExamPlanID")
@@ -819,6 +1176,8 @@ namespace CNPM_QBCA.Migrations
                     b.Navigation("Assignee");
 
                     b.Navigation("Assigner");
+
+                    b.Navigation("Distribution");
 
                     b.Navigation("ExamPlan");
                 });
@@ -834,6 +1193,11 @@ namespace CNPM_QBCA.Migrations
                     b.Navigation("Role");
                 });
 
+            modelBuilder.Entity("CNPM_QBCA.Models.MockExam", b =>
+                {
+                    b.Navigation("Questions");
+                });
+
             modelBuilder.Entity("QBCA.Models.CLO", b =>
                 {
                     b.Navigation("Questions");
@@ -844,6 +1208,11 @@ namespace CNPM_QBCA.Migrations
                     b.Navigation("Questions");
                 });
 
+            modelBuilder.Entity("QBCA.Models.Exam", b =>
+                {
+                    b.Navigation("ExamQuestions");
+                });
+
             modelBuilder.Entity("QBCA.Models.ExamPlan", b =>
                 {
                     b.Navigation("Distributions");
@@ -851,6 +1220,14 @@ namespace CNPM_QBCA.Migrations
                     b.Navigation("ExamQuestions");
 
                     b.Navigation("SubmissionTables");
+
+                    b.Navigation("TaskAssignments");
+                });
+
+            modelBuilder.Entity("QBCA.Models.ExamPlanDistribution", b =>
+                {
+                    b.Navigation("Exam")
+                        .IsRequired();
 
                     b.Navigation("TaskAssignments");
                 });
