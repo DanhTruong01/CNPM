@@ -1,4 +1,5 @@
 ﻿using CNPM_QBCA.Models;
+using QBCA.Models;
 
 namespace CNPM_QBCA.Services
 {
@@ -8,20 +9,21 @@ namespace CNPM_QBCA.Services
         {
         
         };
+        private int userId;
 
         public List<TaskModel> GetTasksForUser(string user)
         {
-            return tasks.Where(t => t.AssignedTo == user).ToList();
+            return tasks.Where(t => t.AssignedTo == userId).ToList();
         }
 
         public TaskModel GetTaskById(int id)
         {
-            return tasks.FirstOrDefault(t => t.Id == id);
+            return tasks.FirstOrDefault(t => t.TaskModelId == id);
         }
 
         public void UpdateTaskStatus(int id, string status)
         {
-            var task = tasks.FirstOrDefault(t => t.Id == id);
+            var task = tasks.FirstOrDefault(t => t.TaskModelId == id);
             if (task != null) task.Status = status;
         }
     }

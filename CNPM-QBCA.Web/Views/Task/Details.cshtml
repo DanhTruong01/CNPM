@@ -26,7 +26,7 @@
 
         <form asp-action="UpdateStatus" asp-controller="Task" method="post" class="mt-4">
             @Html.AntiForgeryToken()
-            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.TaskModelId)
 
             <div class="neumorphic-label">Update Status</div>
             <select asp-for="Status" class="neumorphic-select mb-3">

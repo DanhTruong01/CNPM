@@ -29,7 +29,7 @@
                         foreach (var task in Model)
                         {
                             <tr>
-                                <td>@task.Id</td>
+                                <td>@task.TaskModelId</td>
                                 <td>@task.Title</td>
                                 <td>@task.AssignedBy</td>
                                 <td>@task.Deadline.ToString("dd/MM/yyyy")</td>
@@ -39,7 +39,7 @@
                                     </span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="@Url.Action("Details", "Task", new { id = task.Id })">Details</a>
+                                    <a href="@Url.Action("Details", "Task", new { id = task.TaskModelId })">Details</a>
                                 </td>
                             </tr>
                         }

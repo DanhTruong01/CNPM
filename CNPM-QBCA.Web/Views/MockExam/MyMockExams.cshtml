@@ -96,7 +96,7 @@
                 {
                     <tr>
                         <td>@exam.Title</td>
-                        <td>@exam.Deadline.ToString("dd/MM/yyyy")</td>
+                        <td>@(exam.Deadline == DateTime.MinValue ? "" : exam.Deadline.ToString("dd/MM/yyyy"))</td>
                         <td>@exam.Status</td>
                         <td>
                             <a class="start-button" href="@Url.Action("Take", "MockExam", new { id = exam.ExamId })">Start</a>

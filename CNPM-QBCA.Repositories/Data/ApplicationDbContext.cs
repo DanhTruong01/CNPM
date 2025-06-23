@@ -30,7 +30,7 @@ namespace QBCA.Data
         public DbSet<DuplicateCheckResult> DuplicateCheckResults { get; set; }
         public DbSet<ExamPlanDistribution> ExamPlanDistributions { get; set; }
         public DbSet<Exam> Exams { get; set; }
-        public DbSet<TaskModel> TaskModel { get; set; }
+        public DbSet<TaskModel> TaskModels { get; set; }
         public DbSet<MockExam> MockExam { get; set; }
         public DbSet<MockExamAnswer> MockExamAnswer { get; set; }
         public DbSet<MockFeedback> MockFeedback { get; set; }
@@ -276,6 +276,75 @@ namespace QBCA.Data
                 .WithOne(eq => eq.Exam)
                 .HasForeignKey(eq => eq.ExamID)
                 .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.Assignee)
+                .WithMany(u => u.TasksAssigned) 
+                .HasForeignKey(t => t.AssignedTo)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.Creator)
+                .WithMany(u => u.TasksCreated)
+                .HasForeignKey(t => t.CreatedBy)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.ExamPlan)
+                .WithMany()
+                .HasForeignKey(t => t.ExamPlanID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.Distribution)
+                .WithMany()
+                .HasForeignKey(t => t.DistributionID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.Notification)
+                .WithMany()
+                .HasForeignKey(t => t.NotificationID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.ExamReview)
+                .WithMany(me => me.Tasks)
+                .HasForeignKey(t => t.ExamReviewID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.MockExam)
+                .WithMany(me => me.Tasks)
+                .HasForeignKey(t => t.MockExamID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.Feedback)
+                .WithMany(me => me.Tasks)
+                .HasForeignKey(t => t.FeedbackID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<MockExamAnswer>()
+                .HasOne(a => a.MockExam)
+                .WithMany(me => me.Answers)
+                .HasForeignKey(a => a.MockExamId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<MockFeedback>()
+                .HasOne(f => f.MockExam)
+                .WithMany(me => me.Feedbacks)
+                .HasForeignKey(f => f.MockExamId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<MockQuestion>()
+                .HasOne(q => q.MockExam)
+                .WithMany(me => me.Questions)
+                .HasForeignKey(q => q.MockExamId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
         }
+
     }
 }

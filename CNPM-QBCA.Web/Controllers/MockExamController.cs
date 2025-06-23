@@ -58,7 +58,7 @@ namespace CNPM_QBCA.Controllers
 
             var answerObj = new MockExamAnswer
             {
-                Id = submittedAnswers.Count + 1,
+                MockExamAnswerID = submittedAnswers.Count + 1,
                 MockExamId = examId,
                 LecturerId = "user123",
                 SubmittedAt = DateTime.Now,
@@ -87,7 +87,7 @@ namespace CNPM_QBCA.Controllers
         [HttpPost("SaveFeedback")]
         public IActionResult SaveFeedback(MockFeedback feedback)
         {
-            feedback.Id = feedbacks.Count + 1;
+            feedback.MockFeedbackID = feedbacks.Count + 1;
             feedback.FeedbackDate = DateTime.Now;
             feedback.LecturerId = "user123";
 

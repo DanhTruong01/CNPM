@@ -24,11 +24,11 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             modelBuilder.Entity("CNPM_QBCA.Models.MockExam", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MockExamID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MockExamID"));
 
                     b.Property<DateTime>("Deadline")
                         .HasColumnType("datetime2");
@@ -41,18 +41,18 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("MockExamID");
 
                     b.ToTable("MockExam");
                 });
 
             modelBuilder.Entity("CNPM_QBCA.Models.MockExamAnswer", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MockExamAnswerID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MockExamAnswerID"));
 
                     b.Property<string>("AnswerJson")
                         .IsRequired()
@@ -68,18 +68,20 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Property<DateTime>("SubmittedAt")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.HasKey("MockExamAnswerID");
+
+                    b.HasIndex("MockExamId");
 
                     b.ToTable("MockExamAnswer");
                 });
 
             modelBuilder.Entity("CNPM_QBCA.Models.MockFeedback", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MockFeedbackID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MockFeedbackID"));
 
                     b.Property<string>("Comments")
                         .IsRequired()
@@ -95,18 +97,20 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Property<int>("MockExamId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("MockFeedbackID");
+
+                    b.HasIndex("MockExamId");
 
                     b.ToTable("MockFeedback");
                 });
 
             modelBuilder.Entity("CNPM_QBCA.Models.MockQuestion", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MockQuestionID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MockQuestionID"));
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -135,7 +139,7 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("MockQuestionID");
 
                     b.HasIndex("MockExamId");
 
@@ -144,19 +148,24 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             modelBuilder.Entity("CNPM_QBCA.Models.TaskModel", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("TaskModelId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TaskModelId"));
 
                     b.Property<string>("AssignedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("AssignedTo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("AssignedTo")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Deadline")
                         .HasColumnType("datetime2");
@@ -165,7 +174,29 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("DistributionID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ExamPlanID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ExamReviewID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FeedbackID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MockExamID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("NotificationID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TaskType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -173,9 +204,25 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("TaskModelId");
 
-                    b.ToTable("TaskModel");
+                    b.HasIndex("AssignedTo");
+
+                    b.HasIndex("CreatedBy");
+
+                    b.HasIndex("DistributionID");
+
+                    b.HasIndex("ExamPlanID");
+
+                    b.HasIndex("ExamReviewID");
+
+                    b.HasIndex("FeedbackID");
+
+                    b.HasIndex("MockExamID");
+
+                    b.HasIndex("NotificationID");
+
+                    b.ToTable("TaskModels");
                 });
 
             modelBuilder.Entity("QBCA.Models.CLO", b =>
@@ -871,13 +918,98 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("CNPM_QBCA.Models.MockExamAnswer", b =>
+                {
+                    b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
+                        .WithMany("Answers")
+                        .HasForeignKey("MockExamId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("MockExam");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockFeedback", b =>
+                {
+                    b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
+                        .WithMany("Feedbacks")
+                        .HasForeignKey("MockExamId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("MockExam");
+                });
+
             modelBuilder.Entity("CNPM_QBCA.Models.MockQuestion", b =>
                 {
-                    b.HasOne("CNPM_QBCA.Models.MockExam", null)
+                    b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
                         .WithMany("Questions")
                         .HasForeignKey("MockExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("MockExam");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.TaskModel", b =>
+                {
+                    b.HasOne("QBCA.Models.User", "Assignee")
+                        .WithMany("TasksAssigned")
+                        .HasForeignKey("AssignedTo")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.User", "Creator")
+                        .WithMany("TasksCreated")
+                        .HasForeignKey("CreatedBy")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.ExamPlanDistribution", "Distribution")
+                        .WithMany()
+                        .HasForeignKey("DistributionID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("QBCA.Models.ExamPlan", "ExamPlan")
+                        .WithMany()
+                        .HasForeignKey("ExamPlanID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("QBCA.Models.ExamReview", "ExamReview")
+                        .WithMany("Tasks")
+                        .HasForeignKey("ExamReviewID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CNPM_QBCA.Models.MockFeedback", "Feedback")
+                        .WithMany("Tasks")
+                        .HasForeignKey("FeedbackID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
+                        .WithMany("Tasks")
+                        .HasForeignKey("MockExamID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("QBCA.Models.Notification", "Notification")
+                        .WithMany()
+                        .HasForeignKey("NotificationID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Assignee");
+
+                    b.Navigation("Creator");
+
+                    b.Navigation("Distribution");
+
+                    b.Navigation("ExamPlan");
+
+                    b.Navigation("ExamReview");
+
+                    b.Navigation("Feedback");
+
+                    b.Navigation("MockExam");
+
+                    b.Navigation("Notification");
                 });
 
             modelBuilder.Entity("QBCA.Models.CLO", b =>
@@ -1195,7 +1327,18 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             modelBuilder.Entity("CNPM_QBCA.Models.MockExam", b =>
                 {
+                    b.Navigation("Answers");
+
+                    b.Navigation("Feedbacks");
+
                     b.Navigation("Questions");
+
+                    b.Navigation("Tasks");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockFeedback", b =>
+                {
+                    b.Navigation("Tasks");
                 });
 
             modelBuilder.Entity("QBCA.Models.CLO", b =>
@@ -1235,6 +1378,11 @@ namespace CNPM_QBCA.Repositories.Migrations
             modelBuilder.Entity("QBCA.Models.ExamQuestion", b =>
                 {
                     b.Navigation("ExamReviews");
+                });
+
+            modelBuilder.Entity("QBCA.Models.ExamReview", b =>
+                {
+                    b.Navigation("Tasks");
                 });
 
             modelBuilder.Entity("QBCA.Models.Question", b =>
@@ -1286,6 +1434,10 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Navigation("TaskAssignmentsAssigned");
 
                     b.Navigation("TaskAssignmentsReceived");
+
+                    b.Navigation("TasksAssigned");
+
+                    b.Navigation("TasksCreated");
                 });
 #pragma warning restore 612, 618
         }

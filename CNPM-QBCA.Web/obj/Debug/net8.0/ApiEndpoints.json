@@ -34,7 +34,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "MockFeedbackID",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -56,6 +56,51 @@
       {
         "Name": "FeedbackDate",
         "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tasks",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.TaskModel, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.MockExamID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.Deadline",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.Questions",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.MockQuestion, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.Tasks",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.TaskModel, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.Answers",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.MockExamAnswer, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MockExam.Feedbacks",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.MockFeedback, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       }
     ],

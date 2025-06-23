@@ -1,31 +1,33 @@
 ﻿@model List<QBCA.Models.DuplicateCheckResult>
+
 @{
     ViewBag.Title = "Duplicate Check - History";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
+
 <div class="container py-4">
     <div class="main-content-area">
-        <div style="margin-bottom: 18px;">
-            <h2 class="fw-bold mb-2" style="font-size:2.1rem;">Duplicate Check (AI)</h2>
-            <div class="text-secondary" style="font-size:1.18rem;">History of duplicate semantic checks between questions.</div>
-        </div>
-        <div class="mb-4 w-100" style="display: flex; justify-content: flex-start;">
+        <div class="text-center mb-4 pb-2">
+            <h2 class="fw-bold" style="font-size:2rem;">🧠 Duplicate Check (AI)</h2>
+            <div class="text-secondary" style="font-size:1.1rem;">
+                History of semantic duplicate checks between questions.
+            </div>
             <a href="@Url.Action("Check", "DuplicateCheck")"
-               class="btn btn-signin-custom"
-               style="font-size:1.15rem; min-width:200px;">
-                Check for Semantic Duplicates
+               class="btn btn-check-ai mt-3">
+                <i class="fas fa-search me-1"></i> Check for Semantic Duplicates
             </a>
         </div>
-        <div class="table-container px-2 pt-2 pb-3">
-            <table class="table subject-table mb-0 text-center align-middle">
+
+        <div class="table-container rounded-4">
+            <table class="table subject-table text-center align-middle">
                 <thead>
                     <tr>
-                        <th style="width:8%;">ID</th>
-                        <th style="width:32%;">Original Question</th>
-                        <th style="width:32%;">Potential Duplicate</th>
-                        <th style="width:10%;">Similarity</th>
-                        <th style="width:12%;">Checked At</th>
-                        <th style="width:6%;">Action</th>
+                        <th>ID</th>
+                        <th>Original Question</th>
+                        <th>Potential Duplicate</th>
+                        <th>Similarity</th>
+                        <th>Checked At</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,16 +39,24 @@
                                 <td>@item.CheckID</td>
                                 <td class="text-start">@item.Question?.Content</td>
                                 <td class="text-start">@item.SimilarQuestion?.Content</td>
-                                <td>@((item.SimilarityScore * 100).ToString("0.0") + "%")</td>
+                                <td>
+                                    <span class="badge-similarity rounded-pill">
+                                        @((item.SimilarityScore * 100).ToString("0.0") + "%")
+                                    </span>
+                                </td>
                                 <td>
                                     @{
                                         var checkedAtVN = item.CheckedAt.AddHours(7);
                                     }
-                                    @checkedAtVN.ToString("M/d/yyyy")<br>
+                                    @checkedAtVN.ToString("dd/MM/yyyy")<br />
                                     @checkedAtVN.ToString("HH:mm")
                                 </td>
                                 <td>
-                                    @using (Html.BeginForm("DeleteHistory", "DuplicateCheck", FormMethod.Post, new { onsubmit = "return confirm('Are you sure to delete this history record?');", style = "display:inline;" }))
+                                    @using (Html.BeginForm("DeleteHistory", "DuplicateCheck", FormMethod.Post, new
+                                    {
+                                        onsubmit = "return confirm('Are you sure to delete this history record?');",
+                                        style = "display:inline;"
+                                    }))
                                     {
                                         @Html.AntiForgeryToken()
                                         @Html.Hidden("id", item.CheckID)
@@ -63,7 +73,7 @@
                         <tr>
                             <td colspan="6" class="text-center py-4 text-muted">
                                 <i class="fas fa-folder-open fa-lg mb-2"></i><br />
-                                <span style="font-size:1.11rem;">No duplicate check history found!</span>
+                                <span style="font-size:1.1rem;">No duplicate check history found!</span>
                             </td>
                         </tr>
                     }
@@ -72,109 +82,133 @@
         </div>
     </div>
 </div>
+
 @section Styles {
     <style>
-        .main-content-area {
-            margin-left: 34px;
-            margin-right: 34px;
+                .main-content-area {
+                        margin: 0 auto;
+                        max-width: 1080px;
+
         }
 
-        .btn-signin-custom {
-            background: #6d82f3;
-            color: #fff;
-            border: none;
-            border-radius: 16px;
-            padding: 14px 0;
-            transition: background 0.2s;
-            text-align: center;
-            margin-bottom: 4px;
-            box-shadow: 0 2px 8px #0001;
-            font-size: 1.16rem;
-            font-weight: 600;
-            display: block;
+                .btn-check-ai {
+                        background: #5f6df6;
+                        color: white;
+                        padding: 10px 26px;
+                        font-weight: 600;
+                        font-size: 1.05rem;
+                        border-radius: 20px;
+                        border: none;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                        transition: all 0.25s ease-in-out;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+
         }
 
-            .btn-signin-custom:hover, .btn-signin-custom:focus {
-                background: #5a6ed0;
-                color: #fff;
+                    .btn-check-ai:hover {
+                            background: #4956d8;
+                            color: #fff;
+
             }
 
-        .table-container {
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 1px 6px #0000000d;
-            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-            margin-bottom: 20px;
+                .table-container {
+                        background: white;
+                        border-radius: 16px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+                        overflow-x: auto;
+                        padding: 16px;
+
         }
 
-        .subject-table {
-            border-collapse: separate;
-            border-spacing: 0;
-            font-size: 1.12rem;
-            min-width: 650px;
+                .subject-table {
+                        width: 100%;
+                        min-width: 800px;
+                        border-collapse: separate;
+                        border-spacing: 0;
+                        font-size: 1.05rem;
+                        border-radius: 14px;
+                        overflow: hidden;
+
         }
 
-            .subject-table thead tr th {
-                background: #6277ea;
-                color: #fff;
-                border: none;
-                font-weight: 700;
-                font-size: 1.13rem;
-                text-align: center;
-                padding: 12px 6px;
+                    .subject-table thead th {
+                            background: #6277ea;
+                            color: white;
+                            font-weight: bold;
+                            font-size: 1.07rem;
+                            padding: 12px;
+                            border: none;
+
             }
 
-                .subject-table thead tr th:first-child {
-                    border-top-left-radius: 11px;
+                        .subject-table thead th:first-child {
+                                border-top-left-radius: 12px;
+
                 }
 
-                .subject-table thead tr th:last-child {
-                    border-top-right-radius: 11px;
+                        .subject-table thead th:last-child {
+                                border-top-right-radius: 12px;
+
                 }
 
-            .subject-table td {
-                vertical-align: middle;
-                padding: 0.82rem 0.7rem;
-                font-size: 1.08rem;
+                    .subject-table tbody td {
+                            background: #fdfdfd;
+                            padding: 12px 10px;
+                            font-size: 1.02rem;
+
             }
 
-            .subject-table tbody tr {
-                background: #fafbfc;
-                border-bottom: 1px solid #e6e7eb;
-            }
+                .badge-similarity {
+                        display: inline-block;
+                        padding: 6px 12px;
+                        font-weight: 600;
+                        background-color: #e0f2fe;
+                        color: #0369a1;
+                        border-radius: 16px;
+                        font-size: 0.95rem;
+                        min-width: 60px;
 
-                .subject-table tbody tr:last-child {
-                    border-bottom-left-radius: 10px;
-                    border-bottom-right-radius: 10px;
-                }
+        }
+
+                .no-history td {
+                        background: #f9fafb;
+                        padding: 40px 12px;
+                        color: #6c757d;
+                        text-align: center;
+                        font-size: 1.05rem;
+
+        }
+
+                .no-history i {
+                        font-size: 1.4rem;
+                        color: #a0aec0;
+
+        }
+
 
         @@media (max-width: 900px) {
-            .main-content-area, .table-container
+                        .main-content-area
 
         {
-            margin-left: 4vw !important;
-            margin-right: 4vw !important;
-        }
-
-        .subject-table {
-            font-size: 1rem;
-        }
-
-            .subject-table thead tr th {
-                font-size: 1rem;
-                padding-left: 10px;
-            }
-
-            .subject-table td {
-                padding-left: 6px;
-                font-size: 1rem;
-            }
-
-        .btn-signin-custom {
-            font-size: 1rem;
-            padding: 12px 0;
-        }
+                            margin: 0 16px;
 
         }
+
+                    .btn-check-ai {
+                            width: 100%;
+                            font-size: 1rem;
+
+        }
+
+                    .subject-table {
+                            font-size: 0.95rem;
+
+        }
+
+
+        }
+
     </style>
 }
