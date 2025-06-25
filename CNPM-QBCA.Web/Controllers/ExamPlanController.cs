@@ -312,5 +312,24 @@ namespace QBCA.Controllers
             }
             return RedirectToAction(nameof(ExamPlans));
         }
+
+        public async Task<IActionResult> ExamPlan()
+        {
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdClaim, out int userId))
+                return Unauthorized();
+        
+            var plans = await _context.ExamPlans
+                .Include(p => p.Subject)
+                .Include(p => p.Distributions)
+                    .ThenInclude(d => d.DifficultyLevel)
+                .Include(p => p.Distributions)
+                    .ThenInclude(d => d.AssignedManagerRole)
+                .Include(p => p.CreatedByUser) // Ensure navigation property is included
+                .Where(p => p.Distributions.Any(d => d.AssignedManagerRoleID == userId)) // Corrected filtering logic
+                .ToListAsync();
+        
+            return View("ExamPlan", plans);
+        }
     }
 }
