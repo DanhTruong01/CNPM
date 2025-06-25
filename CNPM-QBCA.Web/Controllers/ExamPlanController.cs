@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,6 @@ using QBCA.Models;
 
 namespace QBCA.Controllers
 {
-
     public class ExamPlanController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -44,7 +43,7 @@ namespace QBCA.Controllers
                     .ThenInclude(d => d.DifficultyLevel)
                 .Include(p => p.Distributions)
                     .ThenInclude(d => d.AssignedManagerRole)
-                .Include(p => p.CreatedByUser) // Ensure navigation property is included
+                .Include(p => p.CreatedByUser)
                 .ToListAsync();
             return View("ExamPlans", plans);
         }
@@ -52,10 +51,15 @@ namespace QBCA.Controllers
         // GET: /ExamPlan/Create
         public IActionResult Create()
         {
+            var subjects = _context.Subjects.ToList();
+            var firstSubjectId = subjects.Any() ? subjects.First().SubjectID : 0;
+
             var vm = new ExamPlanCreateViewModel
             {
-                AllSubjects = _context.Subjects.ToList(),
-                AllDifficultyLevels = _context.DifficultyLevels.ToList(),
+                AllSubjects = subjects,
+                AllDifficultyLevels = firstSubjectId > 0
+                    ? _context.DifficultyLevels.Where(dl => dl.SubjectID == firstSubjectId).ToList()
+                    : new List<DifficultyLevel>(),
                 AllManagerRoles = _context.Roles
                     .Where(r => ManagerRoleIds.Contains(r.RoleID))
                     .ToList(),
@@ -72,17 +76,17 @@ namespace QBCA.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Lấy userId từ claim
                 var userIdClaim = User?.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
                 int createdBy = 0;
                 int.TryParse(userIdClaim, out createdBy);
 
-                // Đảm bảo UserID tồn tại trong bảng Users
                 if (createdBy == 0 || !_context.Users.Any(u => u.UserID == createdBy))
                 {
                     ModelState.AddModelError("", "Invalid or missing user. Please login again.");
                     model.AllSubjects = _context.Subjects.ToList();
-                    model.AllDifficultyLevels = _context.DifficultyLevels.ToList();
+                    model.AllDifficultyLevels = model.SubjectID > 0
+                        ? _context.DifficultyLevels.Where(dl => dl.SubjectID == model.SubjectID).ToList()
+                        : new List<DifficultyLevel>();
                     model.AllManagerRoles = _context.Roles.Where(r => ManagerRoleIds.Contains(r.RoleID)).ToList();
                     model.StatusOptions = new List<string> { "Pending", "Approved", "Rejected" };
                     return View(model);
@@ -94,12 +98,11 @@ namespace QBCA.Controllers
                     SubjectID = model.SubjectID,
                     Status = model.Status,
                     CreatedAt = System.DateTime.UtcNow,
-                    CreatedBy = createdBy    // Đảm bảo luôn lưu CreatedBy
+                    CreatedBy = createdBy
                 };
                 _context.ExamPlans.Add(examPlan);
                 await _context.SaveChangesAsync();
 
-                // Add distributions
                 if (model.Distributions != null)
                 {
                     foreach (var dist in model.Distributions)
@@ -116,12 +119,9 @@ namespace QBCA.Controllers
                     await _context.SaveChangesAsync();
                 }
 
-                // Send notifications
                 var subjectName = _context.Subjects.Find(examPlan.SubjectID)?.SubjectName;
-
                 foreach (var dist in model.Distributions)
                 {
-                    // Send to all selected Managers
                     if (dist.AssignedManagerRoleID.HasValue)
                     {
                         var users = _context.Users.Where(u => u.RoleID == dist.AssignedManagerRoleID.Value && u.IsActive).ToList();
@@ -136,8 +136,6 @@ namespace QBCA.Controllers
                             );
                         }
                     }
-
-                    // Send to all RDs (RoleID == 1)
                     var rds = _context.Users.Where(u => u.RoleID == 1 && u.IsActive).ToList();
                     foreach (var rd in rds)
                     {
@@ -156,7 +154,9 @@ namespace QBCA.Controllers
                 return RedirectToAction(nameof(ExamPlans));
             }
             model.AllSubjects = _context.Subjects.ToList();
-            model.AllDifficultyLevels = _context.DifficultyLevels.ToList();
+            model.AllDifficultyLevels = model.SubjectID > 0
+                ? _context.DifficultyLevels.Where(dl => dl.SubjectID == model.SubjectID).ToList()
+                : new List<DifficultyLevel>();
             model.AllManagerRoles = _context.Roles.Where(r => ManagerRoleIds.Contains(r.RoleID)).ToList();
             model.StatusOptions = new List<string> { "Pending", "Approved", "Rejected" };
             return View(model);
@@ -179,7 +179,9 @@ namespace QBCA.Controllers
                 SubjectID = examPlan.SubjectID,
                 Status = examPlan.Status,
                 AllSubjects = _context.Subjects.ToList(),
-                AllDifficultyLevels = _context.DifficultyLevels.ToList(),
+                AllDifficultyLevels = _context.DifficultyLevels
+                    .Where(dl => dl.SubjectID == examPlan.SubjectID)
+                    .ToList(),
                 AllManagerRoles = _context.Roles
                     .Where(r => ManagerRoleIds.Contains(r.RoleID))
                     .ToList(),
@@ -231,14 +233,12 @@ namespace QBCA.Controllers
                 }
                 await _context.SaveChangesAsync();
 
-                // Delete old notifications related to this exam plan
                 var oldNotifications = _context.Notifications
                     .Where(n => n.RelatedEntityType == "ExamPlan" && n.RelatedEntityID == examPlan.ExamPlanID)
                     .ToList();
                 _context.Notifications.RemoveRange(oldNotifications);
                 await _context.SaveChangesAsync();
 
-                // ReSend notifications
                 var subjectName = _context.Subjects.Find(examPlan.SubjectID)?.SubjectName;
                 var userIdClaim = User?.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
                 int createdBy = 0;
@@ -246,7 +246,6 @@ namespace QBCA.Controllers
 
                 foreach (var dist in model.Distributions)
                 {
-                    // Send to all selected Managers
                     if (dist.AssignedManagerRoleID.HasValue)
                     {
                         var users = _context.Users.Where(u => u.RoleID == dist.AssignedManagerRoleID.Value && u.IsActive).ToList();
@@ -261,8 +260,6 @@ namespace QBCA.Controllers
                             );
                         }
                     }
-
-                    // Send to all RDs (RoleID == 1)
                     var rds = _context.Users.Where(u => u.RoleID == 1 && u.IsActive).ToList();
                     foreach (var rd in rds)
                     {
@@ -281,7 +278,9 @@ namespace QBCA.Controllers
                 return RedirectToAction(nameof(ExamPlans));
             }
             model.AllSubjects = _context.Subjects.ToList();
-            model.AllDifficultyLevels = _context.DifficultyLevels.ToList();
+            model.AllDifficultyLevels = model.SubjectID > 0
+                ? _context.DifficultyLevels.Where(dl => dl.SubjectID == model.SubjectID).ToList()
+                : new List<DifficultyLevel>();
             model.AllManagerRoles = _context.Roles.Where(r => ManagerRoleIds.Contains(r.RoleID)).ToList();
             model.StatusOptions = new List<string> { "Pending", "Approved", "Rejected" };
             return View(model);
@@ -301,7 +300,6 @@ namespace QBCA.Controllers
                 _context.ExamPlanDistributions.RemoveRange(examPlan.Distributions);
                 _context.ExamPlans.Remove(examPlan);
 
-                // Delete notifications related to this exam plan
                 var notifications = _context.Notifications
                     .Where(n => n.RelatedEntityType == "ExamPlan" && n.RelatedEntityID == examPlan.ExamPlanID)
                     .ToList();
@@ -313,23 +311,34 @@ namespace QBCA.Controllers
             return RedirectToAction(nameof(ExamPlans));
         }
 
+        // GET: /ExamPlan/ExamPlan
         public async Task<IActionResult> ExamPlan()
         {
             var userIdClaim = User.FindFirst("UserID")?.Value;
             if (!int.TryParse(userIdClaim, out int userId))
                 return Unauthorized();
-        
+
             var plans = await _context.ExamPlans
                 .Include(p => p.Subject)
                 .Include(p => p.Distributions)
                     .ThenInclude(d => d.DifficultyLevel)
                 .Include(p => p.Distributions)
                     .ThenInclude(d => d.AssignedManagerRole)
-                .Include(p => p.CreatedByUser) // Ensure navigation property is included
-                .Where(p => p.Distributions.Any(d => d.AssignedManagerRoleID == userId)) // Corrected filtering logic
+                .Include(p => p.CreatedByUser)
+                .Where(p => p.Distributions.Any(d => d.AssignedManagerRoleID == userId))
                 .ToListAsync();
-        
+
             return View("ExamPlan", plans);
+        }
+
+        [HttpGet]
+        public JsonResult GetDifficultyLevelsBySubject(int subjectId)
+        {
+            var difficulties = _context.DifficultyLevels
+                .Where(dl => dl.SubjectID == subjectId)
+                .Select(dl => new { dl.DifficultyLevelID, dl.LevelName })
+                .ToList();
+            return Json(difficulties);
         }
     }
 }

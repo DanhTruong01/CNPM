@@ -3332,23 +3332,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\truon\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\letru\\.nuget\\packages\\": {},
+    "D:\\VisualStudio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Công nghệ phần mền\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+      "projectUniqueName": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
       "projectName": "CNPM-QBCA.Business",
-      "projectPath": "E:\\Công nghệ phần mền\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
-      "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-      "outputPath": "E:\\Công nghệ phần mền\\CNPM\\CNPM-QBCA.Business\\obj\\",
+      "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+      "packagesPath": "C:\\Users\\letru\\.nuget\\packages\\",
+      "outputPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\VisualStudio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\letru\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3363,8 +3363,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Công nghệ phần mền\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
-              "projectPath": "E:\\Công nghệ phần mền\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
+            "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+              "projectPath": "E:\\CNPM\\Project\\CNPM-QBCA\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
             }
           }
         }
@@ -3406,7 +3406,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
