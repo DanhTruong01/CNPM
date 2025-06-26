@@ -1,41 +1,76 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using CNPM_QBCA.Models;
-using CNPM_QBCA.Services;
+﻿// MyTaskController.cs
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using QBCA.Data;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace CNPM_QBCA.Controllers
+namespace QBCA.Controllers
 {
-    public class TaskController : Controller
+    public class MyTaskController : Controller
     {
-        private readonly TaskService _taskService;
+        private readonly ApplicationDbContext _context;
 
-        public TaskController()
+        public MyTaskController(ApplicationDbContext context)
         {
-            _taskService = new TaskService();
+            _context = context;
         }
 
-        // GET: /Task/MyTasks
-        public IActionResult MyTasks()
+        // GET: /MyTask/MyTasks
+        public async Task<IActionResult> MyTasks()
         {
-            var task = _taskService.GetTasksForUser("Lecturer A"); // Sau này thay bằng User.Identity.Name
-            return View(task);
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdClaim, out int userId))
+                return Unauthorized();
+
+            var tasks = await _context.TaskAssignments
+                .Include(t => t.ExamPlan)
+                .Include(t => t.Distribution)
+                .Include(t => t.Assigner)
+                .Where(t => t.AssignedTo == userId)
+                .OrderByDescending(t => t.DueDate)
+                .ToListAsync();
+
+            return View(tasks); // View nằm trong Views/MyTask/MyTasks.cshtml
         }
 
-        // GET: /Task/Details/5
-        public IActionResult Details(int id)
+        // GET: /MyTask/Details/5
+        public async Task<IActionResult> Details(int id)
         {
-            var task = _taskService.GetTaskById(id);
+            var task = await _context.TaskAssignments
+                .Include(t => t.ExamPlan)
+                .Include(t => t.Distribution)
+                .Include(t => t.Assigner)
+                .FirstOrDefaultAsync(t => t.AssignmentID == id);
+
             if (task == null)
-            {
                 return NotFound();
-            }
-            return View(task);
+
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdClaim, out int userId) || task.AssignedTo != userId)
+                return Forbid();
+
+            return View("Details", task);
         }
 
-        // POST: /Task/UpdateStatus
+        // POST: /MyTask/UpdateStatus
         [HttpPost]
-        public IActionResult UpdateStatus(int id, string newStatus)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateStatus(int id, string newStatus)
         {
-            _taskService.UpdateTaskStatus(id, newStatus);
+            var task = await _context.TaskAssignments.FindAsync(id);
+            if (task == null)
+                return NotFound();
+
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdClaim, out int userId) || task.AssignedTo != userId)
+                return Forbid();
+
+            task.Status = newStatus;
+            _context.TaskAssignments.Update(task);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Task status updated successfully.";
             return RedirectToAction("MyTasks");
         }
     }

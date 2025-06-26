@@ -1,22 +1,6 @@
 [
   {
-    "ContainingType": "CNPM_QBCA.Controllers.MockExamController",
-    "Method": "Feedback",
-    "RelativePath": "Exam/Feedback/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CNPM_QBCA.Controllers.MockExamController",
+    "ContainingType": "CNPM_QBCA.Controllers.ExamController",
     "Method": "MockExam",
     "RelativePath": "Exam/MockExam",
     "HttpMethod": "GET",
@@ -26,119 +10,37 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CNPM_QBCA.Controllers.MockExamController",
-    "Method": "SaveFeedback",
-    "RelativePath": "Exam/SaveFeedback",
+    "ContainingType": "CNPM_QBCA.Controllers.ExamController",
+    "Method": "MockExam",
+    "RelativePath": "Exam/MockExam",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "MockFeedbackID",
+        "Name": "AssignmentID",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "MockExamId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "LecturerId",
+        "Name": "ExamTitle",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Comments",
+        "Name": "Questions",
+        "Type": "System.Collections.Generic.List\u00601[[QBCA.Models.Question, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Answers",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Feedback",
         "Type": "System.String",
         "IsRequired": false
-      },
-      {
-        "Name": "FeedbackDate",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "Tasks",
-        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.TaskModel, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.MockExamID",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.Title",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.Deadline",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.Status",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.Questions",
-        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.MockQuestion, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.Tasks",
-        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.TaskModel, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.Answers",
-        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.MockExamAnswer, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "MockExam.Feedbacks",
-        "Type": "System.Collections.Generic.ICollection\u00601[[CNPM_QBCA.Models.MockFeedback, CNPM-QBCA.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CNPM_QBCA.Controllers.MockExamController",
-    "Method": "Submit",
-    "RelativePath": "Exam/Submit",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "examId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "answers",
-        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CNPM_QBCA.Controllers.MockExamController",
-    "Method": "Take",
-    "RelativePath": "Exam/Take/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []

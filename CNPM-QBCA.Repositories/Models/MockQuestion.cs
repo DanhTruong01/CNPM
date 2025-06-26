@@ -1,18 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CNPM_QBCA.Models
 {
     public class MockQuestion
     {
-        public int MockQuestionID { get; set; }
-        public int MockExamId { get; set; }
-        public string Content { get; set; }
-        public string OptionA { get; set; }
-        public string OptionB { get; set; }
-        public string OptionC { get; set; }
-        public string OptionD { get; set; }
-        public string CorrectAnswer { get; set; }
-        public virtual MockExam MockExam { get; set; }
+        [Key]
+        public int QuestionID { get; set; }
 
+        [Required]
+        public string Content { get; set; } = string.Empty;
+
+        public string OptionA { get; set; } = string.Empty;
+        public string OptionB { get; set; } = string.Empty;
+        public string OptionC { get; set; } = string.Empty;
+        public string OptionD { get; set; } = string.Empty;
+
+        public string CorrectAnswer { get; set; } = string.Empty;
     }
 }

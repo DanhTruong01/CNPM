@@ -1,103 +1,108 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using CNPM_QBCA.Models;
+﻿using CNPM_QBCA.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using QBCA.Data;
+using QBCA.Models;
 
 namespace CNPM_QBCA.Controllers
 {
     [Route("Exam")]
-    public class MockExamController : Controller
+    public class ExamController : Controller
     {
-        // MOCK DATA for demo (replace with DbContext later)
-        private static List<MockExamViewModel> mockExams = new List<MockExamViewModel>
-        {
-            new MockExamViewModel
-            {
-                //ExamId = 1,
-                //Title = "Midterm Exam Review - Semester 1",
-                //Instructions = "Read each question carefully and select the correct answer.",
-                //Deadline = new DateTime(2025, 6, 13),
-                //Status = "Pending",
-                //AssignedBy = "Department Head",
-                Questions = new List<MockQuestion>
-                {
-                    //new MockQuestion { Id = 1, Content = "Question 1: 2 + 2 = ?", OptionA = "3", OptionB = "4", OptionC = "5", OptionD = "6", CorrectAnswer = "B" },
-                    //new MockQuestion { Id = 2, Content = "Question 2: What is the shape of the Earth?", OptionA = "Round", OptionB = "Square", OptionC = "Triangle", OptionD = "Ellipse", CorrectAnswer = "A" }
-                }
-            }
-        };
+        private readonly ApplicationDbContext _context;
 
-        private static List<MockExamAnswer> submittedAnswers = new();
-        private static List<MockFeedback> feedbacks = new();
+        public ExamController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         // GET: /Exam/MockExam
         [HttpGet("MockExam")]
         public IActionResult MockExam()
         {
-            return View("MyMockExams", mockExams);
-        }
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdClaim, out int userId))
+                return Unauthorized();
 
-        // GET: /Exam/Take/1
-        [HttpGet("Take/{id}")]
-        public IActionResult Take(int id)
-        {
-            var exam = mockExams.FirstOrDefault(e => e.ExamId == id);
-            if (exam == null) return NotFound();
+            var assignment = _context.TaskAssignments
+                .Include(t => t.ExamPlan)
+                .Include(t => t.Distribution)
+                    .ThenInclude(d => d.Questions)
+                .Where(t => t.AssignedTo == userId)
+                .OrderByDescending(t => t.AssignmentID)
+                .FirstOrDefault();
 
-            exam.Status = "In Progress";
-            return View("DoExam", exam);
-        }
+            if (assignment == null)
+                return NotFound("Bạn chưa được giao đề thi thử nào.");
 
-        // POST: /Exam/Submit
-        [HttpPost("Submit")]
-        public IActionResult Submit(int examId, List<string> answers)
-        {
-            var exam = mockExams.FirstOrDefault(e => e.ExamId == examId);
-            if (exam == null) return NotFound();
-
-            var answerObj = new MockExamAnswer
+            var vm = new MockExamViewModel
             {
-                MockExamAnswerID = submittedAnswers.Count + 1,
-                MockExamId = examId,
-                LecturerId = "user123",
-                SubmittedAt = DateTime.Now,
-                AnswerJson = System.Text.Json.JsonSerializer.Serialize(answers)
+                AssignmentID = assignment.AssignmentID,
+                ExamTitle = assignment.ExamPlan?.Title ?? "Untitled Exam",
+                Questions = assignment.Distribution?.Questions?.ToList() ?? new List<Question>(),
+                Answers = new Dictionary<int, string>()
             };
-            submittedAnswers.Add(answerObj);
 
-            exam.Status = "Submitted";
-
-            TempData["Message"] = "The mock exam has been submitted successfully.";
-            return RedirectToAction("MockExam");
+            return View(vm); // Views/Exam/MockExam.cshtml
         }
 
-        // GET: /Exam/Feedback/1
-        [HttpGet("Feedback/{id}")]
-        public IActionResult Feedback(int id)
+        // POST: /Exam/MockExam
+        [HttpPost("MockExam")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MockExam(MockExamViewModel vm)
         {
-            var model = new MockFeedback
+            var userIdClaim = User.FindFirst("UserID")?.Value;
+            if (!int.TryParse(userIdClaim, out int userId))
+                return Unauthorized();
+
+            // ✅ Kiểm tra assignment có tồn tại và thuộc về giảng viên hiện tại không
+            var assignment = await _context.TaskAssignments
+                .FirstOrDefaultAsync(a => a.AssignmentID == vm.AssignmentID && a.AssignedTo == userId);
+
+            if (assignment == null)
             {
-                MockExamId = id
+                ModelState.AddModelError(string.Empty, "Assignment không tồn tại hoặc không hợp lệ.");
+                return RedirectToAction("MockExam");
+            }
+
+            var mockExam = new MockExam
+            {
+                AssignmentID = assignment.AssignmentID,
+                LecturerID = userId,
+                SubmittedAt = DateTime.UtcNow,
+                AnswersJson = JsonConvert.SerializeObject(vm.Answers),
+                Feedback = vm.Feedback
             };
-            return View("Feedback", model);
-        }
 
-        // POST: /Exam/SaveFeedback
-        [HttpPost("SaveFeedback")]
-        public IActionResult SaveFeedback(MockFeedback feedback)
-        {
-            feedback.MockFeedbackID = feedbacks.Count + 1;
-            feedback.FeedbackDate = DateTime.Now;
-            feedback.LecturerId = "user123";
+            try
+            {
+                _context.MockExam.Add(mockExam);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                ModelState.AddModelError(string.Empty, "Lỗi khi lưu bài thi thử. Hãy thử lại sau.");
+                return RedirectToAction("MockExam");
+            }
 
-            feedbacks.Add(feedback);
+            // Gửi thông báo cho người giao đề
+            var notification = new Notification
+            {
+                UserID = assignment.AssignedBy,
+                Message = $"Giảng viên đã hoàn thành đề thi thử cho Assignment #{assignment.AssignmentID}",
+                Status = "unread",
+                RelatedEntityType = "MockExam",
+                RelatedEntityID = mockExam.MockExamID,
+                CreatedAt = DateTime.UtcNow,
+                CreatedBy = userId
+            };
 
-            var exam = mockExams.FirstOrDefault(e => e.ExamId == feedback.MockExamId);
-            if (exam != null) exam.Status = "Feedback Given";
+            _context.Notifications.Add(notification);
+            await _context.SaveChangesAsync();
 
-            TempData["Message"] = "Feedback has been submitted.";
-            return RedirectToAction("MockExam");
+            TempData["SuccessMessage"] = "Bạn đã hoàn thành đề thi thử và gửi nhận xét.";
+            return RedirectToAction("TeamTasks", "Task");
         }
     }
 }

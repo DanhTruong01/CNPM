@@ -24,4 +24,8 @@
     <ProjectReference Include="..\CNPM-QBCA.Services\CNPM-QBCA.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\MockExam\" />
+  </ItemGroup>
+
 </Project>

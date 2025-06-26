@@ -1,19 +1,18 @@
-﻿using System;
+﻿using QBCA.Models;
 using System.Collections.Generic;
 
 namespace CNPM_QBCA.Models
 {
     public class MockExamViewModel
     {
-        public int ExamId { get; set; } // Cho @Model.ExamId
-        public string Title { get; set; }
-        public string Instructions { get; set; } // Cho @Model.Instructions
-        public DateTime Deadline { get; set; }
-        public string Status { get; set; }
-        public string AssignedBy { get; set; }
+        public int AssignmentID { get; set; }
 
-        public List<MockQuestion> Questions { get; set; }
-        public List<string> Answers { get; set; } = new(); // hoặc Dictionary<int, string>
-        public bool HasFeedback { get; set; }
+        public string ExamTitle { get; set; } = string.Empty;
+
+        public List<Question> Questions { get; set; } = new();
+
+        public Dictionary<int, string> Answers { get; set; } = new();
+
+        public string Feedback { get; set; } = string.Empty;
     }
 }

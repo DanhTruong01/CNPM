@@ -38,3 +38,23 @@ D:\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.dll
 D:\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\refint\CNPM-QBCA.Services.dll
 D:\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.pdb
 D:\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\ref\CNPM-QBCA.Services.dll
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\appsettings.json
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\CNPM-QBCA.Services.deps.json
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\CNPM-QBCA.Services.dll
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\CNPM-QBCA.Services.pdb
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\CNPM-QBCA.Business.dll
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\CNPM-QBCA.Repositories.dll
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\CNPM-QBCA.Business.pdb
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\bin\Debug\net8.0\CNPM-QBCA.Repositories.pdb
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.csproj.AssemblyReference.cache
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.AssemblyInfoInputs.cache
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.AssemblyInfo.cs
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.csproj.CoreCompileInputs.cache
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.sourcelink.json
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBC.B4041796.Up2Date
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.dll
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\refint\CNPM-QBCA.Services.dll
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\CNPM-QBCA.Services.pdb
+C:\Users\truon\OneDrive\Máy tính\test 1\CNPM\CNPM-QBCA.Services\obj\Debug\net8.0\ref\CNPM-QBCA.Services.dll

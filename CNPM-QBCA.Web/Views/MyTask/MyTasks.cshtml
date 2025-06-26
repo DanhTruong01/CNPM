@@ -1,4 +1,4 @@
-﻿@model List<CNPM_QBCA.Models.TaskModel>
+﻿@model List<QBCA.Models.TaskAssignment>
 @{
     ViewBag.Title = "My Tasks";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
@@ -20,7 +20,7 @@
                         <th style="width:30%;">Assigned By</th>
                         <th style="width:15%;">Deadline</th>
                         <th style="width:15%;">Status</th>
-                        <th style="width:10%;" class="text-center">Details</th>
+                        <th style="width:10%;">Details</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,17 +29,13 @@
                         foreach (var task in Model)
                         {
                             <tr>
-                                <td>@task.TaskModelId</td>
-                                <td>@task.Title</td>
-                                <td>@task.AssignedBy</td>
-                                <td>@task.Deadline.ToString("dd/MM/yyyy")</td>
-                                <td>
-                                    <span class="badge @(task.Status == "Completed" ? "bg-success" : task.Status == "In Progress" ? "bg-warning text-dark" : "bg-secondary")" style="font-size:1.09em;">
-                                        @task.Status
-                                    </span>
-                                </td>
+                                <td>@task.AssignmentID</td>
+                                <td>@task.Description</td>
+                                <td>@task.Assigner?.FullName</td>
+                                <td>@(task.DueDate?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                                <td class="fw-semibold">@task.Status</td>
                                 <td class="text-center">
-                                    <a href="@Url.Action("Details", "Task", new { id = task.TaskModelId })">Details</a>
+                                    <a href="@Url.Action("Details", "MyTask", new { id = task.AssignmentID })">Details</a>
                                 </td>
                             </tr>
                         }
@@ -152,24 +148,21 @@
         }
 
         @@media (max-width: 900px) {
-            .main-content-area, .table-container
-
-        {
-            margin-left: 4vw !important;
-            margin-right: 4vw !important;
-        }
-
-        .subject-table {
-            font-size: 1rem;
-        }
-
-            .subject-table thead tr th,
-            .subject-table td {
-                font-size: 1rem;
-                padding-left: 10px;
-                padding-right: 10px;
+            .main-content-area, .table-container {
+                margin-left: 4vw !important;
+                margin-right: 4vw !important;
             }
 
+            .subject-table {
+                font-size: 1rem;
+            }
+
+                .subject-table thead tr th,
+                .subject-table td {
+                    font-size: 1rem;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
         }
     </style>
 }

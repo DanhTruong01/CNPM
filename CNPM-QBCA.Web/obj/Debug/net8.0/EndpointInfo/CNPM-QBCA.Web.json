@@ -8,46 +8,21 @@
     "/Exam/MockExam": {
       "get": {
         "tags": [
-          "MockExam"
+          "Exam"
         ],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
-      }
-    },
-    "/Exam/Take/{id}": {
-      "get": {
-        "tags": [
-          "MockExam"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/Exam/Submit": {
+      },
       "post": {
         "tags": [
-          "MockExam"
+          "Exam"
         ],
         "parameters": [
           {
-            "name": "examId",
+            "name": "AssignmentID",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -55,168 +30,37 @@
             }
           },
           {
-            "name": "answers",
+            "name": "ExamTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Questions",
             "in": "query",
             "schema": {
               "type": "array",
               "items": {
+                "$ref": "#/components/schemas/Question"
+              }
+            }
+          },
+          {
+            "name": "Answers",
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
                 "type": "string"
               }
             }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/Exam/Feedback/{id}": {
-      "get": {
-        "tags": [
-          "MockExam"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/Exam/SaveFeedback": {
-      "post": {
-        "tags": [
-          "MockExam"
-        ],
-        "parameters": [
-          {
-            "name": "MockFeedbackID",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
           },
           {
-            "name": "MockExamId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "LecturerId",
+            "name": "Feedback",
             "in": "query",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "Comments",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "FeedbackDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "Tasks",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/TaskModel"
-              }
-            }
-          },
-          {
-            "name": "MockExam.MockExamID",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "MockExam.Title",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MockExam.Deadline",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "MockExam.Status",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "MockExam.Questions",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/MockQuestion"
-              }
-            }
-          },
-          {
-            "name": "MockExam.Tasks",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/TaskModel"
-              }
-            }
-          },
-          {
-            "name": "MockExam.Answers",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/MockExamAnswer"
-              }
-            }
-          },
-          {
-            "name": "MockExam.Feedbacks",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/MockFeedback"
-              }
             }
           }
         ],
@@ -465,6 +309,10 @@
               "$ref": "#/components/schemas/TaskAssignment"
             },
             "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -518,6 +366,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TaskAssignment"
+            },
+            "nullable": true
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Question"
             },
             "nullable": true
           }
@@ -675,74 +530,28 @@
             "type": "integer",
             "format": "int32"
           },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "deadline": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          },
-          "questions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MockQuestion"
-            },
-            "nullable": true
-          },
-          "tasks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TaskModel"
-            },
-            "nullable": true
-          },
-          "answers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MockExamAnswer"
-            },
-            "nullable": true
-          },
-          "feedbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MockFeedback"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MockExamAnswer": {
-        "type": "object",
-        "properties": {
-          "mockExamAnswerID": {
+          "assignmentID": {
             "type": "integer",
             "format": "int32"
           },
-          "mockExamId": {
+          "lecturerID": {
             "type": "integer",
             "format": "int32"
-          },
-          "lecturerId": {
-            "type": "string",
-            "nullable": true
-          },
-          "answerJson": {
-            "type": "string",
-            "nullable": true
           },
           "submittedAt": {
             "type": "string",
             "format": "date-time"
           },
-          "mockExam": {
-            "$ref": "#/components/schemas/MockExam"
+          "answersJson": {
+            "type": "string",
+            "nullable": true
+          },
+          "feedback": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskAssignment": {
+            "$ref": "#/components/schemas/TaskAssignment"
           }
         },
         "additionalProperties": false
@@ -775,47 +584,6 @@
             "items": {
               "$ref": "#/components/schemas/TaskModel"
             },
-            "nullable": true
-          },
-          "mockExam": {
-            "$ref": "#/components/schemas/MockExam"
-          }
-        },
-        "additionalProperties": false
-      },
-      "MockQuestion": {
-        "type": "object",
-        "properties": {
-          "mockQuestionID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "mockExamId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "content": {
-            "type": "string",
-            "nullable": true
-          },
-          "optionA": {
-            "type": "string",
-            "nullable": true
-          },
-          "optionB": {
-            "type": "string",
-            "nullable": true
-          },
-          "optionC": {
-            "type": "string",
-            "nullable": true
-          },
-          "optionD": {
-            "type": "string",
-            "nullable": true
-          },
-          "correctAnswer": {
-            "type": "string",
             "nullable": true
           },
           "mockExam": {
