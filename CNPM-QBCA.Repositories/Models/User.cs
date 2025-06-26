@@ -21,6 +21,8 @@ namespace QBCA.Models
         public ICollection<ExamReview> ExamReviews { get; set; } = new List<ExamReview>();
         public ICollection<Question> QuestionsCreated { get; set; } = new List<Question>();
         public ICollection<SubmissionTable> SubmissionTablesCreated { get; set; } = new List<SubmissionTable>();
+        public ICollection<SubmissionApproval> SubmissionApprovals { get; set; } = new List<SubmissionApproval>();
+
         public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
         public ICollection<Login> Logins { get; set; } = new List<Login>();
         public virtual ICollection<TaskModel> TasksAssigned { get; set; }

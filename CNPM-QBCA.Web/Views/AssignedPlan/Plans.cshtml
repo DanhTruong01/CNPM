@@ -1,0 +1,133 @@
+﻿@model IEnumerable<QBCA.ViewModels.AssignedPlanViewModel>
+@{
+    ViewBag.Title = "Assigned Plans";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style>
+    .neumorphic-table {
+        background: #f2f3f7;
+        border-radius: 25px;
+        box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 95%;
+    }
+
+    .neumorphic-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 4px;
+        font-size: 14px;
+        color: #4F46E5;
+        background: #f2f3f7;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .neumorphic-button:hover {
+            box-shadow: inset 5px 5px 10px #d1d9e6, inset -5px -5px 10px #ffffff;
+            background: #e6e8f0;
+        }
+
+    .badge {
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+    }
+
+    .Assigned {
+        background-color: #6366F1;
+    }
+
+    .Completed {
+        background-color: #10B981;
+    }
+
+    .Overdue {
+        background-color: #EF4444;
+    }
+
+    .InProgress {
+        background-color: #F59E0B;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 14px 18px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #e0e5ec;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9fc;
+    }
+</style>
+
+<div class="neumorphic-table">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="color: #4F46E5; font-weight: bold;">📋 Assigned Plans</h3>
+        <a href="@Url.Action("Create", "AssignedPlan")" class="neumorphic-button">
+            ➕ Create New Plan
+        </a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Subject</th>
+                <th>Assigned To</th>
+                <th>Distribution</th>
+                <th>Status</th>
+                <th>Assigned At</th>
+                <th>Deadline</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                int i = 1;
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@(i++)</td>
+                        <td>@item.SubjectName</td>
+                        <td>@item.AssignedToName</td>
+                        <td>@item.DistributionStatus</td>
+                        <td>
+                            <span class="badge @(item.Status)">@item.Status</span>
+                        </td>
+                        <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
+                        <td>@item.Deadline.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <a href="@Url.Action("Edit", "AssignedPlan", new { id = item.AssignedPlanID })" class="neumorphic-button">✏️ Edit</a>
+                            <a href="@Url.Action("Details", "AssignedPlan", new { id = item.AssignedPlanID })" class="neumorphic-button">📄 Details</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8" class="text-center text-muted">No assigned plans found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

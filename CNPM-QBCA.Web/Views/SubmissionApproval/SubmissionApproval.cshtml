@@ -1,0 +1,75 @@
+﻿@model IEnumerable<QBCA.ViewModels.SubmissionApprovalViewModel>
+@{
+    ViewBag.Title = "Submission Approvals";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style>
+    .neumorphic-table {
+        background: #f2f3f7;
+        border-radius: 25px;
+        box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 95%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 14px 18px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #e0e5ec;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9fc;
+    }
+</style>
+
+<div class="neumorphic-table">
+    <h3 style="color: #4F46E5; font-weight: bold;">Submission Approvals</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Submission</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Approved By</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                int index = 1;
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@(index++)</td>
+                        <td>@item.SubmissionTitle</td>
+                        <td>@item.SubjectName</td>
+                        <td>@item.Status</td>
+                        <td>@item.ApprovedByName</td>
+                        <td>@item.ApprovedDate.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center text-muted">No approvals found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

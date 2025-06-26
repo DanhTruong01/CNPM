@@ -1,0 +1,31 @@
+﻿@model QBCA.ViewModels.SubmissionApprovalViewModel
+@{
+    ViewBag.Title = "Edit Approval";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<div class="neumorphic-box">
+    <h3 class="text-center mb-4" style="color:#4F46E5;">Edit Submission Approval</h3>
+    @using (Html.BeginForm("Edit", "SubmissionApproval", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.SubmissionApprovalID)
+
+        <label class="neumorphic-label">Submission</label>
+        @Html.DropDownListFor(m => m.SubmissionTableID,
+        new SelectList(Model.AllSubmissions, "SubmissionID", "ExamPlan.Name", Model.SubmissionTableID),
+        "Select Submission",
+        new { @class = "neumorphic-select" })
+
+    <label class="neumorphic-label">Approved By</label>
+    @Html.DropDownListFor(m => m.ApprovedByID,
+        new SelectList(Model.AllApprovers, "UserID", "FullName", Model.ApprovedByID),
+        "Select Approver",
+        new { @class = "neumorphic-select" })
+
+    <label class="neumorphic-label">Status</label>
+    @Html.TextBoxFor(m => m.Status, new { @class = "neumorphic-input" })
+
+    <button type="submit" class="neumorphic-button">Update Approval</button>
+        }
+</div>

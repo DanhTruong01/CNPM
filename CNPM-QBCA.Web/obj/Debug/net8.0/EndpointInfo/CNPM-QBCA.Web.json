@@ -1178,6 +1178,47 @@
         },
         "additionalProperties": false
       },
+      "SubmissionApproval": {
+        "required": [
+          "approvedBy",
+          "status",
+          "submissionTableID"
+        ],
+        "type": "object",
+        "properties": {
+          "submissionApprovalID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "submissionTableID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "submissionTable": {
+            "$ref": "#/components/schemas/SubmissionTable"
+          },
+          "approvedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approver": {
+            "$ref": "#/components/schemas/User"
+          },
+          "approvedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "feedback": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "SubmissionTable": {
         "required": [
           "createdAt",
@@ -1247,6 +1288,17 @@
             "items": {
               "$ref": "#/components/schemas/Question"
             },
+            "nullable": true
+          },
+          "submissionApprovals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SubmissionApproval"
+            },
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -1502,6 +1554,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SubmissionTable"
+            },
+            "nullable": true
+          },
+          "submissionApprovals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SubmissionApproval"
             },
             "nullable": true
           },

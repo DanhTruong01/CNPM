@@ -12,8 +12,8 @@ using QBCA.Data;
 namespace CNPM_QBCA.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250623150218_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250626115556_AddTaskTypeToAssignedPlan")]
+    partial class AddTaskTypeToAssignedPlan
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -226,6 +226,54 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.HasIndex("NotificationID");
 
                     b.ToTable("TaskModels");
+                });
+
+            modelBuilder.Entity("QBCA.Models.AssignedPlan", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("AssignedByID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("AssignedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("AssignedToID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DistributionID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExamPlanID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TaskType")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("AssignedByID");
+
+                    b.HasIndex("AssignedToID");
+
+                    b.HasIndex("DistributionID");
+
+                    b.HasIndex("ExamPlanID");
+
+                    b.ToTable("AssignPlans");
                 });
 
             modelBuilder.Entity("QBCA.Models.CLO", b =>
@@ -779,6 +827,39 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.ToTable("Subjects");
                 });
 
+            modelBuilder.Entity("QBCA.Models.SubmissionApproval", b =>
+                {
+                    b.Property<int>("SubmissionApprovalID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubmissionApprovalID"));
+
+                    b.Property<int>("ApprovedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ApprovedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Feedback")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SubmissionTableID")
+                        .HasColumnType("int");
+
+                    b.HasKey("SubmissionApprovalID");
+
+                    b.HasIndex("ApprovedBy");
+
+                    b.HasIndex("SubmissionTableID");
+
+                    b.ToTable("SubmissionApprovals");
+                });
+
             modelBuilder.Entity("QBCA.Models.SubmissionTable", b =>
                 {
                     b.Property<int>("SubmissionID")
@@ -818,6 +899,10 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired()
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SubmissionID");
 
@@ -1013,6 +1098,41 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Navigation("MockExam");
 
                     b.Navigation("Notification");
+                });
+
+            modelBuilder.Entity("QBCA.Models.AssignedPlan", b =>
+                {
+                    b.HasOne("QBCA.Models.User", "AssignedBy")
+                        .WithMany()
+                        .HasForeignKey("AssignedByID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.User", "AssignedTo")
+                        .WithMany()
+                        .HasForeignKey("AssignedToID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.ExamPlanDistribution", "Distribution")
+                        .WithMany()
+                        .HasForeignKey("DistributionID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.ExamPlan", "ExamPlan")
+                        .WithMany()
+                        .HasForeignKey("ExamPlanID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("AssignedBy");
+
+                    b.Navigation("AssignedTo");
+
+                    b.Navigation("Distribution");
+
+                    b.Navigation("ExamPlan");
                 });
 
             modelBuilder.Entity("QBCA.Models.CLO", b =>
@@ -1256,6 +1376,25 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Navigation("Creator");
                 });
 
+            modelBuilder.Entity("QBCA.Models.SubmissionApproval", b =>
+                {
+                    b.HasOne("QBCA.Models.User", "Approver")
+                        .WithMany("SubmissionApprovals")
+                        .HasForeignKey("ApprovedBy")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.SubmissionTable", "SubmissionTable")
+                        .WithMany("SubmissionApprovals")
+                        .HasForeignKey("SubmissionTableID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Approver");
+
+                    b.Navigation("SubmissionTable");
+                });
+
             modelBuilder.Entity("QBCA.Models.SubmissionTable", b =>
                 {
                     b.HasOne("QBCA.Models.User", "Approver")
@@ -1416,6 +1555,8 @@ namespace CNPM_QBCA.Repositories.Migrations
             modelBuilder.Entity("QBCA.Models.SubmissionTable", b =>
                 {
                     b.Navigation("Questions");
+
+                    b.Navigation("SubmissionApprovals");
                 });
 
             modelBuilder.Entity("QBCA.Models.User", b =>
@@ -1431,6 +1572,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Navigation("QuestionsCreated");
 
                     b.Navigation("SubjectsCreated");
+
+                    b.Navigation("SubmissionApprovals");
 
                     b.Navigation("SubmissionTablesCreated");
 

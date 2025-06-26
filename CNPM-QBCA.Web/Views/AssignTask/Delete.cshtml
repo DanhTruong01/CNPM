@@ -1,0 +1,68 @@
+﻿@model QBCA.ViewModels.AssignTaskViewModel
+@{
+    ViewBag.Title = "Delete Task";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style>
+    .neumorphic-box {
+        background: #f2f3f7;
+        border-radius: 25px;
+        box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+        padding: 40px;
+        max-width: 600px;
+        margin: 100px auto;
+        text-align: center;
+    }
+
+    .task-info {
+        margin: 15px 0;
+        font-weight: 500;
+    }
+
+    .btn-danger {
+        background-color: #dc2626;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 12px;
+        font-weight: bold;
+        margin-right: 10px;
+        box-shadow: 5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff;
+    }
+
+        .btn-danger:hover {
+            background-color: #b91c1c;
+        }
+
+    .btn-cancel {
+        background-color: #4B5563;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 12px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff;
+    }
+
+        .btn-cancel:hover {
+            background-color: #374151;
+        }
+</style>
+
+<div class="neumorphic-box">
+    <h3 style="color: #dc2626; font-weight: bold;">Confirm Delete</h3>
+
+    <p>Are you sure you want to delete the following task?</p>
+
+    <div class="task-info">📌 <strong>Task:</strong> @Model.TaskType</div>
+    <div class="task-info">👤 <strong>Assigned To:</strong> @Model.AssignedToName</div>
+    <div class="task-info">⏳ <strong>Deadline:</strong> @Model.Deadline.ToString("dd/MM/yyyy")</div>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="TaskID" />
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a href="@Url.Action("Task", "AssignTask")" class="btn-cancel">Cancel</a>
+    </form>
+</div>

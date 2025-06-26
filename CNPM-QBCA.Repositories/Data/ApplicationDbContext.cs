@@ -21,10 +21,13 @@ namespace QBCA.Data
         public DbSet<CLO> CLOs { get; set; }
         public DbSet<DifficultyLevel> DifficultyLevels { get; set; }
         public DbSet<Question> Questions { get; set; }
+        public DbSet<AssignedPlan> AssignPlans { get; set; }
         public DbSet<ExamPlan> ExamPlans { get; set; }
         public DbSet<ExamQuestion> ExamQuestions { get; set; }
         public DbSet<ExamReview> ExamReviews { get; set; }
         public DbSet<SubmissionTable> SubmissionTables { get; set; }
+        public DbSet<SubmissionApproval> SubmissionApprovals { get; set; }
+
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<TaskAssignment> TaskAssignments { get; set; }
         public DbSet<DuplicateCheckResult> DuplicateCheckResults { get; set; }
@@ -342,7 +345,43 @@ namespace QBCA.Data
                 .WithMany(me => me.Questions)
                 .HasForeignKey(q => q.MockExamId)
                 .OnDelete(DeleteBehavior.Restrict);
+            // SubmissionApproval - SubmissionTable
+            modelBuilder.Entity<SubmissionApproval>()
+                .HasOne(sa => sa.SubmissionTable)
+                .WithMany(st => st.SubmissionApprovals)
+                .HasForeignKey(sa => sa.SubmissionTableID)
+                .OnDelete(DeleteBehavior.Restrict);
 
+            // SubmissionApproval - Approver (User)
+            modelBuilder.Entity<SubmissionApproval>()
+                .HasOne(sa => sa.Approver)
+                .WithMany(u => u.SubmissionApprovals)
+                .HasForeignKey(sa => sa.ApprovedBy);
+
+
+
+            modelBuilder.Entity<AssignedPlan>()
+                .HasOne(ap => ap.ExamPlan)
+                .WithMany()
+                .HasForeignKey(ap => ap.ExamPlanID)
+                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<AssignedPlan>()
+                .HasOne(ap => ap.Distribution)
+                .WithMany()
+                .HasForeignKey(ap => ap.DistributionID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<AssignedPlan>()
+                .HasOne(ap => ap.AssignedTo)
+                .WithMany()
+                .HasForeignKey(ap => ap.AssignedToID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<AssignedPlan>()
+                .HasOne(ap => ap.AssignedBy)
+                .WithMany()
+                .HasForeignKey(ap => ap.AssignedByID)
+                .OnDelete(DeleteBehavior.Restrict);
 
         }
 
