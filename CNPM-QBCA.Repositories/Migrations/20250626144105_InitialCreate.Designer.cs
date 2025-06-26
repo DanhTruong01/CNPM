@@ -12,8 +12,8 @@ using QBCA.Data;
 namespace CNPM_QBCA.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250626115556_AddTaskTypeToAssignedPlan")]
-    partial class AddTaskTypeToAssignedPlan
+    [Migration("20250626144105_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

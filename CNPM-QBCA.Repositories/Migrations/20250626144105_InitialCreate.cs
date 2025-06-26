@@ -385,7 +385,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                     ApprovedBy = table.Column<int>(type: "int", nullable: true),
                     ApprovedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DuplicateRate = table.Column<double>(type: "float", nullable: true),
-                    DuplicateReport = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DuplicateReport = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -411,7 +412,7 @@ namespace CNPM_QBCA.Repositories.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AssignedPlan",
+                name: "AssignPlans",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -428,27 +429,27 @@ namespace CNPM_QBCA.Repositories.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AssignedPlan", x => x.ID);
+                    table.PrimaryKey("PK_AssignPlans", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_AssignedPlan_ExamPlanDistributions_DistributionID",
+                        name: "FK_AssignPlans_ExamPlanDistributions_DistributionID",
                         column: x => x.DistributionID,
                         principalTable: "ExamPlanDistributions",
                         principalColumn: "DistributionID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_AssignedPlan_ExamPlans_ExamPlanID",
+                        name: "FK_AssignPlans_ExamPlans_ExamPlanID",
                         column: x => x.ExamPlanID,
                         principalTable: "ExamPlans",
                         principalColumn: "ExamPlanID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_AssignedPlan_Users_AssignedByID",
+                        name: "FK_AssignPlans_Users_AssignedByID",
                         column: x => x.AssignedByID,
                         principalTable: "Users",
                         principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_AssignedPlan_Users_AssignedToID",
+                        name: "FK_AssignPlans_Users_AssignedToID",
                         column: x => x.AssignedToID,
                         principalTable: "Users",
                         principalColumn: "UserID",
@@ -585,7 +586,7 @@ namespace CNPM_QBCA.Repositories.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SubmissionApproval",
+                name: "SubmissionApprovals",
                 columns: table => new
                 {
                     SubmissionApprovalID = table.Column<int>(type: "int", nullable: false)
@@ -598,15 +599,15 @@ namespace CNPM_QBCA.Repositories.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SubmissionApproval", x => x.SubmissionApprovalID);
+                    table.PrimaryKey("PK_SubmissionApprovals", x => x.SubmissionApprovalID);
                     table.ForeignKey(
-                        name: "FK_SubmissionApproval_SubmissionTables_SubmissionTableID",
+                        name: "FK_SubmissionApprovals_SubmissionTables_SubmissionTableID",
                         column: x => x.SubmissionTableID,
                         principalTable: "SubmissionTables",
                         principalColumn: "SubmissionID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_SubmissionApproval_Users_ApprovedBy",
+                        name: "FK_SubmissionApprovals_Users_ApprovedBy",
                         column: x => x.ApprovedBy,
                         principalTable: "Users",
                         principalColumn: "UserID",
@@ -783,23 +784,23 @@ namespace CNPM_QBCA.Repositories.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AssignedPlan_AssignedByID",
-                table: "AssignedPlan",
+                name: "IX_AssignPlans_AssignedByID",
+                table: "AssignPlans",
                 column: "AssignedByID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AssignedPlan_AssignedToID",
-                table: "AssignedPlan",
+                name: "IX_AssignPlans_AssignedToID",
+                table: "AssignPlans",
                 column: "AssignedToID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AssignedPlan_DistributionID",
-                table: "AssignedPlan",
+                name: "IX_AssignPlans_DistributionID",
+                table: "AssignPlans",
                 column: "DistributionID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AssignedPlan_ExamPlanID",
-                table: "AssignedPlan",
+                name: "IX_AssignPlans_ExamPlanID",
+                table: "AssignPlans",
                 column: "ExamPlanID");
 
             migrationBuilder.CreateIndex(
@@ -949,13 +950,13 @@ namespace CNPM_QBCA.Repositories.Migrations
                 column: "CreatedBy");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SubmissionApproval_ApprovedBy",
-                table: "SubmissionApproval",
+                name: "IX_SubmissionApprovals_ApprovedBy",
+                table: "SubmissionApprovals",
                 column: "ApprovedBy");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SubmissionApproval_SubmissionTableID",
-                table: "SubmissionApproval",
+                name: "IX_SubmissionApprovals_SubmissionTableID",
+                table: "SubmissionApprovals",
                 column: "SubmissionTableID");
 
             migrationBuilder.CreateIndex(
@@ -1043,7 +1044,7 @@ namespace CNPM_QBCA.Repositories.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AssignedPlan");
+                name: "AssignPlans");
 
             migrationBuilder.DropTable(
                 name: "DuplicateCheckResults");
@@ -1067,7 +1068,7 @@ namespace CNPM_QBCA.Repositories.Migrations
                 name: "ReviewExams");
 
             migrationBuilder.DropTable(
-                name: "SubmissionApproval");
+                name: "SubmissionApprovals");
 
             migrationBuilder.DropTable(
                 name: "TaskAssignments");

@@ -16,21 +16,3 @@ E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\refint\CNPM-QBCA.Business.dll
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.pdb
 E:\CNPM\Project\CNPM-QBCA\CNPM-QBCA.Business\obj\Debug\net8.0\ref\CNPM-QBCA.Business.dll
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\bin\Debug\net8.0\appsettings.Development.json
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\bin\Debug\net8.0\appsettings.json
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\bin\Debug\net8.0\CNPM-QBCA.Business.deps.json
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\bin\Debug\net8.0\CNPM-QBCA.Business.dll
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\bin\Debug\net8.0\CNPM-QBCA.Business.pdb
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\bin\Debug\net8.0\CNPM-QBCA.Repositories.dll
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\bin\Debug\net8.0\CNPM-QBCA.Repositories.pdb
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.csproj.AssemblyReference.cache
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.GeneratedMSBuildEditorConfig.editorconfig
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.AssemblyInfoInputs.cache
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.AssemblyInfo.cs
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.csproj.CoreCompileInputs.cache
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.sourcelink.json
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBC.419A0091.Up2Date
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.dll
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\refint\CNPM-QBCA.Business.dll
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\CNPM-QBCA.Business.pdb
-C:\UTH\Cong Nghe Phan Mem\CNPM\CNPM\CNPM-QBCA.Business\obj\Debug\net8.0\ref\CNPM-QBCA.Business.dll
