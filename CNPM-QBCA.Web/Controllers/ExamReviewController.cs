@@ -1,9 +1,11 @@
-﻿using QBCA.Data;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using QBCA.Data;
 using QBCA.Models;
-using System.Linq;
+using QBCA.ViewModels.ReviewExam;
+using System.Threading.Tasks;
 
-namespace CNPM_QBCA.Web.Controllers
+namespace QBCA.Controllers
 {
     public class ExamReviewController : Controller
     {
@@ -14,26 +16,61 @@ namespace CNPM_QBCA.Web.Controllers
             _context = context;
         }
 
-        //  Hiển thị danh sách bài cần review
-        public IActionResult ReviewExam()
+        // GET: /ExamReview/ReviewExam
+        public async Task<IActionResult> ReviewExam()
         {
-            var exams = _context.ReviewExams
-                .OrderByDescending(e => e.SubmittedDate)
-                .ToList();
+            var reviews = await _context.ReviewExams
+                .Include(r => r.Reviewer)
+                .Include(r => r.ExamPlan)
+                    .ThenInclude(p => p.Subject)
+                .Include(r => r.Distribution)
+                .ToListAsync();
 
-            return View(exams);
+            var viewModels = reviews.Select(r => new ReviewExamDetailViewModel
+            {
+                ReviewID = r.ReviewID,
+                ExamTitle = r.ExamPlan?.Name,
+                LecturerName = r.Reviewer?.FullName,
+                SubjectName = r.ExamPlan?.Subject?.SubjectName,
+                SubmittedDate = r.ReviewedAt,
+                Status = r.Status,
+                Comment = r.Comment,
+                DueDate = r.DueDate,
+                ReviewedAt = r.ReviewedAt
+            }).ToList();
+
+            return View(viewModels); // View: ReviewExam.cshtml
         }
 
-        //  Hiển thị chi tiết bài thi
-        public IActionResult ReviewDetails(int id)
+        // GET: /ExamReview/ReviewDetails/5
+        public async Task<IActionResult> ReviewDetails(int id)
         {
-            var exam = _context.ReviewExams.FirstOrDefault(e => e.Id == id);
-            if (exam == null)
+            var review = await _context.ReviewExams
+                .Include(r => r.Reviewer)
+                .Include(r => r.ExamPlan)
+                    .ThenInclude(p => p.Subject)
+                .Include(r => r.Distribution)
+                .FirstOrDefaultAsync(r => r.ReviewID == id);
+
+            if (review == null)
             {
                 return NotFound();
             }
 
-            return View(exam);
+            var vm = new ReviewExamDetailViewModel
+            {
+                ReviewID = review.ReviewID,
+                ExamTitle = review.ExamPlan?.Name,
+                LecturerName = review.Reviewer?.FullName,
+                SubjectName = review.ExamPlan?.Subject?.SubjectName,
+                SubmittedDate = review.ReviewedAt,
+                Comment = review.Comment,
+                Status = review.Status,
+                DueDate = review.DueDate,
+                ReviewedAt = review.ReviewedAt
+            };
+
+            return View(vm); // View: ReviewDetails.cshtml
         }
     }
 }

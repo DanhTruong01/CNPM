@@ -27,7 +27,7 @@ namespace CNPM_QBCA.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                task.Id = _lecturerTasks.Count + 1;
+                task.AssignmentID = _lecturerTasks.Count + 1;
                 task.CreatedAt = DateTime.Now;
                 _lecturerTasks.Add(task);
                 return RedirectToAction("AssignToLecturers");

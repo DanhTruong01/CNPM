@@ -31,23 +31,6 @@ namespace CNPM_QBCA.Repositories.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ExamAssignments",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    LecturerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ExamTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Deadline = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Comments = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsReviewed = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ExamAssignments", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "MockExam",
                 columns: table => new
                 {
@@ -60,23 +43,6 @@ namespace CNPM_QBCA.Repositories.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MockExam", x => x.MockExamID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ReviewExams",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ExamTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LecturerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SubmittedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ReviewExams", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -486,6 +452,43 @@ namespace CNPM_QBCA.Repositories.Migrations
                         principalTable: "Users",
                         principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ReviewExams",
+                columns: table => new
+                {
+                    ReviewID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ExamPlanID = table.Column<int>(type: "int", nullable: false),
+                    DistributionID = table.Column<int>(type: "int", nullable: false),
+                    ReviewerID = table.Column<int>(type: "int", nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ReviewedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DueDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ReviewExams", x => x.ReviewID);
+                    table.ForeignKey(
+                        name: "FK_ReviewExams_ExamPlanDistributions_DistributionID",
+                        column: x => x.DistributionID,
+                        principalTable: "ExamPlanDistributions",
+                        principalColumn: "DistributionID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ReviewExams_ExamPlans_ExamPlanID",
+                        column: x => x.ExamPlanID,
+                        principalTable: "ExamPlans",
+                        principalColumn: "ExamPlanID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ReviewExams_Users_ReviewerID",
+                        column: x => x.ReviewerID,
+                        principalTable: "Users",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -945,6 +948,21 @@ namespace CNPM_QBCA.Repositories.Migrations
                 column: "SubmissionID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ReviewExams_DistributionID",
+                table: "ReviewExams",
+                column: "DistributionID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ReviewExams_ExamPlanID",
+                table: "ReviewExams",
+                column: "ExamPlanID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ReviewExams_ReviewerID",
+                table: "ReviewExams",
+                column: "ReviewerID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Subjects_CreatedBy",
                 table: "Subjects",
                 column: "CreatedBy");
@@ -1051,9 +1069,6 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             migrationBuilder.DropTable(
                 name: "ExamApproveTasks");
-
-            migrationBuilder.DropTable(
-                name: "ExamAssignments");
 
             migrationBuilder.DropTable(
                 name: "Logins");

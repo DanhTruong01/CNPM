@@ -13,7 +13,6 @@ namespace QBCA.Data
 
         public DbSet<Role> Roles { get; set; }
         public DbSet<ExamApproveTask> ExamApproveTasks { get; set; }
-        public DbSet<ExamAssignment> ExamAssignments { get; set; }
         public DbSet<ReviewExam> ReviewExams { get; set; }
         public DbSet<Login> Logins { get; set; }
         public DbSet<User> Users { get; set; }

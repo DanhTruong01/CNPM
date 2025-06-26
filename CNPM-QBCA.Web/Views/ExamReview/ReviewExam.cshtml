@@ -1,58 +1,40 @@
-﻿@model List<QBCA.Models.ReviewExam>
+﻿@model IEnumerable<QBCA.Models.ReviewExam>
 @{
-    ViewBag.Title = "Review Exams";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
-<div class="center-container">
-    <div class="neumorphic-card">
-        <h2 class="header-text">✔️ Exams Pending Review</h2>
-
+<div class="container mt-4">
+    <div class="card p-4 shadow-sm rounded-4">
+        <h2 class="text-primary mb-3">Exam Reviews</h2>
         @if (!Model.Any())
         {
-            <div class="alert alert-info text-center" style="font-size: 18px;">
-                <i> ❗No exams submitted for review yet..
-            </div>
+            <div class="alert alert-info">No reviews available.</div>
         }
         else
         {
-            <table class="styled-table">
-                <thead>
+            <table class="table table-bordered table-hover">
+                <thead class="table-primary">
                     <tr>
-                        <th>Title</th>
-                        <th>Subject</th>
-                        <th>Lecturer</th>
-                        <th>Submitted</th>
+                        <th>Reviewer</th>
+                        <th>Exam Plan</th>
+                        <th>Distribution</th>
                         <th>Status</th>
-                        <th>Details</th>
+                        <th>Due Date</th>
+                        <th>Reviewed At</th>
+                        <th>Comment</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var exam in Model)
+                    @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@exam.ExamTitle</td>
-                            <td>@exam.SubjectName</td>
-                            <td>@exam.LecturerName</td>
-                            <td>@exam.SubmittedDate.ToShortDateString()</td>
-                            <td>
-                                @if (exam.Status == "Pending")
-                                {
-                                    <span class="badge bg-warning text-dark">Pending</span>
-                                }
-                                else if (exam.Status == "Approved")
-                                {
-                                    <span class="badge bg-success">Approved</span>
-                                }
-                            </td>
-                            <td>
-                                <a asp-controller="ExamReview"
-                                   asp-action="ReviewDetails"
-                                   asp-route-id="@exam.Id"
-                                   class="neumorphic-button btn-sm">
-                                    View
-                                </a>
-                            </td>
+                            <td>@item.Reviewer?.FullName</td>
+                            <td>@item.ExamPlan?.Name</td>
+                            <td>@item.Distribution?.DifficultyLevel?.LevelName</td>
+                            <td><span class="badge bg-info text-dark">@item.Status</span></td>
+                            <td>@item.DueDate?.ToString("dd/MM/yyyy")</td>
+                            <td>@item.ReviewedAt.ToString("dd/MM/yyyy")</td>
+                            <td>@item.Comment</td>
                         </tr>
                     }
                 </tbody>
@@ -60,5 +42,3 @@
         }
     </div>
 </div>
-
-<!-- CSS giữ nguyên như các view neumorphic bạn đã dùng -->

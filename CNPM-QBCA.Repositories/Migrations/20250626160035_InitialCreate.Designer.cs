@@ -12,7 +12,7 @@ using QBCA.Data;
 namespace CNPM_QBCA.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250626144105_InitialCreate")]
+    [Migration("20250626160035_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -443,37 +443,6 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.ToTable("ExamApproveTasks");
                 });
 
-            modelBuilder.Entity("QBCA.Models.ExamAssignment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Comments")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Deadline")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ExamTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsReviewed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LecturerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ExamAssignments");
-                });
-
             modelBuilder.Entity("QBCA.Models.ExamPlan", b =>
                 {
                     b.Property<int>("ExamPlanID")
@@ -748,32 +717,42 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             modelBuilder.Entity("QBCA.Models.ReviewExam", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ReviewID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewID"));
 
-                    b.Property<string>("ExamTitle")
+                    b.Property<string>("Comment")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LecturerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("DistributionID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ExamPlanID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ReviewedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ReviewerID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SubjectName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("ReviewID");
 
-                    b.Property<DateTime>("SubmittedDate")
-                        .HasColumnType("datetime2");
+                    b.HasIndex("DistributionID");
 
-                    b.HasKey("Id");
+                    b.HasIndex("ExamPlanID");
+
+                    b.HasIndex("ReviewerID");
 
                     b.ToTable("ReviewExams");
                 });
@@ -1363,6 +1342,33 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Navigation("Subject");
 
                     b.Navigation("SubmissionTable");
+                });
+
+            modelBuilder.Entity("QBCA.Models.ReviewExam", b =>
+                {
+                    b.HasOne("QBCA.Models.ExamPlanDistribution", "Distribution")
+                        .WithMany()
+                        .HasForeignKey("DistributionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.ExamPlan", "ExamPlan")
+                        .WithMany()
+                        .HasForeignKey("ExamPlanID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QBCA.Models.User", "Reviewer")
+                        .WithMany()
+                        .HasForeignKey("ReviewerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Distribution");
+
+                    b.Navigation("ExamPlan");
+
+                    b.Navigation("Reviewer");
                 });
 
             modelBuilder.Entity("QBCA.Models.Subject", b =>
