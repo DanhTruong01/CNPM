@@ -1,78 +1,82 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CNPM_QBCA.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QBCA.Data;
 using QBCA.Models;
-using System;
-using System.Linq;
 
-namespace CNPM_QBCA.Web.Controllers
+public class ExamApproveTaskController : Controller
 {
-    public class ExamApproveController : Controller
+    private readonly ApplicationDbContext _context;
+    private int currentUserId;
+
+    public ExamApproveTaskController(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public ExamApproveController(ApplicationDbContext context)
+    public async Task<IActionResult> Index()
+    {
+        var tasks = await _context.ExamApproveTasks
+            .Include(e => e.Exam)
+            .Include(e => e.AssignedBy)
+            .Where(t => t.AssignedToUserID == currentUserId) // hoặc để hiển thị hết nếu là admin
+            .ToListAsync();
+
+        var viewModel = tasks.Select(t => new ApproveExamTaskViewModel
         {
-            _context = context;
-        }
+            TaskID = t.ExamApproveTaskID,
+            ExamTitle = t.Exam.Title,
+            Status = t.Status,
+            AssignedBy = t.AssignedBy.FullName,
+            AssignedDate = t.AssignedDate,
+            CreatedAt = t.CreatedAt
+        }).ToList();
 
-        public IActionResult Index()
-        {
-            var examTasks = _context.ExamApproveTasks
-                .OrderByDescending(t => t.LastUpdated)
-                .ToList();
-            return View(examTasks);
-        }
-
-        public IActionResult Review(int? id)
-        {
-            ExamApproveTask? examTask;
-
-            if (id == null)
-            {
-                examTask = _context.ExamApproveTasks
-                    .OrderByDescending(t => t.LastUpdated)
-                    .FirstOrDefault();
-            }
-            else
-            {
-                examTask = _context.ExamApproveTasks
-                    .FirstOrDefault(t => t.Id == id.Value);
-            }
-
-            if (examTask == null)
-            {
-                ViewBag.NoData = true;
-                return View(new ExamApproveTask { /* default fields */ });
-            }
-
-            ViewBag.NoData = false;
-            return View(examTask);
-        }
+        return View(viewModel);
+    }
 
 
+    public async Task<IActionResult> Details(int id)
+    {
+        var task = await _context.ExamApproveTasks
+            .Include(e => e.Exam)
+            .Include(e => e.AssignedTo)
+            .Include(e => e.AssignedBy)
+            .FirstOrDefaultAsync(t => t.ExamApproveTaskID == id);
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult ApproveUpdate(ExamApproveTask updatedTask)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(updatedTask);
-            }
+        if (task == null)
+            return NotFound();
 
-            var examTask = _context.ExamApproveTasks.FirstOrDefault(t => t.Id == updatedTask.Id);
-            if (examTask == null)
-            {
-                return NotFound();
-            }
+        return View(task);
+    }
 
-            examTask.Status = updatedTask.Status;
-            examTask.Feedback = updatedTask.Feedback;
-            examTask.LastUpdated = DateTime.Now;
+    [HttpPost]
+    public async Task<IActionResult> Approve(int id, string feedback)
+    {
+        var task = await _context.ExamApproveTasks.FindAsync(id);
+        if (task == null)
+            return NotFound();
 
-            _context.SaveChanges();
+        task.Status = "Approved";
+        task.Feedback = feedback;
+        task.ApprovedDate = DateTime.Now;
 
-            return RedirectToAction(nameof(Index));
-        }
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Reject(int id, string feedback)
+    {
+        var task = await _context.ExamApproveTasks.FindAsync(id);
+        if (task == null)
+            return NotFound();
+
+        task.Status = "Rejected";
+        task.Feedback = feedback;
+        task.ApprovedDate = DateTime.Now;
+
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
     }
 }

@@ -380,6 +380,26 @@ namespace QBCA.Data
                 .WithMany() // hoặc .WithMany(d => d.TaskAssignments) nếu có
                 .HasForeignKey(t => t.DistributionID);
 
+            // Approve
+            modelBuilder.Entity<ExamApproveTask>()
+                .HasOne(e => e.AssignedBy)
+                .WithMany()
+                .HasForeignKey(e => e.AssignedByUserID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ExamApproveTask>()
+                .HasOne(e => e.AssignedTo)
+                .WithMany()
+                .HasForeignKey(e => e.AssignedToUserID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Nếu có Exam:
+            modelBuilder.Entity<ExamApproveTask>()
+                .HasOne(e => e.Exam)
+                .WithMany()
+                .HasForeignKey(e => e.ExamID);
+
+
 
         }
 

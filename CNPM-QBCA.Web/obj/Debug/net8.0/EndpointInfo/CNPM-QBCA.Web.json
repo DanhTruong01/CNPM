@@ -243,6 +243,61 @@
         },
         "additionalProperties": false
       },
+      "ExamApproveTask": {
+        "type": "object",
+        "properties": {
+          "examApproveTaskID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exam": {
+            "$ref": "#/components/schemas/Exam"
+          },
+          "assignedToUserID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignedTo": {
+            "$ref": "#/components/schemas/User"
+          },
+          "assignedByUserID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignedBy": {
+            "$ref": "#/components/schemas/User"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "feedback": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "approvedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isFinalVersion": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "ExamPlan": {
         "required": [
           "name",
@@ -1223,6 +1278,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TaskModel"
+            },
+            "nullable": true
+          },
+          "assignedTasks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExamApproveTask"
             },
             "nullable": true
           }

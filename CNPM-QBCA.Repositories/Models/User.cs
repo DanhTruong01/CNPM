@@ -27,5 +27,6 @@ namespace QBCA.Models
         public ICollection<Login> Logins { get; set; } = new List<Login>();
         public virtual ICollection<TaskModel> TasksAssigned { get; set; }
         public virtual ICollection<TaskModel> TasksCreated { get; set; }
+        public ICollection<ExamApproveTask> AssignedTasks { get; set; }
     }
 }

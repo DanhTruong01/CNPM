@@ -3332,23 +3332,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\truon\\.nuget\\packages\\": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\truon\\OneDrive\\Máy tính\\test 1\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+      "projectUniqueName": "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
       "projectName": "CNPM-QBCA.Business",
-      "projectPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\test 1\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
-      "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\test 1\\CNPM\\CNPM-QBCA.Business\\obj\\",
+      "projectPath": "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\CNPM\\CNPM-QBCA.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3363,8 +3363,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\truon\\OneDrive\\Máy tính\\test 1\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
-              "projectPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\test 1\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
+            "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+              "projectPath": "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
             }
           }
         }

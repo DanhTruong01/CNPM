@@ -12,25 +12,6 @@ namespace CNPM_QBCA.Repositories.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ExamApproveTasks",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ExamTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Reviewer = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastUpdated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Feedback = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ExamApproveTasks", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "MockQuestion",
                 columns: table => new
                 {
@@ -565,6 +546,51 @@ namespace CNPM_QBCA.Repositories.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ExamApproveTasks",
+                columns: table => new
+                {
+                    ExamApproveTaskID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ExamID = table.Column<int>(type: "int", nullable: false),
+                    AssignedToUserID = table.Column<int>(type: "int", nullable: false),
+                    AssignedByUserID = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Feedback = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AssignedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ApprovedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsFinalVersion = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UserID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ExamApproveTasks", x => x.ExamApproveTaskID);
+                    table.ForeignKey(
+                        name: "FK_ExamApproveTasks_Exams_ExamID",
+                        column: x => x.ExamID,
+                        principalTable: "Exams",
+                        principalColumn: "ExamID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ExamApproveTasks_Users_AssignedByUserID",
+                        column: x => x.AssignedByUserID,
+                        principalTable: "Users",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ExamApproveTasks_Users_AssignedToUserID",
+                        column: x => x.AssignedToUserID,
+                        principalTable: "Users",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ExamApproveTasks_Users_UserID",
+                        column: x => x.UserID,
+                        principalTable: "Users",
+                        principalColumn: "UserID");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MockExam",
                 columns: table => new
                 {
@@ -838,6 +864,26 @@ namespace CNPM_QBCA.Repositories.Migrations
                 name: "IX_DuplicateCheckResults_SimilarQuestionID",
                 table: "DuplicateCheckResults",
                 column: "SimilarQuestionID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ExamApproveTasks_AssignedByUserID",
+                table: "ExamApproveTasks",
+                column: "AssignedByUserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ExamApproveTasks_AssignedToUserID",
+                table: "ExamApproveTasks",
+                column: "AssignedToUserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ExamApproveTasks_ExamID",
+                table: "ExamApproveTasks",
+                column: "ExamID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ExamApproveTasks_UserID",
+                table: "ExamApproveTasks",
+                column: "UserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ExamPlanDistributions_AssignedManagerRoleID",

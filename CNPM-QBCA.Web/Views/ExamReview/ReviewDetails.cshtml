@@ -1,32 +1,45 @@
-﻿@model QBCA.ViewModels.ReviewExam.ReviewExamDetailViewModel
+﻿@using QBCA.ViewModels.ReviewExam
+@model ReviewExamDetailViewModel
 
 @{
-    ViewBag.Title = "Review Details";
+    ViewBag.Title = "Review Exam Details";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
-<div class="center-container">
-    <div class="neumorphic-card text-start">
-        <h2 class="header-text text-center">Exam Review Details</h2>
+<div class="container py-4">
+    <div class="main-content-area">
+        <div class="card shadow p-4 rounded-4 bg-light">
+            <h2 class="mb-4 text-primary">Review Exam Details</h2>
 
-        <div class="info-group"><strong>Title:</strong> @Model.ExamTitle</div>
-        <div class="info-group"><strong>Subject:</strong> @Model.SubjectName</div>
-        <div class="info-group"><strong>Lecturer:</strong> @Model.LecturerName</div>
-        <div class="info-group"><strong>Submitted:</strong> @Model.SubmittedDate.ToShortDateString()</div>
-        <div class="info-group">
-            <strong>Status:</strong>
-            @if (Model.Status == "Pending")
-            {
-                <span class="badge bg-warning text-dark">Pending</span>
-            }
-            else if (Model.Status == "Approved")
-            {
-                <span class="badge bg-success">Approved</span>
-            }
-        </div>
+            <dl class="row">
+                <dt class="col-sm-3">Exam Title:</dt>
+                <dd class="col-sm-9">@Model.ExamTitle</dd>
 
-        <div class="mt-4 text-center">
-            <a href="@Url.Action("ReviewExam", "ExamReview")" class="neumorphic-button">Back</a>
+                <dt class="col-sm-3">Lecturer:</dt>
+                <dd class="col-sm-9">@Model.LecturerName</dd>
+
+                <dt class="col-sm-3">Subject:</dt>
+                <dd class="col-sm-9">@Model.SubjectName</dd>
+
+                <dt class="col-sm-3">Status:</dt>
+                <dd class="col-sm-9">
+                    <span class="badge bg-@(Model.Status == "Approved" ? "success" : Model.Status == "Rejected" ? "danger" : "warning")">
+                        @Model.Status
+                    </span>
+                </dd>
+
+                <dt class="col-sm-3">Submitted Date:</dt>
+                <dd class="col-sm-9">@Model.SubmittedDate.ToString("yyyy-MM-dd")</dd>
+
+                <dt class="col-sm-3">Due Date:</dt>
+                <dd class="col-sm-9">@Model.DueDate?.ToString("yyyy-MM-dd") ?? "N/A"</dd>
+
+                <dt class="col-sm-3">Reviewed At:</dt>
+                <dd class="col-sm-9">@Model.ReviewedAt.ToString("yyyy-MM-dd HH:mm")</dd>
+
+                <dt class="col-sm-3">Comment:</dt>
+                <dd class="col-sm-9">@Model.Comment</dd>
+            </dl>
         </div>
     </div>
 </div>

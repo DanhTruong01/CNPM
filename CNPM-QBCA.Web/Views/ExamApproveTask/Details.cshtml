@@ -1,0 +1,51 @@
+﻿@model QBCA.Models.ExamApproveTask
+@{
+    ViewData["Title"] = "Chi tiết nhiệm vụ phê duyệt";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow p-4 rounded-4" style="background: #f8f9fa;">
+        <h2 class="mb-4 text-primary">Chi tiết nhiệm vụ phê duyệt</h2>
+
+        <dl class="row">
+            <dt class="col-sm-4">Đề thi:</dt>
+            <dd class="col-sm-8">@Model.Exam?.Title</dd>
+
+            <dt class="col-sm-4">Người giao:</dt>
+            <dd class="col-sm-8">@Model.AssignedBy?.FullName</dd>
+
+            <dt class="col-sm-4">Người được giao:</dt>
+            <dd class="col-sm-8">@Model.AssignedTo?.FullName</dd>
+
+            <dt class="col-sm-4">Trạng thái:</dt>
+            <dd class="col-sm-8">
+                <span class="badge bg-@(Model.Status == "Approved" ? "success" : Model.Status == "Rejected" ? "danger" : "warning")">
+                    @Model.Status
+                </span>
+            </dd>
+
+            <dt class="col-sm-4">Nhận xét:</dt>
+            <dd class="col-sm-8">@Model.Feedback</dd>
+        </dl>
+
+        @if (Model.Status == "Pending")
+        {
+            <form asp-action="Approve" asp-route-id="@Model.ExamApproveTaskID" method="post" class="mt-4">
+                <div class="mb-3">
+                    <label for="feedback">Nhận xét phê duyệt:</label>
+                    <textarea name="feedback" class="form-control rounded-3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success me-2">Phê duyệt</button>
+            </form>
+
+            <form asp-action="Reject" asp-route-id="@Model.ExamApproveTaskID" method="post" class="mt-2">
+                <div class="mb-3">
+                    <label for="feedback">Lý do từ chối:</label>
+                    <textarea name="feedback" class="form-control rounded-3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Từ chối</button>
+            </form>
+        }
+    </div>
+</div>
