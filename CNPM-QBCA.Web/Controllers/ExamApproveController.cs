@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QBCA.Data;
-using QBCA.Models;
+
+
 
 public class ExamApproveTaskController : Controller
 {
@@ -16,6 +17,10 @@ public class ExamApproveTaskController : Controller
 
     public async Task<IActionResult> Index()
     {
+        var userIdStr = User.FindFirst("UserID")?.Value;
+        if (!int.TryParse(userIdStr, out int currentUserId))
+            return RedirectToAction("Unauthorized", "Home");
+
         var tasks = await _context.ExamApproveTasks
             .Include(e => e.Exam)
             .Include(e => e.AssignedBy)
@@ -39,16 +44,28 @@ public class ExamApproveTaskController : Controller
     public async Task<IActionResult> Details(int id)
     {
         var task = await _context.ExamApproveTasks
-            .Include(e => e.Exam)
-            .Include(e => e.AssignedTo)
-            .Include(e => e.AssignedBy)
+            .Include(t => t.Exam)
+            .Include(t => t.AssignedBy)
+            .Include(t => t.AssignedTo)
             .FirstOrDefaultAsync(t => t.ExamApproveTaskID == id);
 
-        if (task == null)
-            return NotFound();
+        if (task == null) return NotFound();
 
-        return View(task);
+        // Giả sử mỗi Exam có 1 Submission duy nhất → tìm theo ExamID
+        var submission = await _context.SubmissionTables
+            .Include(s => s.Questions)
+            .Include(s => s.Creator)
+            .FirstOrDefaultAsync(s => s.PlanID == task.Exam.ExamPlanID); // hoặc dùng ExamID nếu bạn có mapping riêng
+
+        var viewModel = new ApproveExamDetailViewModel
+        {
+            Task = task,
+            Submission = submission
+        };
+
+        return View(viewModel);
     }
+
 
     [HttpPost]
     public async Task<IActionResult> Approve(int id, string feedback)

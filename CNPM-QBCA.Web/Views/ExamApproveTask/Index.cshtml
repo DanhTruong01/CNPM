@@ -6,6 +6,7 @@
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
+
 <div class="container py-4">
     <div class="main-content-area">
         <div style="margin-bottom: 18px;">
@@ -32,11 +33,18 @@
                         {
                             <tr>
                                 <td>@task.TaskID</td>
-                                <td>@task.ExamTitle</td>
+                                <td>
+                                    <a class="text-decoration-none"
+                                       asp-controller="ExamApproveTask"
+                                       asp-action="Details"
+                                       asp-route-id="@task.TaskID">
+                                        @task.ExamTitle
+                                    </a>
+                                </td>
                                 <td>
                                     <span class="badge bg-@(task.Status == "Approved" ? "success" :
-                                                                                                      task.Status == "Rejected" ? "danger" :
-                                                                                                      "warning")">
+                                                                                                        task.Status == "Rejected" ? "danger" :
+                                                                                                        "warning")">
                                 @task.Status
                             </span>
                         </td>
@@ -63,6 +71,26 @@
 
 @section Styles {
     <style>
+        .assign-btn-neumorphic {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #f0f4ff;
+            color: #3253f1;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            box-shadow: 4px 4px 8px #d4d8e5, -4px -4px 8px #ffffff;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+            .assign-btn-neumorphic:hover {
+                box-shadow: inset 3px 3px 5px #d4d8e5, inset -3px -3px 5px #ffffff;
+                background-color: #e0e9ff;
+                color: #1f3cc4;
+            }
+
         .main-content-area {
             margin-left: 34px;
             margin-right: 34px;

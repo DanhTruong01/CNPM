@@ -239,6 +239,10 @@
             "minLength": 0,
             "type": "string",
             "nullable": true
+          },
+          "examPlanID": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

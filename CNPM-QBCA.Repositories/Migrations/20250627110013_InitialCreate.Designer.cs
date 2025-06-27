@@ -12,7 +12,7 @@ using QBCA.Data;
 namespace CNPM_QBCA.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250626171455_InitialCreate")]
+    [Migration("20250627110013_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -378,6 +378,9 @@ namespace CNPM_QBCA.Repositories.Migrations
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("ExamPlanID")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");

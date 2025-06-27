@@ -351,7 +351,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                     SubmitDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     SubmittedBy = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    ExamPlanID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

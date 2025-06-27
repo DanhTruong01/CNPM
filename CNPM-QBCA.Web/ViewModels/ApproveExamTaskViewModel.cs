@@ -2,7 +2,7 @@
 
 namespace CNPM_QBCA.ViewModels
 {
-    public class ApproveExamTaskViewModel : Controller
+    public class ApproveExamTaskViewModel
     {
 
 

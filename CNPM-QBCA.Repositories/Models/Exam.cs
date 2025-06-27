@@ -33,5 +33,6 @@ namespace QBCA.Models
 
         [StringLength(500)]
         public string Description { get; set; }
+        public int ExamPlanID { get; set; }
     }
 }
