@@ -433,6 +433,9 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Property<int>("ExamID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ExamID1")
+                        .HasColumnType("int");
+
                     b.Property<string>("Feedback")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -454,6 +457,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.HasIndex("AssignedToUserID");
 
                     b.HasIndex("ExamID");
+
+                    b.HasIndex("ExamID1");
 
                     b.HasIndex("UserID");
 
@@ -1224,6 +1229,10 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("QBCA.Models.Exam", null)
+                        .WithMany("ApproveTasks")
+                        .HasForeignKey("ExamID1");
+
                     b.HasOne("QBCA.Models.User", null)
                         .WithMany("AssignedTasks")
                         .HasForeignKey("UserID");
@@ -1559,6 +1568,8 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             modelBuilder.Entity("QBCA.Models.Exam", b =>
                 {
+                    b.Navigation("ApproveTasks");
+
                     b.Navigation("ExamQuestions");
                 });
 

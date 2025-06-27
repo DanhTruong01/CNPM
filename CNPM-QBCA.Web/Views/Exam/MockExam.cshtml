@@ -71,7 +71,7 @@
     <div class="neumorphic-box">
         <h3 class="text-center fw-bold mb-4 text-dark">
             <span style="color:#6d82f3;"><i class="fas fa-book-open"></i></span>
-            @Model.ExamTitle - Thi thử
+            @Model.ExamTitle - Mock Exam
         </h3>
 
         <form asp-action="MockExam" asp-controller="Exam" method="post">
@@ -82,16 +82,16 @@
             {
                 var q = Model.Questions[i];
                 <div class="question-box">
-                    <label class="neumorphic-label">Câu @(i + 1): @q.Content</label>
-                    <textarea name="Answers[@q.QuestionID]" rows="3" class="neumorphic-textarea" placeholder="Nhập câu trả lời..." required></textarea>
+                    <label class="neumorphic-label">Question @(i + 1): @q.Content</label>
+                    <textarea name="Answers[@q.QuestionID]" rows="3" class="neumorphic-textarea" placeholder="Enter your answer..." required></textarea>
                 </div>
             }
 
-            <label class="neumorphic-label">Nhận xét chung về đề thi:</label>
-            <textarea name="Feedback" rows="4" class="neumorphic-textarea" placeholder="Nhập nhận xét..."></textarea>
+            <label class="neumorphic-label">General feedback on the exam:</label>
+            <textarea name="Feedback" rows="4" class="neumorphic-textarea" placeholder="Enter your feedback..."></textarea>
 
             <button type="submit" class="neumorphic-button">
-                <i class="fas fa-paper-plane me-2"></i> Nộp bài thi thử
+                <i class="fas fa-paper-plane me-2"></i> Submit Mock Exam
             </button>
         </form>
     </div>

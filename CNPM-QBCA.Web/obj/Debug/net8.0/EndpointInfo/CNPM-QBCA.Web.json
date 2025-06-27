@@ -234,6 +234,13 @@
               "$ref": "#/components/schemas/ExamQuestion"
             }
           },
+          "approveTasks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExamApproveTask"
+            },
+            "nullable": true
+          },
           "description": {
             "maxLength": 500,
             "minLength": 0,

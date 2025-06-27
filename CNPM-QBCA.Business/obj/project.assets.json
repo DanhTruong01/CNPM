@@ -3332,23 +3332,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Users\\truon\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+      "projectUniqueName": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
       "projectName": "CNPM-QBCA.Business",
-      "projectPath": "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\CNPM\\CNPM-QBCA.Business\\obj\\",
+      "projectPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+      "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3363,8 +3363,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
-              "projectPath": "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
+            "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+              "projectPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
             }
           }
         }

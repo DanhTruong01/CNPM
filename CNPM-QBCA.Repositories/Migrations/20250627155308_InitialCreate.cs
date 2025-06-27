@@ -561,6 +561,7 @@ namespace CNPM_QBCA.Repositories.Migrations
                     ApprovedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsFinalVersion = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ExamID1 = table.Column<int>(type: "int", nullable: true),
                     UserID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -572,6 +573,11 @@ namespace CNPM_QBCA.Repositories.Migrations
                         principalTable: "Exams",
                         principalColumn: "ExamID",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ExamApproveTasks_Exams_ExamID1",
+                        column: x => x.ExamID1,
+                        principalTable: "Exams",
+                        principalColumn: "ExamID");
                     table.ForeignKey(
                         name: "FK_ExamApproveTasks_Users_AssignedByUserID",
                         column: x => x.AssignedByUserID,
@@ -880,6 +886,11 @@ namespace CNPM_QBCA.Repositories.Migrations
                 name: "IX_ExamApproveTasks_ExamID",
                 table: "ExamApproveTasks",
                 column: "ExamID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ExamApproveTasks_ExamID1",
+                table: "ExamApproveTasks",
+                column: "ExamID1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ExamApproveTasks_UserID",
