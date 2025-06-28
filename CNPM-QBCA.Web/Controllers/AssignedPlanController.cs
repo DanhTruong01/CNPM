@@ -35,11 +35,13 @@ namespace QBCA.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(AssignedPlanViewModel model)
         {
-            if (!ModelState.IsValid)
+            if (model.Deadline <= DateTime.Now)
             {
+                ModelState.AddModelError("Deadline", "Deadline must be a future date.");
                 LoadDropdowns(model);
                 return View(model);
             }
+
 
             var plan = new AssignedPlan
             {
@@ -65,7 +67,7 @@ namespace QBCA.Controllers
                 UserID = model.AssignedToID,
                 Message = $"You have been assigned a task for subject: {subjectName} ({model.TaskType})",
                 CreatedAt = DateTime.Now,
-               
+
             };
 
             _context.Notifications.Add(notification);
@@ -74,16 +76,25 @@ namespace QBCA.Controllers
         }
 
         // GET: AssignedPlan/Plans
-        public IActionResult Plans()
+        public IActionResult Plans(string subject, string status)
         {
-            var assignedPlans = _context.AssignPlans
+            var query = _context.AssignPlans
                 .Include(t => t.ExamPlan).ThenInclude(p => p.Subject)
                 .Include(t => t.AssignedTo)
                 .Include(t => t.Distribution).ThenInclude(d => d.DifficultyLevel)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(subject))
+                query = query.Where(p => p.ExamPlan.Subject.SubjectName == subject);
+
+            if (!string.IsNullOrEmpty(status))
+                query = query.Where(p => p.Status.ToString() == status);
+
+            var assignedPlans = query
+                .OrderByDescending(p => p.AssignedDate)
                 .Select(t => new AssignedPlanViewModel
                 {
                     AssignedPlanID = t.ID,
-                    ExamPlanID = t.ExamPlanID,
                     SubjectName = t.ExamPlan.Subject.SubjectName,
                     AssignedToName = t.AssignedTo.FullName,
                     DistributionStatus = $"{t.Distribution.Status} - {t.Distribution.DifficultyLevel.LevelName}",
@@ -94,8 +105,12 @@ namespace QBCA.Controllers
                     Notes = t.Notes
                 }).ToList();
 
+            ViewBag.Subjects = _context.Subjects.Select(s => s.SubjectName).Distinct().ToList();
+            ViewBag.Statuses = Enum.GetNames(typeof(AssignedPlanStatus)).ToList();
+
             return View(assignedPlans);
         }
+
 
         // GET: AssignedPlan/Edit/{id}
         public IActionResult Edit(int id)
@@ -126,13 +141,13 @@ namespace QBCA.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, AssignedPlanViewModel model)
         {
-            if (id != model.AssignedPlanID) return NotFound();
-
-            if (!ModelState.IsValid)
+            if (model.Deadline <= DateTime.Now)
             {
+                ModelState.AddModelError("Deadline", "Deadline must be a future date.");
                 LoadDropdowns(model);
                 return View(model);
             }
+
 
             var plan = _context.AssignPlans.Find(id);
             if (plan == null) return NotFound();
@@ -142,7 +157,7 @@ namespace QBCA.Controllers
             plan.AssignedToID = model.AssignedToID;
             plan.Deadline = model.Deadline;
             plan.Notes = model.Notes;
-            plan.Status = model.Status;
+            plan.Status = (AssignedPlanStatus)model.Status;
             plan.TaskType = model.TaskType;
 
             _context.SaveChanges();
@@ -181,11 +196,65 @@ namespace QBCA.Controllers
         }
 
         // Helper method
+        // Helper method
         private void LoadDropdowns(AssignedPlanViewModel model)
         {
             model.AllExamPlans = _context.ExamPlans.Include(e => e.Subject).ToList();
-            model.AllDistributions = _context.ExamPlanDistributions.Include(d => d.DifficultyLevel).ToList();
-            model.AllLecturers = _context.Users.Include(u => u.Role).Where(u => u.Role.RoleName == "Lecturer").ToList();
+
+            // Sửa lỗi hiển thị trùng bằng cách ghép Status + DifficultyLevel
+            model.AllDistributions = _context.ExamPlanDistributions
+                .Include(d => d.DifficultyLevel)
+                .Include(d => d.ExamPlan).ThenInclude(p => p.Subject)
+                .Select(d => new ExamPlanDistribution
+                {
+                    DistributionID = d.DistributionID,
+                    Status = $"{d.Status} - {d.DifficultyLevel.LevelName}",
+                    DifficultyLevel = d.DifficultyLevel,
+                    ExamPlanID = d.ExamPlanID,
+                    ExamPlan = d.ExamPlan
+                })
+                .ToList();
+
+            model.AllLecturers = _context.Users
+                .Include(u => u.Role)
+                .Where(u => u.Role.RoleName == "Lecturer")
+                .ToList();
         }
+        // GET: AssignedPlan/Delete/5
+        public IActionResult Delete(int id)
+        {
+            var plan = _context.AssignPlans
+                .Include(p => p.ExamPlan).ThenInclude(e => e.Subject)
+                .Include(p => p.AssignedTo)
+                .FirstOrDefault(p => p.ID == id);
+
+            if (plan == null) return NotFound();
+
+            var model = new AssignedPlanViewModel
+            {
+                AssignedPlanID = plan.ID,
+                SubjectName = plan.ExamPlan.Subject.SubjectName,
+                AssignedToName = plan.AssignedTo.FullName,
+                Deadline = plan.Deadline,
+                Status = plan.Status
+            };
+
+            return View(model);
+        }
+
+        // POST: AssignedPlan/Delete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(AssignedPlanViewModel model)
+        {
+            var plan = _context.AssignPlans.Find(model.AssignedPlanID);
+            if (plan == null) return NotFound();
+
+            _context.AssignPlans.Remove(plan);
+            _context.SaveChanges();
+
+            return RedirectToAction("Plans");
+        }
+
     }
 }

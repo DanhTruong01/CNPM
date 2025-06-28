@@ -74,6 +74,96 @@
   },
   "components": {
     "schemas": {
+      "AssignedPlan": {
+        "required": [
+          "assignedByID",
+          "assignedToID",
+          "deadline",
+          "distributionID",
+          "examPlanID",
+          "status",
+          "taskType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examPlanID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examPlan": {
+            "$ref": "#/components/schemas/ExamPlan"
+          },
+          "distributionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "distribution": {
+            "$ref": "#/components/schemas/ExamPlanDistribution"
+          },
+          "assignedToID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignedTo": {
+            "$ref": "#/components/schemas/User"
+          },
+          "assignedByID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignedBy": {
+            "$ref": "#/components/schemas/User"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "assignedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskType": {
+            "$ref": "#/components/schemas/TaskTypeEnum"
+          },
+          "status": {
+            "$ref": "#/components/schemas/AssignedPlanStatus"
+          },
+          "finalApprovedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "finalFeedback": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssignedPlanStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "CLO": {
         "required": [
           "code",
@@ -881,6 +971,7 @@
       "SubmissionApproval": {
         "required": [
           "approvedBy",
+          "assignedPlanID",
           "status",
           "submissionTableID"
         ],
@@ -897,6 +988,13 @@
           "submissionTable": {
             "$ref": "#/components/schemas/SubmissionTable"
           },
+          "assignedPlanID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignedPlan": {
+            "$ref": "#/components/schemas/AssignedPlan"
+          },
           "approvedBy": {
             "type": "integer",
             "format": "int32"
@@ -909,10 +1007,13 @@
             "format": "date-time"
           },
           "status": {
-            "minLength": 1,
+            "maxLength": 20,
+            "minLength": 0,
             "type": "string"
           },
           "feedback": {
+            "maxLength": 500,
+            "minLength": 0,
             "type": "string",
             "nullable": true
           }
@@ -1178,6 +1279,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "TaskTypeEnum": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "User": {
         "type": "object",

@@ -245,6 +245,9 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Property<int>("AssignedToID")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("Deadline")
                         .HasColumnType("datetime2");
 
@@ -253,6 +256,12 @@ namespace CNPM_QBCA.Repositories.Migrations
 
                     b.Property<int>("ExamPlanID")
                         .HasColumnType("int");
+
+                    b.Property<DateTime?>("FinalApprovedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FinalFeedback")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
@@ -851,12 +860,17 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Property<DateTime>("ApprovedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("AssignedPlanID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Feedback")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("SubmissionTableID")
                         .HasColumnType("int");
@@ -864,6 +878,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.HasKey("SubmissionApprovalID");
 
                     b.HasIndex("ApprovedBy");
+
+                    b.HasIndex("AssignedPlanID");
 
                     b.HasIndex("SubmissionTableID");
 
@@ -1464,6 +1480,12 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("QBCA.Models.AssignedPlan", "AssignedPlan")
+                        .WithMany()
+                        .HasForeignKey("AssignedPlanID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("QBCA.Models.SubmissionTable", "SubmissionTable")
                         .WithMany("SubmissionApprovals")
                         .HasForeignKey("SubmissionTableID")
@@ -1471,6 +1493,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired();
 
                     b.Navigation("Approver");
+
+                    b.Navigation("AssignedPlan");
 
                     b.Navigation("SubmissionTable");
                 });

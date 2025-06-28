@@ -1,10 +1,16 @@
-﻿@model IEnumerable<QBCA.ViewModels.AssignedPlanViewModel>
+﻿@using QBCA.Models
+@model IEnumerable<QBCA.ViewModels.AssignedPlanViewModel>
 @{
     ViewBag.Title = "Assigned Plans";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
 <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 17px;
+    }
+
     .neumorphic-table {
         background: #f2f3f7;
         border-radius: 25px;
@@ -14,11 +20,17 @@
         max-width: 95%;
     }
 
+    h3 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #4F46E5;
+    }
+
     .neumorphic-button {
         display: inline-block;
         padding: 10px 20px;
         margin: 4px;
-        font-size: 14px;
+        font-size: 1rem;
         color: #4F46E5;
         background: #f2f3f7;
         border: none;
@@ -36,25 +48,34 @@
     .badge {
         padding: 4px 10px;
         border-radius: 12px;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 500;
         color: white;
+        text-transform: capitalize;
     }
 
-    .Assigned {
+    .assigned {
         background-color: #6366F1;
     }
 
-    .Completed {
+    .completed {
         background-color: #10B981;
     }
 
-    .Overdue {
+    .overdue {
         background-color: #EF4444;
     }
 
-    .InProgress {
+    .inprogress {
         background-color: #F59E0B;
+    }
+
+    .finalapproved {
+        background-color: #2563EB;
+    }
+
+    .rejectedfinal {
+        background-color: #DC2626;
     }
 
     table {
@@ -76,14 +97,16 @@
     tr:nth-child(even) {
         background-color: #f9f9fc;
     }
+
+    .text-muted {
+        color: #6c757d;
+    }
 </style>
 
 <div class="neumorphic-table">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h3 style="color: #4F46E5; font-weight: bold;">📋 Assigned Plans</h3>
-        <a href="@Url.Action("Create", "AssignedPlan")" class="neumorphic-button">
-            ➕ Create New Plan
-        </a>
+        <h3>📋 Assigned Plans</h3>
+        <a href="@Url.Action("Create", "AssignedPlan")" class="neumorphic-button">➕ Create New Plan</a>
     </div>
 
     <table>
@@ -105,19 +128,26 @@
                 int i = 1;
                 foreach (var item in Model)
                 {
+                    var statusClass = item.Status?.ToString().ToLowerInvariant().Replace(" ", "") ?? "unknown";
+
+                    bool isOverdue = item.Deadline < DateTime.Now && item.Status != AssignedPlanStatus.Completed;
+                    string deadlineColor = isOverdue ? "color:#DC2626;" : "";
+
+
                     <tr>
                         <td>@(i++)</td>
                         <td>@item.SubjectName</td>
                         <td>@item.AssignedToName</td>
                         <td>@item.DistributionStatus</td>
-                        <td>
-                            <span class="badge @(item.Status)">@item.Status</span>
-                        </td>
-                        <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
-                        <td>@item.Deadline.ToString("dd/MM/yyyy")</td>
+                        <span class="badge @(statusClass)">
+                            @item.Status?.ToString().Replace("Final", "Final ")
+                        </span>
+                        <td>@item.AssignedDate.ToString("dd/MM/yyyy")</td>
+                        <td style="@deadlineColor">@item.Deadline.ToString("dd/MM/yyyy")</td>
                         <td>
                             <a href="@Url.Action("Edit", "AssignedPlan", new { id = item.AssignedPlanID })" class="neumorphic-button">✏️ Edit</a>
                             <a href="@Url.Action("Details", "AssignedPlan", new { id = item.AssignedPlanID })" class="neumorphic-button">📄 Details</a>
+                            <a href="@Url.Action("Delete", "AssignedPlan", new { id = item.AssignedPlanID })" class="neumorphic-button" style="color: #EF4444;">🗑️ Delete</a>
                         </td>
                     </tr>
                 }
@@ -125,7 +155,7 @@
             else
             {
                 <tr>
-                    <td colspan="8" class="text-center text-muted">No assigned plans found.</td>
+                    <td colspan="8" class="text-center text-muted">🔍 No assigned plans found.</td>
                 </tr>
             }
         </tbody>

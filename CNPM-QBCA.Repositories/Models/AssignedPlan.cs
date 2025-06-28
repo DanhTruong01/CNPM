@@ -5,10 +5,23 @@ namespace QBCA.Models
 {
     public enum AssignedPlanStatus
     {
+        [Display(Name = "Assigned")]
         Assigned,
+
+        [Display(Name = "In Progress")]
         InProgress,
+
+        [Display(Name = "Completed")]
         Completed,
-        Overdue
+
+        [Display(Name = "Overdue")]
+        Overdue,
+
+        [Display(Name = "Final Approved")]
+        FinalApproved,
+
+        [Display(Name = "Rejected (Final)")]
+        RejectedFinal
     }
 
     public enum TaskTypeEnum
@@ -20,7 +33,8 @@ namespace QBCA.Models
         CheckDifficulty,
 
         [Display(Name = "Write Feedback")]
-        WriteFeedback
+        WriteFeedback,
+        QuestionWriting
     }
 
     public class AssignedPlan
@@ -44,17 +58,24 @@ namespace QBCA.Models
         public int AssignedByID { get; set; }
         public User AssignedBy { get; set; }
 
-        public DateTime AssignedDate { get; set; } = DateTime.Now;
-
         [Required]
         public DateTime Deadline { get; set; }
 
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+
+        public DateTime AssignedDate { get; set; } = DateTime.Now;
+
         public string? Notes { get; set; }
-        
+
         [Required]
         public TaskTypeEnum TaskType { get; set; }
 
         [Required]
         public AssignedPlanStatus Status { get; set; } = AssignedPlanStatus.Assigned;
+
+
+        public DateTime? FinalApprovedAt { get; set; }
+
+        public string? FinalFeedback { get; set; }
     }
 }

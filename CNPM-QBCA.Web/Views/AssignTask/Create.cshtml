@@ -9,18 +9,20 @@
         background: #f2f3f7;
         border-radius: 25px;
         box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
-        padding: 40px;
-        margin: 50px auto;
-        max-width: 600px;
+        padding: 50px;
+        margin: 60px auto;
+        max-width: 700px;
+        font-size: 18px; 
     }
 
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     label {
-        font-weight: bold;
-        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 12px;
         display: block;
         color: #36395A;
     }
@@ -29,20 +31,29 @@
     input[type="date"],
     select {
         width: 100%;
-        padding: 12px 15px;
-        border-radius: 12px;
+        padding: 18px 20px;
+        border-radius: 14px;
         border: none;
-        box-shadow: inset 5px 5px 10px #d1d9e6, inset -5px -5px 10px #ffffff;
+        box-shadow: inset 6px 6px 10px #d1d9e6, inset -6px -6px 10px #ffffff;
         background: #f2f3f7;
+        font-size: 18px;
+    }
+
+   
+    input::placeholder {
+        font-size: 18px;
+        font-weight: 500;
+        color: #999;
     }
 
     .btn-create {
         background: #4F46E5;
         color: white;
-        padding: 12px 25px;
+        padding: 18px;
         border: none;
         border-radius: 15px;
-        font-weight: 600;
+        font-weight: 700;
+        font-size: 18px;
         box-shadow: 5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff;
         transition: 0.3s ease;
         width: 100%;
@@ -54,15 +65,23 @@
         }
 
     .text-danger {
-        font-size: 0.9em;
+        font-size: 1.1em;
         color: red;
-        margin-top: 4px;
+        margin-top: 6px;
         display: block;
+    }
+
+    h3 {
+        color: #4F46E5;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 35px;
+        text-align: center;
     }
 </style>
 
 <div class="neumorphic-form">
-    <h3 style="color: #4F46E5; font-weight: bold; margin-bottom: 30px;">Create New Task</h3>
+    <h3>🆕 Create New Task</h3>
 
     <form asp-action="Create" method="post">
         @Html.AntiForgeryToken()
@@ -87,9 +106,6 @@
             <span asp-validation-for="Deadline" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn-create">Create Task</button>
+        <button type="submit" class="btn-create">✅ Create Task</button>
     </form>
 </div>
-
-
-}

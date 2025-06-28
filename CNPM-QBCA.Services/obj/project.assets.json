@@ -3350,23 +3350,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\truon\\.nuget\\packages\\": {},
+    "C:\\Users\\hieu0\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
+      "projectUniqueName": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
       "projectName": "CNPM-QBCA.Services",
-      "projectPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
-      "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\obj\\",
+      "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
+      "packagesPath": "C:\\Users\\hieu0\\.nuget\\packages\\",
+      "outputPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hieu0\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3375,14 +3375,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
-              "projectPath": "C:\\Users\\truon\\OneDrive\\Máy tính\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
+            "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
+              "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
             }
           }
         }

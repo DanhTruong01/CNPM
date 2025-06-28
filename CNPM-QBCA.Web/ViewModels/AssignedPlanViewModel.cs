@@ -51,7 +51,7 @@ namespace QBCA.ViewModels
 
         [Required]
         [Display(Name = "Status")]
-        public AssignedPlanStatus Status { get; set; } = AssignedPlanStatus.Assigned;
+        public AssignedPlanStatus? Status { get; set; } = AssignedPlanStatus.Assigned;
 
         // Dropdown enums
         public IEnumerable<SelectListItem> TaskTypeOptions =>
@@ -89,4 +89,5 @@ namespace QBCA.ViewModels
             return attribute?.Name ?? value.ToString();
         }
     }
+
 }

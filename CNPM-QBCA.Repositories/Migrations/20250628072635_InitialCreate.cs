@@ -134,7 +134,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                     SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -303,11 +304,14 @@ namespace CNPM_QBCA.Repositories.Migrations
                     DistributionID = table.Column<int>(type: "int", nullable: false),
                     AssignedToID = table.Column<int>(type: "int", nullable: false),
                     AssignedByID = table.Column<int>(type: "int", nullable: false),
-                    AssignedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Deadline = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    AssignedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Notes = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TaskType = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false)
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    FinalApprovedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FinalFeedback = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -524,14 +528,21 @@ namespace CNPM_QBCA.Repositories.Migrations
                     SubmissionApprovalID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SubmissionTableID = table.Column<int>(type: "int", nullable: false),
+                    AssignedPlanID = table.Column<int>(type: "int", nullable: false),
                     ApprovedBy = table.Column<int>(type: "int", nullable: false),
                     ApprovedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Feedback = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Status = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Feedback = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SubmissionApprovals", x => x.SubmissionApprovalID);
+                    table.ForeignKey(
+                        name: "FK_SubmissionApprovals_AssignPlans_AssignedPlanID",
+                        column: x => x.AssignedPlanID,
+                        principalTable: "AssignPlans",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_SubmissionApprovals_SubmissionTables_SubmissionTableID",
                         column: x => x.SubmissionTableID,
@@ -1049,6 +1060,11 @@ namespace CNPM_QBCA.Repositories.Migrations
                 column: "ApprovedBy");
 
             migrationBuilder.CreateIndex(
+                name: "IX_SubmissionApprovals_AssignedPlanID",
+                table: "SubmissionApprovals",
+                column: "AssignedPlanID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_SubmissionApprovals_SubmissionTableID",
                 table: "SubmissionApprovals",
                 column: "SubmissionTableID");
@@ -1143,9 +1159,6 @@ namespace CNPM_QBCA.Repositories.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AssignPlans");
-
-            migrationBuilder.DropTable(
                 name: "DuplicateCheckResults");
 
             migrationBuilder.DropTable(
@@ -1168,6 +1181,9 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             migrationBuilder.DropTable(
                 name: "TaskModels");
+
+            migrationBuilder.DropTable(
+                name: "AssignPlans");
 
             migrationBuilder.DropTable(
                 name: "ExamReviews");
