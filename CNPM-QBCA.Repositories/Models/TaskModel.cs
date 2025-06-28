@@ -51,7 +51,7 @@ namespace CNPM_QBCA.Models
         public int? MockExamID { get; set; }
         public virtual MockExam? MockExam { get; set; }
 
-        
+
         public int? FeedbackID { get; set; }
         public virtual MockFeedback? Feedback { get; set; }
     }

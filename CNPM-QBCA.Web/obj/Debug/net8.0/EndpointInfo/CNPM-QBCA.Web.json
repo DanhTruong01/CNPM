@@ -706,8 +706,65 @@
             "type": "string",
             "nullable": true
           },
+          "answers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MockExamAnswer"
+            },
+            "nullable": true
+          },
+          "feedbacks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MockFeedback"
+            },
+            "nullable": true
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MockQuestion"
+            },
+            "nullable": true
+          },
+          "tasks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TaskModel"
+            },
+            "nullable": true
+          },
           "taskAssignment": {
             "$ref": "#/components/schemas/TaskAssignment"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MockExamAnswer": {
+        "type": "object",
+        "properties": {
+          "mockExamAnswerID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mockExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lecturerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "answerJson": {
+            "type": "string",
+            "nullable": true
+          },
+          "submittedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "mockExam": {
+            "$ref": "#/components/schemas/MockExam"
           }
         },
         "additionalProperties": false
@@ -744,6 +801,47 @@
           },
           "mockExam": {
             "$ref": "#/components/schemas/MockExam"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MockQuestion": {
+        "type": "object",
+        "properties": {
+          "mockQuestionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mockExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mockExam": {
+            "$ref": "#/components/schemas/MockExam"
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionA": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionB": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionC": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionD": {
+            "type": "string",
+            "nullable": true
+          },
+          "correctAnswer": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -366,14 +366,34 @@ namespace QBCA.Data
                 .HasForeignKey(t => t.ExamReviewID)
                 .OnDelete(DeleteBehavior.Restrict);
 
-
+            modelBuilder.Entity<TaskModel>()
+                .HasOne(t => t.MockExam)
+                .WithMany(me => me.Tasks)
+                .HasForeignKey(t => t.MockExamID)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<TaskModel>()
                 .HasOne(t => t.Feedback)
                 .WithMany(me => me.Tasks)
                 .HasForeignKey(t => t.FeedbackID)
                 .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<MockExamAnswer>()
+                .HasOne(a => a.MockExam)
+                .WithMany(me => me.Answers)
+                .HasForeignKey(a => a.MockExamId)
+                .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<MockFeedback>()
+                .HasOne(f => f.MockExam)
+                .WithMany(me => me.Feedbacks)
+                .HasForeignKey(f => f.MockExamId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<MockQuestion>()
+                .HasOne(q => q.MockExam)
+                .WithMany(me => me.Questions)
+                .HasForeignKey(q => q.MockExamId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<TaskAssignment>()
                 .HasOne(t => t.Distribution)

@@ -12,8 +12,8 @@ using QBCA.Data;
 namespace CNPM_QBCA.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250628072810_AddTitleToSubjectOnly")]
-    partial class AddTitleToSubjectOnly
+    [Migration("20250628123913_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -117,11 +117,11 @@ namespace CNPM_QBCA.Repositories.Migrations
 
             modelBuilder.Entity("CNPM_QBCA.Models.MockQuestion", b =>
                 {
-                    b.Property<int>("QuestionID")
+                    b.Property<int>("MockQuestionID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuestionID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MockQuestionID"));
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -130,6 +130,9 @@ namespace CNPM_QBCA.Repositories.Migrations
                     b.Property<string>("CorrectAnswer")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MockExamId")
+                        .HasColumnType("int");
 
                     b.Property<string>("OptionA")
                         .IsRequired()
@@ -147,7 +150,9 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("QuestionID");
+                    b.HasKey("MockQuestionID");
+
+                    b.HasIndex("MockExamId");
 
                     b.ToTable("MockQuestion");
                 });
@@ -842,10 +847,6 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("SubjectID");
 
                     b.HasIndex("CreatedBy");
@@ -1058,9 +1059,9 @@ namespace CNPM_QBCA.Repositories.Migrations
             modelBuilder.Entity("CNPM_QBCA.Models.MockExamAnswer", b =>
                 {
                     b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
-                        .WithMany()
+                        .WithMany("Answers")
                         .HasForeignKey("MockExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("MockExam");
@@ -1069,9 +1070,20 @@ namespace CNPM_QBCA.Repositories.Migrations
             modelBuilder.Entity("CNPM_QBCA.Models.MockFeedback", b =>
                 {
                     b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
-                        .WithMany()
+                        .WithMany("Feedbacks")
                         .HasForeignKey("MockExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("MockExam");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockQuestion", b =>
+                {
+                    b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
+                        .WithMany("Questions")
+                        .HasForeignKey("MockExamId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("MockExam");
@@ -1112,8 +1124,9 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("CNPM_QBCA.Models.MockExam", "MockExam")
-                        .WithMany()
-                        .HasForeignKey("MockExamID");
+                        .WithMany("Tasks")
+                        .HasForeignKey("MockExamID")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("QBCA.Models.Notification", "Notification")
                         .WithMany()
@@ -1580,6 +1593,17 @@ namespace CNPM_QBCA.Repositories.Migrations
                         .IsRequired();
 
                     b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("CNPM_QBCA.Models.MockExam", b =>
+                {
+                    b.Navigation("Answers");
+
+                    b.Navigation("Feedbacks");
+
+                    b.Navigation("Questions");
+
+                    b.Navigation("Tasks");
                 });
 
             modelBuilder.Entity("CNPM_QBCA.Models.MockFeedback", b =>

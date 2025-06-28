@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {}
+    "D:\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {}
   },
   "projects": {
-    "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
+    "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+        "projectUniqueName": "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
         "projectName": "CNPM-QBCA.Business",
-        "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
-        "packagesPath": "C:\\Users\\hieu0\\.nuget\\packages\\",
-        "outputPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\obj\\",
+        "projectPath": "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\CNPM\\CNPM-QBCA.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hieu0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
-                "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
+              "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+                "projectPath": "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj"
               }
             }
           }
@@ -80,20 +79,20 @@
         }
       }
     },
-    "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+    "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
+        "projectUniqueName": "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
         "projectName": "CNPM-QBCA.Repositories",
-        "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
-        "packagesPath": "C:\\Users\\hieu0\\.nuget\\packages\\",
-        "outputPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\obj\\",
+        "projectPath": "D:\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\CNPM\\CNPM-QBCA.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hieu0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -102,7 +101,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -178,20 +176,20 @@
         }
       }
     },
-    "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {
+    "D:\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
+        "projectUniqueName": "D:\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
         "projectName": "CNPM-QBCA.Services",
-        "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
-        "packagesPath": "C:\\Users\\hieu0\\.nuget\\packages\\",
-        "outputPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\obj\\",
+        "projectPath": "D:\\CNPM\\CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\CNPM\\CNPM-QBCA.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hieu0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -200,15 +198,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
-                "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
+              "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj": {
+                "projectPath": "D:\\CNPM\\CNPM-QBCA.Business\\CNPM-QBCA.Business.csproj"
               }
             }
           }

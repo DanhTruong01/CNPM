@@ -21,6 +21,10 @@ namespace CNPM_QBCA.Models
         public string AnswersJson { get; set; } = string.Empty;
 
         public string Feedback { get; set; } = string.Empty;
+        public virtual ICollection<MockExamAnswer> Answers { get; set; } = new List<MockExamAnswer>();
+        public virtual ICollection<MockFeedback> Feedbacks { get; set; } = new List<MockFeedback>();
+        public ICollection<MockQuestion> Questions { get; set; } = new List<MockQuestion>();
+        public virtual ICollection<TaskModel> Tasks { get; set; } = new List<TaskModel>();
 
         // Navigation (nếu cần dùng)
         public TaskAssignment? TaskAssignment { get; set; }

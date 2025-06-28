@@ -1,281 +1,299 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\",
+  "WorkspaceRootPath": "D:\\CNPM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628073241_AddTaskTypeToAssignedPlan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CNPM-QBCA.Repositories\\Migrations\\20250628073241_AddTaskTypeToAssignedPlan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\viewmodels\\assignedplanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\assignedplanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\submissionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\submissionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072810_AddTitleToSubjectOnly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CNPM-QBCA.Repositories\\Migrations\\20250628072810_AddTitleToSubjectOnly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\assignedplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\assignedplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\viewmodels\\submissionapprovalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\submissionapprovalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\viewmodels\\assigntaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\assigntaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\submissionapprovalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\submissionapprovalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\assigntaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\assigntaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\assignedplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\assignedplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examreview\\reviewexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examreview\\reviewexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\exam\\mockexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\exam\\mockexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\mytask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\mytask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\examapprovecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\examapprovecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\examplandistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examplandistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\examapprovetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examapprovetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\examplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examapprovetask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examapprovetask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examapprovetask\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examapprovetask\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\task\\teamtasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\task\\teamtasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examreview\\reviewdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examreview\\reviewdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\viewmodels\\approveexamdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\approveexamdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\viewmodels\\approveexamtaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\approveexamtaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\taskassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\taskassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\viewmodels\\mockexamviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\mockexamviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\duplicatecheck\\homecheck.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\duplicatecheck\\homecheck.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\mytask\\mytasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\mytask\\mytasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\examreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\mockfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\mockfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarlecturer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarlecturer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\mytaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\mytaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\mockexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\mockexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\mockquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\mockquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\mockexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\mockexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\mockexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\lecturerassignment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\mockquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\mockquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\mockfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\mockfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\assignedplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\assignedplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\question\\reviewquestions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\question\\reviewquestions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\question\\questions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\question\\questions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\question\\questionbank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\question\\questionbank.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\question\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\question\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\question\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\question\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\question\\approvequestionlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\question\\approvequestionlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\mytask\\mytasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\mytask\\mytasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\mytask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\mytask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\taskassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\taskassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\viewmodels\\assignedplanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\assignedplanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\submissionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\submissionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\assignedplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\assignedplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\viewmodels\\submissionapprovalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\submissionapprovalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\viewmodels\\assigntaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\assigntaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\submissionapprovalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\submissionapprovalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\assigntaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\assigntaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examreview\\reviewexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examreview\\reviewexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\exam\\mockexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\exam\\mockexam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\examapprovecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\examapprovecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\examplandistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examplandistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\examapprovetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examapprovetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\examplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examapprovetask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examapprovetask\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examapprovetask\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examapprovetask\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\task\\teamtasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\task\\teamtasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examreview\\reviewdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examreview\\reviewdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\viewmodels\\approveexamdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\approveexamdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\viewmodels\\approveexamtaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\approveexamtaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\viewmodels\\mockexamviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\mockexamviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\duplicatecheck\\homecheck.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\duplicatecheck\\homecheck.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\examreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\examreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarlecturer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarlecturer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\mytaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\mytaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\mockexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\mockexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\lecturerassignment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\lecturerassignment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\lecturerassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\lecturerassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\lecturerassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\examlecturerassignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\examlecturerassignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\examlecturerassignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\lecturerassignment\\assigntolecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\lecturerassignment\\assigntolecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\lecturerassignment\\assigntolecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\mockexamanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\mockexamanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\mockexamanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\submissiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\submissiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\submissiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarheaddept.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarheaddept.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarheaddept.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examplan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examplan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examplan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examplan\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examplan\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examplan\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\examplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\examplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\examplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examplan\\examplans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examplan\\examplans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examplan\\examplans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\examplan\\examplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\examplan\\examplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\examplan\\examplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\duplicatecheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\duplicatecheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\duplicatecheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\duplicatecheck\\check.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\duplicatecheck\\check.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\duplicatecheck\\check.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\models\\duplicatecheckresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\duplicatecheckresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\duplicatecheckresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\views\\duplicatecheck\\checkresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\duplicatecheck\\checkresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\duplicatecheck\\checkresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.services\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|d:\\cnpm\\cnpm-qbca.services\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|solutionrelative:cnpm-qbca.services\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.repositories\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.services\\services\\openaiduplicateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|d:\\cnpm\\cnpm-qbca.services\\services\\openaiduplicateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|solutionrelative:cnpm-qbca.services\\services\\openaiduplicateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.services\\services\\geminiduplicateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|d:\\cnpm\\cnpm-qbca.services\\services\\geminiduplicateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1823F67E-FC2D-456C-A1F6-F46B9556A13E}|CNPM-QBCA.Services\\CNPM-QBCA.Services.csproj|solutionrelative:cnpm-qbca.services\\services\\geminiduplicateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|c:\\uth\\cong nghe phan mem\\cnpm-qbca\\cnpm\\cnpm-qbca.web\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -286,158 +304,217 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 35,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250628073241_AddTaskTypeToAssignedPlan.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628073241_AddTaskTypeToAssignedPlan.cs",
-              "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Migrations\\20250628073241_AddTaskTypeToAssignedPlan.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628073241_AddTaskTypeToAssignedPlan.cs",
-              "RelativeToolTip": "CNPM-QBCA.Repositories\\Migrations\\20250628073241_AddTaskTypeToAssignedPlan.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskModel.cs",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\TaskModel.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskModel.cs",
+              "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\TaskModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T07:32:41.23Z",
+              "WhenOpened": "2025-06-28T11:03:34.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20250628072810_AddTitleToSubjectOnly.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072810_AddTitleToSubjectOnly.cs",
-              "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Migrations\\20250628072810_AddTitleToSubjectOnly.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072810_AddTitleToSubjectOnly.cs",
-              "RelativeToolTip": "CNPM-QBCA.Repositories\\Migrations\\20250628072810_AddTitleToSubjectOnly.cs",
+              "DocumentIndex": 8,
+              "Title": "ReviewQuestions.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\ReviewQuestions.cshtml",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\ReviewQuestions.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\ReviewQuestions.cshtml",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Question\\ReviewQuestions.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T10:56:00.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Questions.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Questions.cshtml",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\Questions.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Questions.cshtml",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Question\\Questions.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T07:28:10.145Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T10:55:59.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
+              "Title": "QuestionBank.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\QuestionBank.cshtml",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\QuestionBank.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\QuestionBank.cshtml",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Question\\QuestionBank.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T10:55:59.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\Edit.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Edit.cshtml",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Question\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T10:55:58.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Create.cshtml",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\Create.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Create.cshtml",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Question\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T10:55:56.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApproveQuestionList.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\ApproveQuestionList.cshtml",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\ApproveQuestionList.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\ApproveQuestionList.cshtml",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Question\\ApproveQuestionList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T10:55:54.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "20250628072342_FixSubjectTitleColumn.cs",
               "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs",
-              "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs",
               "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs",
-              "RelativeToolTip": "CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T07:23:42.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T07:23:42.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\appsettings.json",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\appsettings.json",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\appsettings.json",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\appsettings.json",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\appsettings.json",
               "RelativeToolTip": "CNPM-QBCA.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-28T07:18:47.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\appsettings.json",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\appsettings.json",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\appsettings.json",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\appsettings.json",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\appsettings.json",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-28T07:18:41.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "20250628071321_AddTaskTypeToAssignedPlan.cs",
               "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs",
-              "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs",
               "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs",
-              "RelativeToolTip": "CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T07:13:21.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T07:13:21.439Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "SubmissionApprovalViewModel.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T06:58:45.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T06:58:45.836Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 17,
               "Title": "AssignedPlanViewModel.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T06:58:01.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T06:58:01.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 26,
               "Title": "AssignTaskController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
               "ViewState": "AgIAAMQAAAAAAAAAAAAuwNYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T06:57:24.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T06:57:24.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 7,
               "Title": "AssignedPlan.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAA+wFEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T06:56:36.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "ReviewExam.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAGQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T17:43:49.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T17:43:49.384Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 39,
               "Title": "ApproveExamTaskViewModel.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -445,11 +522,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 29,
               "Title": "ExamApproveController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAQwFQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -457,23 +534,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
               "ViewState": "AgIAAFQAAAAAAAAAAAAiwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T16:35:27.074Z"
+              "WhenOpened": "2025-06-26T16:35:27.074Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "MockExam.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -481,11 +559,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 37,
               "Title": "ReviewDetails.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -493,11 +571,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 42,
               "Title": "NotificationsController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAAAFMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -505,11 +583,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 41,
               "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\Notification.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\Notification.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\Notification.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Notification.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\Notification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -517,11 +595,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "ApproveExamDetailViewModel.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -529,11 +607,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 30,
               "Title": "Exam.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\Exam.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Exam.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\Exam.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\Exam.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Exam.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\Exam.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAuwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -541,24 +619,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "AssignTaskViewModel.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T10:57:05.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T10:57:05.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 34,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
               "ViewState": "AgIAABwAAAAAAAAAAAAkwD4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -566,11 +643,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 35,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -578,11 +655,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 32,
               "Title": "ExamApproveTask.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -590,11 +667,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 44,
               "Title": "MockExamViewModel.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -602,11 +679,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 46,
               "Title": "HomeCheck.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -614,11 +691,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 45,
               "Title": "TaskController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\TaskController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\TaskController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\TaskController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\TaskController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\TaskController.cs",
               "ViewState": "AgIAAFYBAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -626,23 +703,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 14,
               "Title": "MyTasks.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T16:35:24.433Z"
+              "WhenOpened": "2025-06-26T16:35:24.433Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 43,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\User.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\User.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\User.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\User.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\User.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwB0AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -650,23 +728,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 0,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAGoBAAAAAAAAAAAAAJMBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHIBAAAAAAAAAAAtwIMBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T13:40:17.014Z"
+              "WhenOpened": "2025-06-23T13:40:17.014Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "ExamReview.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAmwCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -674,23 +753,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 4,
               "Title": "MockFeedback.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAsAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T14:28:49.994Z"
+              "WhenOpened": "2025-06-23T14:28:49.994Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "_SidebarLecturer.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -698,11 +778,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "MyTaskController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAgwEwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -710,35 +790,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 16,
               "Title": "TaskAssignment.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:26:05.85Z"
+              "WhenOpened": "2025-06-26T16:26:05.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 1,
               "Title": "MockExam.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExam.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExam.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockExam.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExam.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExam.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\MockExam.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T14:28:40.495Z"
+              "WhenOpened": "2025-06-23T14:28:40.495Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "MockExamController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAowGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -746,11 +828,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 31,
               "Title": "ExamPlanDistribution.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -758,23 +840,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 2,
               "Title": "MockQuestion.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T14:45:57.888Z"
+              "WhenOpened": "2025-06-23T14:45:57.888Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "AssignToLecturers.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAjwCgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -782,11 +865,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 33,
               "Title": "ExamPlan.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -794,11 +877,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
               "ViewState": "AgIAAEgAAAAAAAAAAAAjwFwAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -806,11 +889,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "LecturerAssignment.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -818,24 +901,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "SubmissionApproval.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T15:51:34.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T15:51:34.154Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 40,
               "Title": "_SidebarExamHead.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -843,11 +925,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "_SidebarHeadDept.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -855,24 +937,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "AssignedPlanController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
               "ViewState": "AgIAAMcAAAAAAAAAAAAawMkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T11:50:54.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T11:50:54.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "ExamLecturerAssignmentController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -880,24 +961,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 25,
               "Title": "SubmissionApprovalController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAuwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T11:47:43.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T11:47:43.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 57,
               "Title": "SubmissionTable.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -905,11 +985,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAPAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -917,11 +997,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
               "ViewState": "AgIAAJQAAAAAAAAAAAAYwPAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -929,11 +1009,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 61,
               "Title": "ExamPlanController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowEwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -941,11 +1021,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 62,
               "Title": "ExamPlans.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -953,11 +1033,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 63,
               "Title": "ExamPlan.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -965,11 +1045,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 67,
               "Title": "CheckResult.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
               "ViewState": "AgIAAEQAAAAAAAAAAAAkwGAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -977,11 +1057,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 64,
               "Title": "DuplicateCheckController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
               "ViewState": "AgIAAM4AAAAAAAAAAAAAwO4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -989,11 +1069,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Program.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Program.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Program.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Program.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Program.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Program.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1001,11 +1081,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 66,
               "Title": "DuplicateCheckResult.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1013,11 +1093,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 65,
               "Title": "Check.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
               "ViewState": "AgIAABwAAAAAAAAAAAAmwFIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1025,11 +1105,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "MockExamAnswer.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1037,11 +1117,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 70,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AuthController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1049,11 +1129,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 68,
               "Title": "TaskService.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\Services\\TaskService.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\TaskService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\TaskService.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\Services\\TaskService.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\TaskService.cs",
               "RelativeToolTip": "CNPM-QBCA.Services\\Services\\TaskService.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAmwA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1061,11 +1141,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 69,
               "Title": "ApplicationDbContextFactory.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1073,11 +1153,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 36,
               "Title": "TeamTasks.cshtml",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
               "ViewState": "AgIAAFIAAAAAAAAAAAAkwHQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1085,24 +1165,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 18,
               "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\Subject.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Subject.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\Subject.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Models\\Subject.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Subject.cs",
               "RelativeToolTip": "CNPM-QBCA.Repositories\\Models\\Subject.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T06:33:42.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T06:33:42.812Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 71,
               "Title": "OpenAIDuplicateService.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
               "RelativeToolTip": "CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1110,11 +1189,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 72,
               "Title": "GeminiDuplicateService.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
               "RelativeToolTip": "CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1122,11 +1201,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 73,
               "Title": "QuestionController.cs",
-              "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
-              "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
               "RelativeToolTip": "CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
               "ViewState": "AgIAALYAAAAAAAAAAAAuwLoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

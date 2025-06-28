@@ -12,24 +12,6 @@ namespace CNPM_QBCA.Repositories.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "MockQuestion",
-                columns: table => new
-                {
-                    QuestionID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OptionA = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OptionB = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OptionC = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OptionD = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CorrectAnswer = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MockQuestion", x => x.QuestionID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
@@ -134,8 +116,7 @@ namespace CNPM_QBCA.Repositories.Migrations
                     SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -715,7 +696,7 @@ namespace CNPM_QBCA.Repositories.Migrations
                         column: x => x.MockExamId,
                         principalTable: "MockExam",
                         principalColumn: "MockExamID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -737,7 +718,32 @@ namespace CNPM_QBCA.Repositories.Migrations
                         column: x => x.MockExamId,
                         principalTable: "MockExam",
                         principalColumn: "MockExamID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MockQuestion",
+                columns: table => new
+                {
+                    MockQuestionID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MockExamId = table.Column<int>(type: "int", nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionA = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionB = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionC = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OptionD = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CorrectAnswer = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MockQuestion", x => x.MockQuestionID);
+                    table.ForeignKey(
+                        name: "FK_MockQuestion_MockExam_MockExamId",
+                        column: x => x.MockExamId,
+                        principalTable: "MockExam",
+                        principalColumn: "MockExamID",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -816,7 +822,8 @@ namespace CNPM_QBCA.Repositories.Migrations
                         name: "FK_TaskModels_MockExam_MockExamID",
                         column: x => x.MockExamID,
                         principalTable: "MockExam",
-                        principalColumn: "MockExamID");
+                        principalColumn: "MockExamID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_TaskModels_MockFeedback_FeedbackID",
                         column: x => x.FeedbackID,
@@ -992,6 +999,11 @@ namespace CNPM_QBCA.Repositories.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_MockFeedback_MockExamId",
                 table: "MockFeedback",
+                column: "MockExamId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MockQuestion_MockExamId",
+                table: "MockQuestion",
                 column: "MockExamId");
 
             migrationBuilder.CreateIndex(
