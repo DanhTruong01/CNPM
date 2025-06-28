@@ -42,13 +42,19 @@ namespace QBCA.Controllers
                 return View(model);
             }
 
+            if (!_context.ExamPlanDistributions.Any(d => d.DistributionID == model.DistributionID))
+            {
+                ModelState.AddModelError("DistributionID", "Selected distribution does not exist.");
+                LoadDropdowns(model);
+                return View(model);
+            }
 
             var plan = new AssignedPlan
             {
                 ExamPlanID = model.ExamPlanID,
                 DistributionID = model.DistributionID,
                 AssignedToID = model.AssignedToID,
-                AssignedByID = 1, // TODO: Replace with current user ID
+                AssignedByID = 1, // TODO: Replace with logged-in user
                 AssignedDate = DateTime.Now,
                 Deadline = model.Deadline,
                 Notes = model.Notes,
@@ -57,22 +63,28 @@ namespace QBCA.Controllers
             };
 
             _context.AssignPlans.Add(plan);
+            _context.SaveChanges(); // Lưu trước để lấy ID
 
-            var subjectName = _context.ExamPlans.Include(e => e.Subject)
-                                .FirstOrDefault(e => e.ExamPlanID == model.ExamPlanID)
-                                ?.Subject?.SubjectName;
+            var subjectName = _context.ExamPlans
+                .Include(e => e.Subject)
+                .FirstOrDefault(e => e.ExamPlanID == model.ExamPlanID)
+                ?.Subject?.SubjectName;
 
             var notification = new Notification
             {
                 UserID = model.AssignedToID,
                 Message = $"You have been assigned a task for subject: {subjectName} ({model.TaskType})",
                 CreatedAt = DateTime.Now,
-
+                CreatedBy = plan.AssignedByID,
+                Status = "Unread",
+                RelatedEntityType = "AssignedPlan",
+                RelatedEntityID = plan.ID
             };
 
             _context.Notifications.Add(notification);
             _context.SaveChanges();
             return RedirectToAction("Plans");
+
         }
 
         // GET: AssignedPlan/Plans
@@ -111,7 +123,6 @@ namespace QBCA.Controllers
             return View(assignedPlans);
         }
 
-
         // GET: AssignedPlan/Edit/{id}
         public IActionResult Edit(int id)
         {
@@ -147,7 +158,6 @@ namespace QBCA.Controllers
                 LoadDropdowns(model);
                 return View(model);
             }
-
 
             var plan = _context.AssignPlans.Find(id);
             if (plan == null) return NotFound();
@@ -195,32 +205,7 @@ namespace QBCA.Controllers
             return View(viewModel);
         }
 
-        // Helper method
-        // Helper method
-        private void LoadDropdowns(AssignedPlanViewModel model)
-        {
-            model.AllExamPlans = _context.ExamPlans.Include(e => e.Subject).ToList();
-
-            // Sửa lỗi hiển thị trùng bằng cách ghép Status + DifficultyLevel
-            model.AllDistributions = _context.ExamPlanDistributions
-                .Include(d => d.DifficultyLevel)
-                .Include(d => d.ExamPlan).ThenInclude(p => p.Subject)
-                .Select(d => new ExamPlanDistribution
-                {
-                    DistributionID = d.DistributionID,
-                    Status = $"{d.Status} - {d.DifficultyLevel.LevelName}",
-                    DifficultyLevel = d.DifficultyLevel,
-                    ExamPlanID = d.ExamPlanID,
-                    ExamPlan = d.ExamPlan
-                })
-                .ToList();
-
-            model.AllLecturers = _context.Users
-                .Include(u => u.Role)
-                .Where(u => u.Role.RoleName == "Lecturer")
-                .ToList();
-        }
-        // GET: AssignedPlan/Delete/5
+        // GET: AssignedPlan/Delete/{id}
         public IActionResult Delete(int id)
         {
             var plan = _context.AssignPlans
@@ -252,9 +237,27 @@ namespace QBCA.Controllers
 
             _context.AssignPlans.Remove(plan);
             _context.SaveChanges();
-
             return RedirectToAction("Plans");
         }
 
+        // Helper dropdowns
+        private void LoadDropdowns(AssignedPlanViewModel model)
+        {
+            model.AllExamPlans = _context.ExamPlans.Include(e => e.Subject).ToList();
+
+            model.DisplayDistributions = _context.ExamPlanDistributions
+                .Include(d => d.DifficultyLevel)
+                .Include(d => d.ExamPlan).ThenInclude(p => p.Subject)
+                .Select(d => new DistributionDisplayViewModel
+                {
+                    DistributionID = d.DistributionID,
+                    DisplayName = $"Plan: {d.ExamPlan.Title} - {d.DifficultyLevel.LevelName} ({d.Status})"
+                }).ToList();
+
+            model.AllLecturers = _context.Users
+                .Include(u => u.Role)
+                .Where(u => u.Role.RoleName == "Lecturer")
+                .ToList();
+        }
     }
 }

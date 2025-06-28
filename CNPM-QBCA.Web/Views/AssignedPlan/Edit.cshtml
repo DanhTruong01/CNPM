@@ -8,6 +8,8 @@
     body {
         font-family: 'Segoe UI', sans-serif;
         font-size: 17px;
+        color: #36395A;
+        background-color: #f8f9fc;
     }
 
     .neumorphic-box {
@@ -24,6 +26,7 @@
         font-size: 1.7rem;
         font-weight: 700;
         color: #4F46E5;
+        margin-bottom: 30px;
     }
 
     .neumorphic-label {
@@ -47,14 +50,17 @@
         color: #36395A;
         box-shadow: inset 6px 6px 10px #d1d9e6, inset -6px -6px 10px #ffffff;
         appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L10 12L14 8' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 1rem center;
         background-size: 1rem;
     }
 
-        .modern-dropdown:focus,
+    .modern-dropdown {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L10 12L14 8' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
         .neumorphic-input:focus,
+        .modern-dropdown:focus,
         textarea:focus {
             outline: none;
             box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
@@ -79,12 +85,15 @@
     .validation-message {
         color: red;
         font-size: 0.95rem;
-        margin-bottom: 15px;
+        margin-top: -14px;
+        margin-bottom: 16px;
+        display: block;
     }
 </style>
 
 <div class="neumorphic-box">
-    <h3 class="text-center mb-4">✏️ Edit Assigned Plan</h3>
+    <h3 class="text-center">✏️ Edit Assigned Plan</h3>
+
     @using (Html.BeginForm("Edit", "AssignedPlan", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
@@ -93,23 +102,30 @@
         <label class="neumorphic-label">Exam Plan</label>
         @Html.DropDownListFor(m => m.ExamPlanID,
         new SelectList(Model.AllExamPlans, "ExamPlanID", "Name", Model.ExamPlanID),
-        "Select Exam Plan",
+        "-- Select Exam Plan --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.ExamPlanID, "", new { @class = "validation-message" })
 
     <label class="neumorphic-label">Distribution</label>
     @Html.DropDownListFor(m => m.DistributionID,
-        new SelectList(Model.AllDistributions, "DistributionID", "Status", Model.DistributionID),
-        "Select Distribution",
+        new SelectList(Model.DisplayDistributions, "DistributionID", "DisplayName", Model.DistributionID),
+        "-- Select Distribution --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.DistributionID, "", new { @class = "validation-message" })
 
     <label class="neumorphic-label">Assign To</label>
     @Html.DropDownListFor(m => m.AssignedToID,
         new SelectList(Model.AllLecturers, "UserID", "FullName", Model.AssignedToID),
-        "Select Lecturer",
+        "-- Select Lecturer --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.AssignedToID, "", new { @class = "validation-message" })
+
+    <label class="neumorphic-label">Task Type</label>
+    @Html.DropDownListFor(m => m.TaskType,
+        new SelectList(Model.TaskTypeOptions, "Value", "Text", Model.TaskType.ToString()),
+        "-- Select Task Type --",
+        new { @class = "modern-dropdown" })
+    @Html.ValidationMessageFor(m => m.TaskType, "", new { @class = "validation-message" })
 
     <label class="neumorphic-label">Deadline</label>
     @Html.TextBoxFor(m => m.Deadline, "{0:yyyy-MM-ddTHH:mm}", new { @type = "datetime-local", @class = "neumorphic-input" })
@@ -120,13 +136,8 @@
 
     <label class="neumorphic-label">Status</label>
     @Html.DropDownListFor(m => m.Status,
-        new SelectList(new[] {
-        new SelectListItem { Value = "Assigned", Text = "Assigned" },
-        new SelectListItem { Value = "In Progress", Text = "In Progress" },
-        new SelectListItem { Value = "Completed", Text = "Completed" },
-        new SelectListItem { Value = "Cancelled", Text = "Cancelled" }
-        }, "Value", "Text", Model.Status),
-        "Select Status",
+        new SelectList(Model.StatusOptions, "Value", "Text", Model.Status.ToString()),
+        "-- Select Status --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.Status, "", new { @class = "validation-message" })
 

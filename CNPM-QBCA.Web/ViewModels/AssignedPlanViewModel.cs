@@ -76,6 +76,8 @@ namespace QBCA.ViewModels
         public List<ExamPlan> AllExamPlans { get; set; } = new();
         public List<ExamPlanDistribution> AllDistributions { get; set; } = new();
         public List<User> AllLecturers { get; set; } = new();
+        public List<DistributionDisplayViewModel> DisplayDistributions { get; set; } = new();
+
     }
 
     // Extension cho Display(Name)
@@ -88,6 +90,14 @@ namespace QBCA.ViewModels
                                  .FirstOrDefault() as DisplayAttribute;
             return attribute?.Name ?? value.ToString();
         }
+    }
+    public class DistributionDisplayViewModel
+    {
+        [Required(ErrorMessage = "Please select a distribution")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select a valid distribution")]
+        public int? DistributionID { get; set; }
+
+        public string DisplayName { get; set; }
     }
 
 }

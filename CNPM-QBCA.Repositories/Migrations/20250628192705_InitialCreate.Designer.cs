@@ -12,7 +12,7 @@ using QBCA.Data;
 namespace CNPM_QBCA.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250628123913_InitialCreate")]
+    [Migration("20250628192705_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

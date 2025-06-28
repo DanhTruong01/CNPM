@@ -117,28 +117,28 @@
         <label class="neumorphic-label">Exam Plan</label>
         @Html.DropDownListFor(m => m.ExamPlanID,
         new SelectList(Model.AllExamPlans, "ExamPlanID", "Name", Model.ExamPlanID),
-        "Select Exam Plan",
+        "-- Select Exam Plan --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.ExamPlanID, "", new { @class = "validation-message" })
 
     <label class="neumorphic-label">Distribution</label>
     @Html.DropDownListFor(m => m.DistributionID,
-        new SelectList(Model.AllDistributions, "DistributionID", "Status", Model.DistributionID),
-        "Select Distribution",
+        new SelectList(Model.DisplayDistributions, "DistributionID", "DisplayName", Model.DistributionID),
+        "-- Select Distribution --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.DistributionID, "", new { @class = "validation-message" })
 
     <label class="neumorphic-label">Assign To</label>
     @Html.DropDownListFor(m => m.AssignedToID,
         new SelectList(Model.AllLecturers, "UserID", "FullName", Model.AssignedToID),
-        "Select Lecturer",
+        "-- Select Lecturer --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.AssignedToID, "", new { @class = "validation-message" })
 
     <label class="neumorphic-label">Task Type</label>
     @Html.DropDownListFor(m => m.TaskType,
-        new SelectList(new[] { "Multiple Choice", "Essay", "Oral Exam" }, Model.TaskType),
-        "Select Task Type",
+        new SelectList(Model.TaskTypeOptions, "Value", "Text", ((int)Model.TaskType)),
+        "-- Select Task Type --",
         new { @class = "modern-dropdown" })
     @Html.ValidationMessageFor(m => m.TaskType, "", new { @class = "validation-message" })
 
