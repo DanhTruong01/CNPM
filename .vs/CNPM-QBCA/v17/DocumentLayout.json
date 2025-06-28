@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\CNPM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarsubjectleader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarsubjectleader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -161,10 +169,6 @@
       "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\viewmodels\\approveexamtaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|d:\\cnpm\\cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9760A707-4247-24DC-143B-8EDFFA820D79}|CNPM-QBCA.Web\\CNPM-QBCA.Web.csproj|solutionrelative:cnpm-qbca.web\\views\\shared\\_sidebarexamhead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|d:\\cnpm\\cnpm-qbca.repositories\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFF942F-B7EF-4F72-9B2B-2577D5B70A2D}|CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj|solutionrelative:cnpm-qbca.repositories\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -304,7 +308,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 35,
+          "SelectedChildIndex": 51,
           "Children": [
             {
               "$type": "Bookmark",
@@ -312,7 +316,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "_SidebarSubjectLeader.cshtml",
+              "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarSubjectLeader.cshtml",
+              "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarSubjectLeader.cshtml",
+              "ToolTip": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarSubjectLeader.cshtml",
+              "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarSubjectLeader.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T18:01:47.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TaskModel.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\TaskModel.cs",
@@ -324,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ReviewQuestions.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\ReviewQuestions.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\ReviewQuestions.cshtml",
@@ -336,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Questions.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Questions.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\Questions.cshtml",
@@ -348,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "QuestionBank.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\QuestionBank.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\QuestionBank.cshtml",
@@ -360,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Edit.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\Edit.cshtml",
@@ -372,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\Create.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\Create.cshtml",
@@ -384,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ApproveQuestionList.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Question\\ApproveQuestionList.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Question\\ApproveQuestionList.cshtml",
@@ -396,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "20250628072342_FixSubjectTitleColumn.cs",
               "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs",
               "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628072342_FixSubjectTitleColumn.cs",
@@ -406,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\appsettings.json",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\appsettings.json",
@@ -418,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\appsettings.json",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\appsettings.json",
@@ -430,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "20250628071321_AddTaskTypeToAssignedPlan.cs",
               "DocumentMoniker": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs",
               "ToolTip": "C:\\UTH\\Cong Nghe Phan Mem\\CNPM-QBCA\\CNPM\\CNPM-QBCA.Repositories\\Migrations\\20250628071321_AddTaskTypeToAssignedPlan.cs",
@@ -440,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "SubmissionApprovalViewModel.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\SubmissionApprovalViewModel.cs",
@@ -452,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "AssignedPlanViewModel.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\AssignedPlanViewModel.cs",
@@ -464,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "AssignTaskController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\AssignTaskController.cs",
@@ -476,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "AssignedPlan.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\AssignedPlan.cs",
@@ -488,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "ReviewExam.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamReview\\ReviewExam.cshtml",
@@ -500,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "ApproveExamTaskViewModel.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\ApproveExamTaskViewModel.cs",
@@ -512,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "ExamApproveController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamApproveController.cs",
@@ -524,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\MyTask\\Details.cshtml",
@@ -536,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "MockExam.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Exam\\MockExam.cshtml",
@@ -548,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "ReviewDetails.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamReview\\ReviewDetails.cshtml",
@@ -560,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\NotificationsController.cs",
@@ -572,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Notification.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\Notification.cs",
@@ -584,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "ApproveExamDetailViewModel.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\ApproveExamDetailViewModel.cs",
@@ -596,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Exam.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Exam.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\Exam.cs",
@@ -608,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "AssignTaskViewModel.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\AssignTaskViewModel.cs",
@@ -620,7 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamApproveTask\\Details.cshtml",
@@ -632,7 +649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamApproveTask\\Index.cshtml",
@@ -644,7 +661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "ExamApproveTask.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamApproveTask.cs",
@@ -656,7 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "MockExamViewModel.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\ViewModels\\MockExamViewModel.cs",
@@ -668,7 +685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "HomeCheck.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\HomeCheck.cshtml",
@@ -680,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "TaskController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\TaskController.cs",
@@ -692,7 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "MyTasks.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\MyTask\\MyTasks.cshtml",
@@ -704,7 +721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\User.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\User.cs",
@@ -716,7 +733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContext.cs",
@@ -729,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "ExamReview.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamReview.cs",
@@ -741,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MockFeedback.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockFeedback.cs",
@@ -753,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "_SidebarLecturer.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarLecturer.cshtml",
@@ -765,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "MyTaskController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\MyTaskController.cs",
@@ -777,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "TaskAssignment.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\TaskAssignment.cs",
@@ -789,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MockExam.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExam.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockExam.cs",
@@ -801,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "MockExamController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\MockExamController.cs",
@@ -813,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "ExamPlanDistribution.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamPlanDistribution.cs",
@@ -825,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MockQuestion.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockQuestion.cs",
@@ -837,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "AssignToLecturers.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\LecturerAssignment\\AssignToLecturers.cshtml",
@@ -849,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "ExamPlan.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\ExamPlan.cs",
@@ -861,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\LecturerAssignment\\Create.cshtml",
@@ -873,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "LecturerAssignment.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\LecturerAssignment.cs",
@@ -885,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "SubmissionApproval.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\SubmissionApproval.cs",
@@ -897,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 0,
               "Title": "_SidebarExamHead.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
@@ -905,11 +922,12 @@
               "RelativeToolTip": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarExamHead.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T15:50:11.905Z"
+              "WhenOpened": "2025-06-26T15:50:11.905Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "_SidebarHeadDept.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Shared\\_SidebarHeadDept.cshtml",
@@ -921,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "AssignedPlanController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\AssignedPlanController.cs",
@@ -933,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "ExamLecturerAssignmentController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamLecturerAssignmentController.cs",
@@ -945,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "SubmissionApprovalController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\SubmissionApprovalController.cs",
@@ -957,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "SubmissionTable.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\SubmissionTable.cs",
@@ -969,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\Edit.cshtml",
@@ -981,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\Create.cshtml",
@@ -993,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "ExamPlanController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\ExamPlanController.cs",
@@ -1005,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "ExamPlans.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlans.cshtml",
@@ -1017,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "ExamPlan.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\ExamPlan\\ExamPlan.cshtml",
@@ -1029,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "CheckResult.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\CheckResult.cshtml",
@@ -1041,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "DuplicateCheckController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\DuplicateCheckController.cs",
@@ -1053,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Program.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Program.cs",
@@ -1065,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "DuplicateCheckResult.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\DuplicateCheckResult.cs",
@@ -1077,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "Check.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Duplicatecheck\\Check.cshtml",
@@ -1089,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "MockExamAnswer.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\MockExamAnswer.cs",
@@ -1101,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\AuthController.cs",
@@ -1113,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "TaskService.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\TaskService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\TaskService.cs",
@@ -1125,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "ApplicationDbContextFactory.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Data\\ApplicationDbContextFactory.cs",
@@ -1137,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "TeamTasks.cshtml",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Views\\Task\\TeamTasks.cshtml",
@@ -1149,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Subject.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Repositories\\Models\\Subject.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Repositories\\Models\\Subject.cs",
@@ -1161,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "OpenAIDuplicateService.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\OpenAIDuplicateService.cs",
@@ -1173,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "GeminiDuplicateService.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Services\\Services\\GeminiDuplicateService.cs",
@@ -1185,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "QuestionController.cs",
               "DocumentMoniker": "D:\\CNPM\\CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "CNPM-QBCA.Web\\Controllers\\QuestionController.cs",
