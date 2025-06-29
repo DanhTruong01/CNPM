@@ -317,6 +317,7 @@ namespace QBCA.Controllers
             var userIdClaim = User.FindFirst("UserID")?.Value;
             if (!int.TryParse(userIdClaim, out int userId))
                 return Unauthorized();
+            ViewBag.CurrentUserId = userId;
 
             var plans = await _context.ExamPlans
                 .Include(p => p.Subject)
