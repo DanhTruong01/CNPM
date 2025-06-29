@@ -12,7 +12,7 @@
 * **GIẢNG VIÊN**: Ths Nguyễn Văn Chiến 
 
 # ĐỒ ÁN 
-* **Đề tài:** Phần mềm hỗ trợ kiểm tra trùng lặp ngân hàng câu hỏi
+* **ĐỀ TÀI:** Phần mềm hỗ trợ kiểm tra trùng lặp ngân hàng câu hỏi
 
 # THÀNH VIÊN NHÓM
 | STT    | MSSV          | Họ và Tên              |Chức Vụ    |
@@ -36,14 +36,14 @@
 * Nhận thông báo khi tạo môn học thành công và khi có kết quả phê duyệt.
 ### 👨‍🏫 Quản lý Đề – Giảng viên
 * Kiểm tra và loại bỏ câu hỏi trùng lặp trong ngân hàng và câu hỏi mới.
-* Tải lên các câu hỏi mới vào ngân hàng đề.**
+* Tải lên các câu hỏi mới vào ngân hàng đề.
 * Chỉnh sửa hoặc xóa câu hỏi trùng lặp để đảm bảo tính duy nhất.
 * Làm bài thi thử và gửi phản hồi để cải tiến đề thi.
 * Nhận thông báo khi có nhiệm vụ được giao.
 ### 🧑‍💼 Điều phối Ngân hàng Đề – Trưởng Bộ môn
 * Nhận thông báo về kế hoạch được giao và tiến độ câu hỏi.
 * Giao nhiệm vụ cho giảng viên để tạo và rà soát câu hỏi.
-* Rà soát và phê duyệt bảng tổng hợp đề thi cuối cùng.**
+* Rà soát và phê duyệt bảng tổng hợp đề thi cuối cùng.
 * Nhận thông báo khi có câu hỏi mới hoặc trùng lặp được tải lên.
 * Gửi đề thi lên hệ thống để kiểm tra tự động.
 ### 👨‍🎓 Điều phối cấp Khoa – Trưởng Khoa
