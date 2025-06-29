@@ -28,7 +28,7 @@
 
 ---
 
-## 🌟 Tính năng chính – Hệ thống QBCA
+# 🌟 Tính năng chính – Hệ thống QBCA
 ##🧪 Quản lý Ngân hàng Đề – Nhân viên R&D
 -Tạo môn học, chuẩn đầu ra (CLO), và mức độ khó của câu hỏi.
 
