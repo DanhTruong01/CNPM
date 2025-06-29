@@ -68,3 +68,8 @@
 3️⃣**Tải câu hỏi, rà soát trùng lặp, cập nhật từ giảng viên.**  
 4️⃣**Phê duyệt và thông báo ở mỗi giai đoạn (bộ môn, khoa, khảo thí).**  
 5️⃣**Cập nhật đề thi, phản hồi, và ngân hàng đề chính thức.**
+
+---
+
+# 🙏 **Lời tri ân**
+**Chúng em xin gửi lời cảm ơn chân thành và sâu sắc đến Thầy Nguyễn Văn Chiến, người đã luôn đồng hành, định hướng và hỗ trợ tận tình trong suốt quá trình thực hiện dự án. Chính nhờ sự chỉ dẫn quý báu của Thầy, chúng em mới có thể hoàn thành sản phẩm một cách hiệu quả và chuyên nghiệp hơn từng ngày.**
