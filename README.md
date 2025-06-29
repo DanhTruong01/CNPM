@@ -59,12 +59,12 @@
 * **Giao nhiệm vụ cho giảng viên để rà soát và nhận xét đề thi.**
 * **Rà soát và phê duyệt đề thi cuối cùng.**
 * **Nhận thông báo về trạng thái cập nhật đề thi sau khi nhận xét.**
+---
 
-  ---
 ## 🔥 **Cách hoạt động QBCA**
-1️⃣ **Tạo môn học, CLO, độ khó từ nhân viên R&D.**  
-2️⃣ **Giao nhiệm vụ từ trưởng khoa/bộ môn đến giảng viên.**
-3️⃣ **Tải câu hỏi, rà soát trùng lặp, cập nhật từ giảng viên.**
-4️⃣ **Phê duyệt và thông báo ở mỗi giai đoạn (bộ môn, khoa, khảo thí).**
-5️⃣ **Cập nhật đề thi, phản hồi, và ngân hàng đề chính thức.**
 
+1️⃣**Tạo môn học, CLO, độ khó từ nhân viên R&D.**  
+2️⃣**Giao nhiệm vụ từ trưởng khoa/bộ môn đến giảng viên.**  
+3️⃣**Tải câu hỏi, rà soát trùng lặp, cập nhật từ giảng viên.**  
+4️⃣**Phê duyệt và thông báo ở mỗi giai đoạn (bộ môn, khoa, khảo thí).**  
+5️⃣**Cập nhật đề thi, phản hồi, và ngân hàng đề chính thức.**
