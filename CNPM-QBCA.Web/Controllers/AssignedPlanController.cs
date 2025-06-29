@@ -83,6 +83,7 @@ namespace QBCA.Controllers
 
             _context.Notifications.Add(notification);
             _context.SaveChanges();
+
             return RedirectToAction("Plans");
 
         }

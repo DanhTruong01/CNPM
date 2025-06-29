@@ -56,15 +56,15 @@ namespace QBCA.Controllers
             return View(model);
         }
 
-
         // GET: AssignTask/Create
         public IActionResult Create()
         {
             var model = new AssignTaskViewModel
             {
+                AssignedAt = DateTime.Now,
+                Deadline = DateTime.Now.AddDays(7),
                 AllLecturers = GetEligibleLecturers()
             };
-
             return View(model);
         }
 
@@ -79,7 +79,7 @@ namespace QBCA.Controllers
                 {
                     TaskType = model.TaskType,
                     AssignedTo = model.AssignedToID,
-                    AssignedBy = 1, // TODO: Replace with current user ID
+                    AssignedBy = 1, // TODO: Replace with logged-in user ID
                     AssignedAt = DateTime.Now,
                     DueDate = model.Deadline,
                     Status = "Assigned",
@@ -87,6 +87,21 @@ namespace QBCA.Controllers
                 };
 
                 _context.TaskAssignments.Add(task);
+                _context.SaveChanges();
+
+                // 🎯 Gửi thông báo đến giảng viên
+                var notification = new Notification
+                {
+                    UserID = model.AssignedToID,
+                    Message = $"📝 You have been assigned a task: {model.TaskType} (Deadline: {model.Deadline:dd/MM/yyyy})",
+                    CreatedAt = DateTime.Now,
+                    CreatedBy = task.AssignedBy,
+                    Status = "Unread",
+                    RelatedEntityType = "AssignTask",
+                    RelatedEntityID = task.AssignmentID
+                };
+
+                _context.Notifications.Add(notification);
                 _context.SaveChanges();
 
                 return RedirectToAction(nameof(Task));
@@ -165,15 +180,6 @@ namespace QBCA.Controllers
             return View(model);
         }
 
-        // Private helper method
-        private List<User> GetEligibleLecturers()
-        {
-            return _context.Users
-                .Include(u => u.Role)
-                .Where(u => u.Role.RoleName == "Lecturer" || u.Role.RoleName == "Subject Leader")
-                .ToList();
-
-        }
         // GET: AssignTask/Delete/5
         public IActionResult Delete(int id)
         {
@@ -209,6 +215,13 @@ namespace QBCA.Controllers
             return RedirectToAction(nameof(Task));
         }
 
-
+        // Private helper method
+        private List<User> GetEligibleLecturers()
+        {
+            return _context.Users
+                .Include(u => u.Role)
+                .Where(u => u.Role.RoleName == "Lecturer" || u.Role.RoleName == "Subject Leader")
+                .ToList();
+        }
     }
 }

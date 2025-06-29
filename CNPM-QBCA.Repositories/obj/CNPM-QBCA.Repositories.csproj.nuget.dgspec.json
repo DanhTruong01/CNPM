@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {}
+    "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29-6\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {}
   },
   "projects": {
-    "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
+    "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29-6\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
+        "projectUniqueName": "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29-6\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
         "projectName": "CNPM-QBCA.Repositories",
-        "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
+        "projectPath": "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29-6\\CNPM\\CNPM-QBCA.Repositories\\CNPM-QBCA.Repositories.csproj",
         "packagesPath": "C:\\Users\\hieu0\\.nuget\\packages\\",
-        "outputPath": "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29\\CNPM\\CNPM-QBCA.Repositories\\obj\\",
+        "outputPath": "C:\\UTH\\Cong Nghe Phan Mem\\QBCA-29-6\\CNPM\\CNPM-QBCA.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

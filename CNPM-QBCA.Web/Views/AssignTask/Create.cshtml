@@ -12,7 +12,7 @@
         padding: 50px;
         margin: 60px auto;
         max-width: 700px;
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .form-group {
@@ -39,7 +39,7 @@
         font-size: 18px;
     }
 
-   
+
     input::placeholder {
         font-size: 18px;
         font-weight: 500;
@@ -81,6 +81,13 @@
 </style>
 
 <div class="neumorphic-form">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div style="background-color: #d1fae5; color: #065f46; padding: 15px; border-radius: 12px; text-align: center; font-weight: 600; margin-bottom: 25px;">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
     <h3>🆕 Create New Task</h3>
 
     <form asp-action="Create" method="post">
