@@ -5,6 +5,7 @@
     <img src="https://giaothongvantaitphcm.edu.vn/wp-content/uploads/2025/01/Logo-GTVT.png" alt="Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh" width="400">
   </a>
 </p>
+![logo_full](https://github.com/user-attachments/assets/1d1ff715-d5e9-4377-88cb-3c420806708b)
 
 <h1 align="center"><b>CÔNG NGHỆ PHẦN MỀM</b></h1>
 
