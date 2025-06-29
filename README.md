@@ -6,10 +6,10 @@
 <h1 align="center"><b>CÔNG NGHỆ PHẦN MỀM</b></h1>
 
 # GIỚI THIỆU MÔN HỌC
-* **Tên môn học:** Công Nghệ Phần Mềm
-* **Mã lớp:** 010412210502
-* **Năm học:** HK2 (2024-2025)
-* **Giảng viên**: Ths Nguyễn Văn Chiến 
+* **TÊN MÔN HỌC:** Công Nghệ Phần Mềm
+* **MÃ LỚP:** 010412210502
+* **NĂM HỌC:** HK2 (2024-2025)
+* **GIẢNG VIÊN**: Ths Nguyễn Văn Chiến 
 
 # ĐỒ ÁN 
 * **Đề tài:** Phần mềm hỗ trợ kiểm tra trùng lặp ngân hàng câu hỏi
