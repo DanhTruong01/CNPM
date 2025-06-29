@@ -14,7 +14,7 @@
 * **Năm học:** HK2 (2024-2025)
 * **Giảng viên**: Ths Nguyễn Văn Chiến 
 
-# ĐỒ ÁN CUỐI KÌ
+# ĐỒ ÁN 
 * **Đề tài:** Phần mềm hỗ trợ kiểm tra trùng lặp ngân hàng câu hỏi
 
 # THÀNH VIÊN NHÓM
