@@ -102,6 +102,7 @@ namespace QBCA.Controllers
                 {
                     Title = model.Title,
                     DistributionID = model.DistributionID,
+                    ExamPlanID = distribution.ExamPlanID,
                     StartDate = model.StartDate,
                     EndDate = model.EndDate,
                     SubmitDate = DateTime.Now,
