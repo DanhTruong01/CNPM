@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using QBCA.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using QBCA.Models;
 
 namespace QBCA.ViewModels
 {
@@ -41,5 +42,11 @@ namespace QBCA.ViewModels
 
         // Dropdown chọn giảng viên
         public List<User> AllLecturers { get; set; } = new();
+        public IEnumerable<SelectListItem> LecturerOptions =>
+            AllLecturers.Select(l => new SelectListItem
+            {
+                Value = l.UserID.ToString(),
+                Text = l.FullName
+            });
     }
 }
